@@ -2,8 +2,9 @@
     <div>
         <header class="uk-content-header uk-background-default">
             <div class="title">
-                <h2>Мотивации <button @click="ShowAdd()" class="uk-button uk-button-small uk-button-primary" >
-                    <span uk-icon="plus"></span></button>
+                <h2>Мотивации
+                    <button @click="ShowAdd()" class="uk-button uk-button-small uk-button-primary">
+                        <span uk-icon="plus"></span></button>
                 </h2>
             </div>
             <div class="js-upload uk-placeholder uk-text-center uk-position-relative">
@@ -40,13 +41,15 @@
                                             :path="'/admin/motivation/'"></widget-paginator-component>
                 <div class="content-section-grid">
                     <div class="content-section-grid-item test" v-for="item in list">
-<!--                        <img class="thumbnail" :src="item.image">-->
+                        <!--                        <img class="thumbnail" :src="item.image">-->
                         <div class="text-section">
                             <div class="title"><strong>День {{item.day}}:</strong> {{item.title}}</div>
                             <ul class="uk-comment-meta uk-flex">
                                 <li class="uk-margin-right">ID: <strong>{{item.id}}</strong></li>
-                                <li class="uk-margin-right">Отредактировано: <strong>{{getDate(item.updated_at)}}</strong></li>
-                                <li class="uk-margin-right">Дата создания: <strong>{{getDate(item.created_at)}}</strong></li>
+                                <li class="uk-margin-right">Отредактировано:
+                                    <strong>{{getDate(item.updated_at)}}</strong></li>
+                                <li class="uk-margin-right">Дата создания: <strong>{{getDate(item.created_at)}}</strong>
+                                </li>
                             </ul>
                         </div>
                         <div class="buttons-section">
@@ -66,7 +69,8 @@
                                     @click="Down(item)">
                                 <span uk-icon="arrow-down"></span>
                             </button>
-                            <button class="uk-button uk-button-default uk-button-small" v-if="is_delete" @click="Delete(item)">
+                            <button class="uk-button uk-button-default uk-button-small" v-if="is_delete"
+                                    @click="Delete(item)">
                                 <span uk-icon="trash" class="uk-icon"></span>
                             </button>
                         </div>
@@ -94,15 +98,17 @@
                 <div class="uk-margin">
                     <label class="uk-form-label" for="title">Заголовок:*</label>
                     <div class="uk-form-controls">
-                        <input v-model="current_motivation.title" class="uk-input uk-form-width-large" id="title" type="text"
-                               placeholder="Заголовок" autocomplete="off" @keypress="Checked" >
+                        <input v-model="current_motivation.title" class="uk-input uk-form-width-large" id="title"
+                               type="text"
+                               placeholder="Заголовок" autocomplete="off" @keypress="Checked">
                         <label>{{current_motivation.title.length}}/70</label>
                     </div>
                 </div>
                 <div class="uk-margin">
                     <label class="uk-form-label" for="day">День:*</label>
                     <div class="uk-form-controls">
-                        <input v-model="current_motivation.day" class="uk-input uk-form-width-large" id="day" type="text"
+                        <input v-model="current_motivation.day" class="uk-input uk-form-width-large" id="day"
+                               type="text"
                                placeholder="Заголовок" autocomplete="off">
                     </div>
                 </div>
@@ -153,8 +159,9 @@
                 <div class="uk-margin">
                     <label class="uk-form-label" for="title">Заголовок:*</label>
                     <div class="uk-form-controls">
-                        <input v-model="new_motivation.title" class="uk-input uk-form-width-large" id="title" type="text"
-                               placeholder="Заголовок" autocomplete="off" @keypress="CheckedNew" >
+                        <input v-model="new_motivation.title" class="uk-input uk-form-width-large" id="title"
+                               type="text"
+                               placeholder="Заголовок" autocomplete="off" @keypress="CheckedNew">
                         <br>
                         <label>{{new_motivation.title.length}}/70</label>
                     </div>
@@ -214,7 +221,7 @@
 
 <script>
     export default {
-        props: ['method', 'current_page','user_type'],
+        props: ['method', 'current_page', 'user_type'],
         data() {
             return {
                 list: [],
@@ -227,10 +234,10 @@
                 is_delete: false,
                 path: window.location.pathname,
                 current_motivation: {
-                    title:'',
+                    title: '',
                 },
                 new_motivation: {
-                    title:'',
+                    title: '',
                 },
                 types: {
                     'news': "Новость",
@@ -251,13 +258,20 @@
             this.getList();
         },
         methods: {
-            ShowAdd:function(){
+            ShowAdd: function () {
                 UIkit.modal(this.add_modal).show();
             },
-            CreateNew:function(){
-                console.log(this.new_motivation);
+            CreateNew: function () {
+                this.$http.post('/admin/motivation/create', this.new_motivation).then(response => {
+                    if (response.data.result) {
+                        this.new_motivation = {
+                            title: '',
+                        };
+                        UIkit.modal(this.add_modal).hide();
+                    }
+                });
             },
-            getDate:function(date){
+            getDate: function (date) {
                 return date.substring(0, date.length - 9);
             },
             Checked: function () {
@@ -326,12 +340,12 @@
                     this.getList();
                 });
             },
-            Up:function(item){
+            Up: function (item) {
                 item.day--;
                 this.current_motivation = item;
                 this.Save();
             },
-            Down:function(item){
+            Down: function (item) {
                 item.day++;
                 this.current_motivation = item;
                 this.Save();
@@ -391,7 +405,7 @@
                     'sort_field': this.sort_field,
                     'sort_method': (this.sort_method ? 'asc' : 'desc'),
                 };
-                this.$http.post('/admin/motivation/get/' + this.current_page,pros).then(response => {
+                this.$http.post('/admin/motivation/get/' + this.current_page, pros).then(response => {
                     this.list = response.data.list;
                     this.page_list = response.data.page_list;
                     this.is_delete = response.data.delete;

@@ -9048,6 +9048,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['method', 'current_page', 'user_type'],
   data: function data() {
@@ -9089,7 +9098,16 @@ __webpack_require__.r(__webpack_exports__);
       UIkit.modal(this.add_modal).show();
     },
     CreateNew: function CreateNew() {
-      console.log(this.new_motivation);
+      var _this = this;
+
+      this.$http.post('/admin/motivation/create', this.new_motivation).then(function (response) {
+        if (response.data.result) {
+          _this.new_motivation = {
+            title: ''
+          };
+          UIkit.modal(_this.add_modal).hide();
+        }
+      });
     },
     getDate: function getDate(date) {
       return date.substring(0, date.length - 9);
@@ -9116,14 +9134,14 @@ __webpack_require__.r(__webpack_exports__);
       this.getList();
     },
     findVideo: function findVideo() {
-      var _this = this;
+      var _this2 = this;
 
       if (this.video_name.length >= 2) {
         this.$http.post('/admin/find/video', {
           video: this.video_name
         }).then(function (response) {
           // if (response.data.length) {
-          _this.video_list = response.data; // }
+          _this2.video_list = response.data; // }
         });
       } else {
         this.video_list = [];
@@ -9152,7 +9170,7 @@ __webpack_require__.r(__webpack_exports__);
       this.new_motivation.video_ = {};
     },
     clone: function clone(item) {
-      var _this2 = this;
+      var _this3 = this;
 
       this.$http.post('/admin/motivation/clone', item).then(function (response) {
         UIkit.notification({
@@ -9160,7 +9178,7 @@ __webpack_require__.r(__webpack_exports__);
           status: 'success'
         });
 
-        _this2.getList();
+        _this3.getList();
       });
     },
     Up: function Up(item) {
@@ -9174,13 +9192,13 @@ __webpack_require__.r(__webpack_exports__);
       this.Save();
     },
     Save: function Save() {
-      var _this3 = this;
+      var _this4 = this;
 
       this.$http.post('/admin/motivation/update', this.current_motivation).then(function (response) {
         if (response.data.result) {
-          UIkit.modal(_this3.video_modal).hide();
+          UIkit.modal(_this4.video_modal).hide();
 
-          _this3.getList();
+          _this4.getList();
         }
       });
     },
@@ -9200,7 +9218,7 @@ __webpack_require__.r(__webpack_exports__);
       UIkit.modal(this.video_modal).show();
     },
     onUpload: function onUpload(e) {
-      var _this4 = this;
+      var _this5 = this;
 
       var files = e.target.files;
       var formData = new FormData();
@@ -9225,7 +9243,7 @@ __webpack_require__.r(__webpack_exports__);
             status: 'success'
           });
 
-          _this4.getList();
+          _this5.getList();
         }
       })["catch"](function () {
         UIkit.notification({
@@ -9235,17 +9253,17 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     getList: function getList() {
-      var _this5 = this;
+      var _this6 = this;
 
       var pros = {
         'sort_field': this.sort_field,
         'sort_method': this.sort_method ? 'asc' : 'desc'
       };
       this.$http.post('/admin/motivation/get/' + this.current_page, pros).then(function (response) {
-        _this5.list = response.data.list;
-        _this5.page_list = response.data.page_list;
-        _this5.is_delete = response.data["delete"];
-        _this5.load = true;
+        _this6.list = response.data.list;
+        _this6.page_list = response.data.page_list;
+        _this6.is_delete = response.data["delete"];
+        _this6.load = true;
       });
     },
     Delete: function Delete(item) {
@@ -9257,12 +9275,12 @@ __webpack_require__.r(__webpack_exports__);
       this.page_list = data.page_list;
     },
     deletePage: function deletePage(item) {
-      var _this6 = this;
+      var _this7 = this;
 
       this.$http["delete"]('/admin/motivation/delete/' + this.delete_item.id).then(function (response) {
-        UIkit.modal(_this6.delete_dialog).hide();
+        UIkit.modal(_this7.delete_dialog).hide();
 
-        _this6.getList();
+        _this7.getList();
       });
     }
   }
@@ -63096,7 +63114,7 @@ var render = function() {
     _c("header", { staticClass: "uk-content-header uk-background-default" }, [
       _c("div", { staticClass: "title" }, [
         _c("h2", [
-          _vm._v("Мотивации "),
+          _vm._v("Мотивации\n                "),
           _c(
             "button",
             {
@@ -63158,7 +63176,7 @@ var render = function() {
                     }
                   },
                   [
-                    _vm._v("День\n                        "),
+                    _vm._v("День\n                    "),
                     _vm.sort_method
                       ? _c("i", { attrs: { "uk-icon": "triangle-down" } })
                       : _vm._e(),
@@ -63181,7 +63199,7 @@ var render = function() {
                     }
                   },
                   [
-                    _vm._v("Дата\n                        "),
+                    _vm._v("Дата\n                    "),
                     _vm.sort_method
                       ? _c("i", { attrs: { "uk-icon": "triangle-down" } })
                       : _vm._e(),
@@ -63204,7 +63222,7 @@ var render = function() {
                     }
                   },
                   [
-                    _vm._v("имя\n                        "),
+                    _vm._v("имя\n                    "),
                     _vm.sort_method
                       ? _c("i", { attrs: { "uk-icon": "triangle-down" } })
                       : _vm._e(),
@@ -63248,7 +63266,9 @@ var render = function() {
                           ]),
                           _vm._v(" "),
                           _c("li", { staticClass: "uk-margin-right" }, [
-                            _vm._v("Отредактировано: "),
+                            _vm._v(
+                              "Отредактировано:\n                                "
+                            ),
                             _c("strong", [
                               _vm._v(_vm._s(_vm.getDate(item.updated_at)))
                             ])
@@ -63605,9 +63625,9 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                                " +
+                              "\n                            " +
                                 _vm._s(_vm.current_motivation.video_.title) +
-                                "\n                                "
+                                "\n                            "
                             ),
                             _c("a", {
                               staticClass:
@@ -63894,9 +63914,9 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                                " +
+                              "\n                            " +
                                 _vm._s(_vm.new_motivation.video_.title) +
-                                "\n                                "
+                                "\n                            "
                             ),
                             _c("a", {
                               staticClass:
