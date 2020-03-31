@@ -44,7 +44,7 @@ class SectionController extends Controller
 
     public function listParent()
     {
-        $data = Section::where('parent_id', 0)->get();
+        $data = Section::where('parent_id', 0)->where('course_id', 1)->get();
 
         return response()->json($data);
     }
