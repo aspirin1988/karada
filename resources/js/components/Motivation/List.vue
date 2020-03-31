@@ -2,7 +2,7 @@
     <div>
         <header class="uk-content-header uk-background-default">
             <div class="title">
-                <h2>Мотивации</h2>
+                <h2>Мотивации <button class="uk-button uk-button-primary" ><spna uk-icon="plus"></spna></button> </h2>
             </div>
             <div class="js-upload uk-placeholder uk-text-center uk-position-relative">
                 <input :style="{opacity:0, zIndex: 1}" class="uk-height-1-1 uk-position-top-left uk-width-1-1"

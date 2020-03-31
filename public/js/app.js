@@ -63006,7 +63006,17 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("header", { staticClass: "uk-content-header uk-background-default" }, [
-      _vm._m(0),
+      _c("div", { staticClass: "title" }, [
+        _c("h2", [
+          _vm._v("Мотивации "),
+          _c(
+            "button",
+            { staticClass: "uk-button uk-button-primary" },
+            [_c("spna", { attrs: { "uk-icon": "plus" } })],
+            1
+          )
+        ])
+      ]),
       _vm._v(" "),
       _c(
         "div",
@@ -63028,7 +63038,7 @@ var render = function() {
             _vm._v("Перетащите файлы сюда или")
           ]),
           _vm._v(" "),
-          _vm._m(1)
+          _vm._m(0)
         ]
       )
     ]),
@@ -63610,14 +63620,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "title" }, [
-      _c("h2", [_vm._v("Мотивации")])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
