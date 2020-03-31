@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 30">
+    <g  transform="translate(4,4)">
+        <g>
+            <path d="M0 18h25v3H0z"/>
+        </g>
+        <g>
+            <path d="M0 9h25v3H0z"/>
+        </g>
+        <g>
+            <path d="M0 0h25v3H0z"/>
+        </g>
+    </g>
+</svg>

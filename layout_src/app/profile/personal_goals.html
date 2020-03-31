@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личные цели</title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body style="background: #000000 url(/images/space-03.png) no-repeat center center/cover;">
+<header>
+    <nav>
+        <a class="logo" href="/">
+            <img src="/images/Ellipse_8.png" alt="">
+            <div>
+                <span class="big">Karadau</span> <span class="small">Marketing univercity</span>
+            </div>
+        </a>
+        <div class="title">Личные цели</div>
+        <div ref="menu" class="menu">Меню <img src="/images/menu.svg" alt=""></div>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <div class="personal_goals_section">
+            <div class="personal_goals_header">
+                <div class="block motivation">
+                    <img src="/images/Layer_7.png" alt="">
+                    <div>
+                        <span class="sub-title">Формула успеха от Юсупа:</span>
+                        <span class="title">Всё в твоих руках!</span>
+                        <a href="#" class="button round button-yellow-stroke ">смотреть ролик</a>
+                    </div>
+                </div>
+                <div class="block add-goals">
+                    <img src="/images/button-plus.png" alt="">
+                    <div class="title">добавить новую цель</div>
+                </div>
+            </div>
+            <div class="personal_goals_body">
+                <ul class="goals-tabs">
+                    <li class="active" ><a href="#">Все</a><span>1</span></li>
+                    <li><a href="#">в процессе</a><span>1</span></li>
+                    <li><a href="#">выполнено</a><span>1</span></li>
+                    <li><a href="#">не сделано</a><span>1</span></li>
+                </ul>
+                <ul class="goals-tabs-switch">
+                    <li class="active">
+                        <div class="personal_goals_body_grid">
+                            <div class="personal_goals_body_grid_item block complete">
+                                <img src="/images/Layer_3.png" alt="">
+                                <div class="data">
+                                    <div class="title">Приобрести новую машину своей жене</div>
+                                    <div class="sub-title">Дата выполнения:</div>
+                                    <div class="date">25 июля 2020</div>
+                                    <span class="status">Выполнено!</span>
+                                </div>
+                            </div>
+                            <div class="personal_goals_body_grid_item block in-process">
+                                <img src="/images/Layer_3.png" alt="">
+                                <div class="data">
+                                    <div class="title">Приобрести новую машину своей жене</div>
+                                    <div class="sub-title">Дата выполнения:</div>
+                                    <div class="date">25 июля 2020</div>
+                                    <a href="#" class="button round button-blue-stroke "><img src="/images/check.png"
+                                                                                              alt="">сделано!</a>
+                                </div>
+                            </div>
+                            <div class="personal_goals_body_grid_item block failed">
+                                <img src="/images/Layer_3.png" alt="">
+                                <div class="data">
+                                    <div class="title">Приобрести новую машину своей жене</div>
+                                    <div class="sub-title">Дата выполнения:</div>
+                                    <div class="date">25 июля 2020</div>
+                                    <a href="#" class="button round button-blue-stroke "><img src="/images/check.png"
+                                                                                              alt="">сделано!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="offcanvas active" rel="personal_goals_add_model">
+    <div class="overlay"></div>
+    <div class="center-center">
+        <div class="block modal-body">
+            <a href="#" class="modal-body-header">Добавить цель:</a>
+            <img class="add-photo" src="/images/add-photo.png" alt="">
+            <div class="form">
+                <div class="row">
+                    <label for="">Описание:</label>
+                    <textarea></textarea>
+                </div>
+                <div class="row">
+                    <label for="">Дата выполнения::</label>
+                   <select>
+                       <option>1</option>
+                       <option>2</option>
+                       <option>3</option>
+                   </select>
+                    <select>
+                        <option>Январь</option>
+                        <option>Февраль</option>
+                        <option>Март</option>
+                    </select>
+                    <select>
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                    </select>
+                </div>
+                <div class="row flex-center">
+                    <a href="#" class="button round button-yellow-stroke">сохранить</a>
+                </div>
+                <div class="row flex-center">
+                    <a href="#" class="button round button-gray-stroke">отменить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="offcanvas" ref="menu_modal">
+    <div class="overlay"></div>
+    <div class="offcanvas-container">
+        <div class="close" ref="menu_modal_close">закрыть</div>
+        <div class="menu-ava">
+            <div class="ava">
+                <img src="/images/Layer_8.png" alt="">
+                <a href="#" class="button round button-blue-stroke "><img src="/images/play.svg" alt="">продолжить урок</a>
+            </div>
+        </div>
+        <ul class="menu-list">
+            <li><img src="/images/user.svg" alt=""><a href="#">личный кабинет</a></li>
+            <li><img src="/images/chart.svg" alt=""><a href="#">план продаж</a></li>
+            <li><img src="/images/target.svg" alt=""><a href="#">личные цели</a></li>
+            <li><img src="/images/cup.svg" alt=""><a href="#">Мотивация</a></li>
+            <li><img src="/images/copy.svg" alt=""><a href="#">Онлайн курсы</a></li>
+            <li><img src="/images/medal.svg" alt=""><a href="#">Дипломы и сертификаты</a></li>
+            <li><img src="/images/shout.svg" alt=""><a href="#">Новости</a></li>
+            <li><img src="/images/help.svg" alt=""><a href="#">помощь</a></li>
+            <li><img src="/images/university.svg" alt=""><a href="#">об университете</a></li>
+            <li><img src="/images/exit.svg" alt=""><a href="#">выйти</a></li>
+        </ul>
+    </div>
+</div>
+<div class="offcanvas" ref="sales_plan_edit_modal">
+    <div class="overlay"></div>
+    <div class="center-center">
+        <div class="block modal-body">
+            <a href="#" class="modal-body-header">План продаж на год:</a>
+            <div class="form">
+                <div class="row">
+                    <label for="name">Сумма:</label>
+                    <input id="name" type="text" value="2 000 000">
+                </div>
+                <div class="row flex-center">
+                    <a href="#" ref="motivation_modal_close" class="button round button-yellow-stroke">сохранить</a>
+                </div>
+                <div class="row flex-center">
+                    <a href="#" class="button round button-gray-stroke" ref="sales_plan_edit_modal_close">отменить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="offcanvas" ref="sales_plan_month_modal">
+    <div class="overlay"></div>
+    <div class="center-center">
+        <div class="block modal-body">
+            <a href="#" class="modal-body-header">Продажи за месяц:</a>
+            <div class="form">
+                <div class="row">
+                    <label for="name">Сумма:</label>
+                    <input id="name" type="text" value="2 000 000">
+                </div>
+                <div class="row flex-center">
+                    <a href="#" ref="motivation_modal_close" class="button round button-yellow-stroke">сохранить</a>
+                </div>
+                <div class="row flex-center">
+                    <a href="#" class="button round button-gray-stroke" ref="sales_plan_month_modal_close">отменить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="copyright">
+                <b>Karadau University, 2019</b>
+                Все права защищены
+            </div>
+            <div class="privacy_policy">
+                Политика конфиденциальности
+                Договор оферты
+            </div>
+            <div class="contacts">
+                <a href="tel:+7(705)2711177">+7 (705) 271 11 77</a>
+                <a href="mailto:info@karadau.kz">info@karadau.kz</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/js/profile.js"></script>
+</body>
+</html>

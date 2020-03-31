@@ -1,0 +1,153 @@
+/* line 24, ../sass/all/base.scss */
+.scroll-block {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 74px;
+  z-index: -10;
+}
+
+/* line 3, ../sass/about.scss */
+.AboutWr {
+  padding-top: 144px;
+  padding-bottom: 65px;
+}
+
+/* line 8, ../sass/about.scss */
+.AboutB {
+  position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+/* line 18, ../sass/about.scss */
+.AboutB .AboutBImg {
+  position: relative;
+  overflow: hidden;
+  width: 31%;
+  border-radius: 5px;
+}
+/* line 24, ../sass/about.scss */
+.AboutB .AboutBImg img {
+  display: block;
+  width: 100%;
+}
+/* line 30, ../sass/about.scss */
+.AboutB .AboutBDesc {
+  position: relative;
+  width: 63%;
+}
+/* line 34, ../sass/about.scss */
+.AboutB .AboutBDesc h2 {
+  position: relative;
+  color: #136db8;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 27px;
+  line-height: 1;
+}
+/* line 42, ../sass/about.scss */
+.AboutB .AboutBDesc h2.big {
+  font-size: 35px;
+}
+/* line 47, ../sass/about.scss */
+.AboutB .AboutBDesc ul {
+  position: relative;
+}
+/* line 50, ../sass/about.scss */
+.AboutB .AboutBDesc ul li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+/* line 57, ../sass/about.scss */
+.AboutB .AboutBDesc ul li:after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  background: #000;
+  border-radius: 50%;
+}
+/* line 70, ../sass/about.scss */
+.AboutB .AboutBDesc p {
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+/* line 76, ../sass/about.scss */
+.AboutB .AboutBDesc p a {
+  display: inline-block;
+  color: #031a29;
+  font-weight: 700;
+  border-bottom: 1px solid #031a29;
+  line-height: 1.1;
+}
+
+@media only screen and (max-width: 709px) and (min-width: 120px) {
+  /* line 91, ../sass/about.scss */
+  .AboutWr {
+    padding-top: calc(60px + 11vw);
+    padding-bottom: 13vw;
+  }
+
+  /* line 96, ../sass/about.scss */
+  .AboutB {
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  /* line 100, ../sass/about.scss */
+  .AboutB:nth-last-child(1) {
+    margin-bottom: 0px;
+  }
+  /* line 104, ../sass/about.scss */
+  .AboutB .AboutBImg {
+    width: 100%;
+    border-radius: 5px;
+  }
+  /* line 109, ../sass/about.scss */
+  .AboutB .AboutBDesc {
+    width: 100%;
+    margin-top: 7vw;
+  }
+  /* line 113, ../sass/about.scss */
+  .AboutB .AboutBDesc h2 {
+    margin-bottom: 7vw;
+    font-size: 7vw;
+    text-align: center;
+  }
+  /* line 118, ../sass/about.scss */
+  .AboutB .AboutBDesc h2.big {
+    font-size: 8vw;
+    margin-bottom: 6vw;
+  }
+  /* line 126, ../sass/about.scss */
+  .AboutB .AboutBDesc ul li {
+    padding-left: 5vw;
+    margin-bottom: 3vw;
+    font-size: 4.4vw;
+    line-height: 1.5;
+  }
+  /* line 132, ../sass/about.scss */
+  .AboutB .AboutBDesc ul li:after {
+    left: 0;
+    top: 2vw;
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+  /* line 141, ../sass/about.scss */
+  .AboutB .AboutBDesc p {
+    font-size: 4.4vw;
+    margin-bottom: 8vw;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,445 @@
+.courses-grid {
+  margin: 100px auto 150px;
+  max-width: 920px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 400px 250px;
+  grid-gap: 20px;
+
+  .courses-grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: #000 url('/images/corporate-marketing.jpg') no-repeat center center/cover;
+
+    p {
+      color: #ffffff;
+      font-family: Montserrat;
+      font-size: 37px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    span {
+      color: #ffffff;
+      font-family: Montserrat;
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+  }
+}
+
+.courses-main {
+  margin-left: 400px;
+  box-sizing: border-box;
+  margin-bottom: 110px;
+  margin-top: 70px;
+
+  .courses-main-header {
+    background: #000 url("/images/fon-markt.jpg") no-repeat left bottom/cover;
+    height: 150px;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .courses-main-title {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 25px;
+    @media (max-width: 640px) {
+      font-size: 25px;
+    }
+  }
+}
+
+aside {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  background-color: #ededed;
+  width: 400px;
+  height: calc(100% - 70px);
+  left: 0;
+  top: 70px;
+  position: fixed;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  ul {
+    li {
+      cursor: pointer;
+
+      a {
+        position: relative;
+        color: #000;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19px;
+        text-transform: uppercase;
+        padding: 20px;
+        padding-right: 45px;
+        border-bottom: 1px solid #dbdbdb;
+        display: flex;
+
+        & > span {
+          margin-right: 10px;
+        }
+
+        //span {
+        //    font-family: Montserrat;
+        //    font-size: 12px;
+        //    font-weight: 700;
+        //    line-height: 25px;
+        //    text-transform: uppercase;
+        //    position: absolute;
+        //    top: 3px;
+        //    padding-left: 10px;
+        //}
+      }
+
+      &.parent {
+        position: relative;
+        transition: all 1s;
+
+        .parent-btn {
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          right: 10px;
+          top: 15px;
+          background: url('/images/nav-plus.png') no-repeat center center/cover;
+        }
+
+        &.open {
+          color: #37a2e9;
+
+          & > a {
+            color: #37a2e9;
+          }
+
+          .parent-btn {
+            background-image: url('/images/nav-x.png');
+          }
+
+          //&> ul {
+          //  height: auto;
+          //}
+        }
+        & > ul {
+          overflow: hidden;
+          transition: height 1s;
+          height: 0;
+
+          li {
+            &.active {
+              a {
+                color: #49a8e9;
+              }
+            }
+
+            a {
+              border-bottom: 1px solid #dbdbdb;
+              background-color: #e2e2e2;
+              padding-left: 40px;
+            }
+          }
+        }
+
+      }
+
+      & > ul li a {
+        text-transform: inherit;
+      }
+    }
+  }
+
+}
+
+input[name="search"] {
+  width: 430px;
+  background: #eeeeee url('/images/search.png') no-repeat calc(100% - 10px) center;
+}
+
+.courses-progress {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px 50px;
+  align-items: center;
+  align-content: center;
+  grid-gap: 40px;
+
+  .form.row {
+
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.courses-main-grid {
+  max-width: 900px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 15px 15px 60px;
+  }
+
+  .courses-main-grid-item {
+    height: 305px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    background: #efefef url('') no-repeat left center/cover;
+    @media (max-width: 768px) {
+      background-position: 72% 0;
+      height: 270px;
+    }
+
+    .data {
+      width: 313px;
+    }
+
+    &.black {
+      background: #1e1e1e url('') no-repeat left center/cover;
+
+      p {
+        color: #ffffff;
+      }
+
+      ul {
+        li {
+          color: #ffffff;
+        }
+      }
+    }
+
+    p {
+      color: #000000;
+      font-family: Montserrat;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      li {
+        list-style: square inside;
+        color: #000000;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+.courses-main-list {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+
+  .courses-main-list-item {
+    display: grid;
+    grid-template-columns: 1fr 255px;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    grid-gap: 20px;
+    font-family: Montserrat;
+
+    .status-container {
+      @media (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: 135px 120px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+
+      span {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 50px;
+      }
+
+    }
+
+    & > img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+    }
+
+    .name {
+      color: #000000;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .title {
+      color: #000000;
+      font-family: Montserrat;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 45px;
+    }
+
+    &.complete {
+      .name, & > img, .title {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.them-progress {
+  padding: 10px 50px;
+}
+
+.lesson {
+  margin: 0 0;
+  padding: 50px 0 50px 50px;
+  max-width: 795px;
+  @media (max-width: 768px) {
+    padding: 15px
+  }
+
+  iframe {
+    width: 100%;
+    height: 430px;
+  }
+
+  .lesson-title {
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    p {
+      color: #515151;
+      font-family: "Open Sans";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+    }
+  }
+
+  .button {
+    margin-bottom: 10px;
+    height: 50px;
+    justify-content: flex-start;
+  }
+
+  .test-button-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 40px;
+
+    .button {
+      width: 215px;
+      height: 60px;
+      color: #010101;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 25px;
+      text-transform: uppercase;
+      justify-content: center;
+
+    }
+  }
+}
+
+
+//.video-container {
+//    position: relative;
+//}
+//.overlay-video {
+//    cursor: pointer;
+//    position: absolute;
+//    background: rgba(0, 0, 0, 0.5) url(/images/play_btn.png) no-repeat center center;
+//    width: 100%;
+//    height: 100%;
+//    top: 0;
+//    left: 0;
+//    box-sizing: border-box;
+//}
+
+.plyr__control--overlaid {
+  z-index: 0 !important;
+}
+
+.pdf-download {
+  background: url(/images/download-black.png) no-repeat 99% center;
+
+  &:hover {
+    background: #37a2e9 url(/images/download-white.png) no-repeat 99% center !important;
+  }
+}
+
+.border-right {
+  border-right: 1px solid #d5d5d5;
+  margin-right: 15px;
+  @media (max-width: 640px) {
+    padding-right: 18px;
+  }
+}
+
+.need {
+  color: #37a2e9;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}

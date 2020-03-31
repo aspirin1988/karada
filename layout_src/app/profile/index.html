@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+<header>
+    <nav>
+        <a class="logo" href="/">
+            <img src="/images/Ellipse_8.png" alt="">
+            <div>
+                <span class="big">Karadau</span> <span class="small">Marketing univercity</span>
+            </div>
+        </a>
+        <div class="title">Личный кабинет</div>
+        <div ref="menu" class="menu">Меню <img src="/images/menu.svg" alt=""></div>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <div class="profile-grid">
+            <div class="block profile">
+                <div class="profile-ava"><img src="/images/Layer_8.png" alt=""></div>
+                <div class="profile-data">
+                    <div class="name">Владимир Булавин</div>
+                    <div>
+                        <label class="progress-label" for="">Курс по маркетингу: <b>50%</b></label>
+                        <div class="progress">
+                            <div style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="progress-label" for="">Курс по родажам: <b>75%</b></label>
+                        <div class="progress">
+                            <div style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="progress-label" for="">Личные цели: <b>10%</b></label>
+                        <div class="progress">
+                            <div style="width: 10%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="progress-label" for="">План продаж: <b>90%</b></label>
+                        <div class="progress">
+                            <div style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block motivation">
+                <a href="#" class="button circle button-yellow-fill ">Мотивация на сегодня:</a>
+                <div class="profile-ava"><img src="/images/2-layers.png" alt=""></div>
+                <a href="#" class="button round button-yellow-stroke "><img src="/images/cup.svg" alt="">перейти в
+                    раздел</a>
+            </div>
+            <div class="block sales_program">
+                <a href="#" class="sales_program_title">Мой план продаж:</a>
+                <span class="plan">250 000</span>
+                <span class="period">в месяц</span>
+                <div class="pie yellow" style="--p:87">
+                    <div class="center">
+                    </div>
+                </div>
+                <canvas id="pie" width="240" height="240"></canvas>
+                <a href="#" class="button round button-blue-stroke "><img src="/images/chart.svg" alt="">перейти в
+                    раздел</a>
+            </div>
+            <div class="block personal_goals">
+                <a href="#" class="personal_goals_title">Мой план продаж:</a>
+                <div class="slider">
+                    <div class="slider-container">
+                        <div class="slider-item active">
+                            <img src="/images/goals_1.png" alt="">
+                        </div>
+                        <div class="slider-item active">
+                            <img src="/images/goals_2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="slider-arrow-container">
+                        <span data-prew="" ><img src="/images/arrow_left.png" alt=""></span>
+                        <span data-next="" ><img src="/images/arrow_right.png" alt=""></span>
+                    </div>
+                </div>
+                <div class="display-flex">
+                <div class="status in_process">В процессе: <b>9</b></div>
+                <div class="status complete">Выполнено: <b>1</b></div>
+                <div class="status failed">Не сделано: <b>0</b></div>
+                <a href="#" class="button round button-blue-stroke "><img src="/images/goals.svg" alt="">
+                    <span>перейти в раздел</span>
+                </a>
+                </div>
+            </div>
+            <div class="block online courses">
+                <a href="#" class="courses_title">Онлайн курсы:</a>
+                <div class="courses_items">
+                    <div class="courses_item">
+                        <a href="#" class="courses_sub_title">Маркетинг</a>
+                        <div class="pie red" style="--p:87">
+                            <div class="center">
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div>
+                                <label class="progress-label" for="">Пройдено тем: <b>4</b></label>
+                                <div class="progress">
+                                    <div style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="progress-label" for="">Пройдено уроков: <b>21</b></label>
+                                <div class="progress">
+                                    <div style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="progress-label" for="">Сертификатов: <b>4 / 23</b></label>
+                                <div class="progress">
+                                    <div style="width: 10%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="time-title">Общее время:</span>
+                        <time>4 ч : 25 мин : 31 сек</time>
+                    </div>
+                    <div class="courses_item">
+                        <a href="#" class="courses_sub_title">Продажи</a>
+                        <div class="pie green" style="--p:87">
+                            <div class="center">
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div>
+                                <label class="progress-label" for="">Пройдено тем: <b>4</b></label>
+                                <div class="progress">
+                                    <div style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="progress-label" for="">Пройдено уроков: <b>21</b></label>
+                                <div class="progress">
+                                    <div style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="progress-label" for="">Сертификатов: <b>4 / 23</b></label>
+                                <div class="progress">
+                                    <div style="width: 10%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="time-title">Общее время:</span>
+                        <time>9 ч : 13 мин : 19 сек</time>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <a href="#" class="button round button-blue-stroke "><img src="/images/copy.svg" alt="">перейти в
+                        раздел</a>
+                    <a href="#" class="button round button-green-stroke "><img src="/images/play.svg" alt="">продолжить
+                        урок</a>
+                </div>
+            </div>
+            <div class="block my_rewards">
+                <a href="#" class="my_rewards_title">Мои награды:</a>
+                <div class="my_rewards_item">
+                    <span class="my_rewards_sub_title">Маркетинг</span>
+                    <img src="/images/Group_4.png" alt="">
+                    <div>
+                        <label class="progress-label" for="">Сертификатов: <b>4 / 23</b></label>
+                        <div class="progress">
+                            <div style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my_rewards_item">
+                    <span class="my_rewards_sub_title">Продажи</span>
+                    <img src="/images/Group_4.png" alt="">
+                    <div>
+                        <label class="progress-label" for="">Сертификатов: <b>9 / 20</b></label>
+                        <div class="progress">
+                            <div style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button round button-blue-stroke "><img src="/images/medal.svg" alt="">перейти в
+                    раздел</a>
+
+            </div>
+
+            <div class="block news_block">
+                <a href="#" class="news_block_title">Новости:</a>
+                <span class="news_count"><span>1</span></span>
+                <img src="/images/news.png" alt="">
+                <a href="#" class="button round button-blue-stroke "><img src="/images/shout.svg" alt="">перейти в
+                    раздел</a>
+            </div>
+            <div class="block help_block">
+                <a href="#" class="help_block_title">Помощь:</a>
+                <img src="/images/help.png" alt="">
+                <p class="help_block_sub_title">Ответы на самые популярные вопросы</p>
+                <a href="#" class="button round button-blue-stroke "><img src="/images/shout.svg" alt="">перейти в
+                    раздел</a>
+            </div>
+            <div class="block profile_block">
+                <a href="#" class="profile_block_title">Мой профиль:</a>
+                <a href="/profile/edit.html" class="button round button-blue-stroke "><img src="/images/config.svg" alt="">редактировать
+                    данные</a>
+                <a href="#" class="button round button-blue-stroke "><img src="/images/card.svg" alt="">данные по
+                    платежам</a>
+                <a href="#" class="button round button-blue-stroke "><img src="/images/lock.svg" alt="">сменить
+                    пароль</a>
+                <a href="#" class="button round button-blue-stroke "><img src="/images/exit.svg" alt="">выйти</a>
+            </div>
+
+
+        </div>
+    </div>
+</main>
+<div class="offcanvas" ref="menu_modal">
+    <div class="overlay"></div>
+    <div class="offcanvas-container">
+        <div class="close" ref="menu_modal_close">закрыть</div>
+        <div class="menu-ava">
+            <div class="ava">
+                <img src="/images/Layer_8.png" alt="">
+                <a href="#" class="button round button-blue-stroke "><img src="/images/play.svg" alt="">продолжить урок</a>
+            </div>
+        </div>
+        <ul class="menu-list">
+            <li><img src="/images/user.svg" alt=""><a href="#">личный кабинет</a></li>
+            <li><img src="/images/chart.svg" alt=""><a href="#">план продаж</a></li>
+            <li><img src="/images/target.svg" alt=""><a href="#">личные цели</a></li>
+            <li><img src="/images/cup.svg" alt=""><a href="#">Мотивация</a></li>
+            <li><img src="/images/copy.svg" alt=""><a href="#">Онлайн курсы</a></li>
+            <li><img src="/images/medal.svg" alt=""><a href="#">Дипломы и сертификаты</a></li>
+            <li><img src="/images/shout.svg" alt=""><a href="#">Новости</a></li>
+            <li><img src="/images/help.svg" alt=""><a href="#">помощь</a></li>
+            <li><img src="/images/university.svg" alt=""><a href="#">об университете</a></li>
+            <li><img src="/images/exit.svg" alt=""><a href="#">выйти</a></li>
+        </ul>
+    </div>
+</div>
+<div class="offcanvas" ref="sales_program_modal">
+    <div class="overlay"></div>
+    <div class="center-center">
+        <div class="block modal-body">
+            <div class="sales_program">
+                <a href="#" class="sales_program_title">Мой план продаж:</a>
+                <span class="plan">250 000</span>
+                <span class="period">в месяц</span>
+                <div class="pie yellow" style="--p:87">
+                    <div class="center">
+                    </div>
+                </div>
+                <div class="modal-body-sub-header">
+                    Поднажми!
+                </div>
+                <a href="#" ref="sales_program_modal_close" class="button round button-blue-stroke ">я сделаю это!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="offcanvas" ref="personal_goals_modal">
+    <div class="center-center">
+        <div class="block modal-body">
+            <div>
+                <a href="#" class="modal-body-header">Не забывай, ради чего ты здесь!</a>
+                <div class="slider">
+                    <div class="slider-container">
+                        <div class="slider-item active">
+                            <img src="/images/goals_1.png" alt="">
+                        </div>
+                        <div class="slider-item active">
+                            <img src="/images/goals_2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="slider-arrow-container">
+                        <span><img src="/images/arrow_left.png" alt=""></span>
+                        <span><img src="/images/arrow_right.png" alt=""></span>
+                    </div>
+                </div>
+                <div class="status in_process">В процессе: <b>9</b></div>
+                <div class="status complete">Выполнено: <b>1</b></div>
+                <div class="status failed">Не сделано: <b>0</b></div>
+                <a href="#" ref="personal_goals_modal_close" class="button round button-blue-stroke "><span>вперёд!</span></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="offcanvas" ref="motivation_modal">
+    <div class="center-center">
+        <div class="block modal-body">
+            <a href="#" class="modal-body-header">Мотивация на сегодня:</a>
+            <img src="/images/_DSC8514.png" alt="">
+            <p class="modal-body-sub-header">У тебя всё получится!</p>
+            <a href="#" ref="motivation_modal_close" class="button round button-blue-stroke">я готов!</a>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="copyright">
+                <b>Karadau University, 2019</b>
+                Все права защищены
+            </div>
+            <div class="privacy_policy">
+                Политика конфиденциальности
+                Договор оферты
+            </div>
+            <div class="contacts">
+                <a href="tel:+7(705)2711177">+7 (705) 271 11 77</a>
+                <a href="mailto:info@karadau.kz">info@karadau.kz</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/js/profile.js"></script>
+</body>
+</html>
