@@ -68105,7 +68105,7 @@ var render = function() {
                   ? _c("div", { staticClass: "uk-margin" }, [
                       _c("div", { staticClass: "uk-form-controls" }, [
                         _c("table", { staticClass: "uk-table" }, [
-                          _c("caption", [_vm._v("Подразделы курса")]),
+                          _c("caption", [_vm._v("Уроки подраздела")]),
                           _vm._v(" "),
                           _vm._m(1),
                           _vm._v(" "),

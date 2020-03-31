@@ -94,7 +94,7 @@
 <!--                            <button class="uk-button uk-button-small uk-button-primary"><i uk-icon="plus" ></i></button>-->
                             <div class="uk-form-controls">
                                 <table class="uk-table">
-                                    <caption>Подразделы курса</caption>
+                                    <caption>Уроки подраздела</caption>
                                     <thead>
                                     <tr>
                                         <th>Id</th>
