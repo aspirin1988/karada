@@ -73,6 +73,8 @@ class SectionController extends Controller
 
     public function getEdit($id)
     {
+        $user = Auth::user();
+
         $section = Section::where('id', $id)->first();
         $thumb_section_url = Media::where('id', $section->thumb)->first();
         $thumb_category_url = Media::where('id', $section->thumb_category)->first();
@@ -81,6 +83,8 @@ class SectionController extends Controller
 
         $section->lessons = Lesson::where('section_id', $section->id)->get();
         $section->sections = Section::where('parent_id', $section->id)->get();
+
+        $section->delete = ($user->isRole('super admin') || $user->isRole('admin'));
 
 
         return response()->json($section);
@@ -93,6 +97,7 @@ class SectionController extends Controller
         unset($data['thumb_category_url']);
         unset($data['lessons']);
         unset($data['sections']);
+        unset($data['delete']);
 
         $section = Section::where('id', $id)->update($data);
 
