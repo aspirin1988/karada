@@ -414,8 +414,7 @@ p {
     margin-left: 50px;
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     left: 0;
   }
 }
@@ -432,8 +431,7 @@ p {
     height: 60vh;
     width: 67vw;
     right: 50%;
-    -webkit-transform: translate(50%, 0);
-            transform: translate(50%, 0);
+    transform: translate(50%, 0);
   }
 }
 
@@ -448,16 +446,14 @@ p {
     height: 600px;
     width: 50%;
     right: 30%;
-    -webkit-transform: translate(50%, 0);
-            transform: translate(50%, 0);
+    transform: translate(50%, 0);
   }
 }
 
 @media (min-width: 1200px) {
   .business-card .business-card-img {
     width: 50%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
     right: 0;
     min-width: 470px;
     height: 80vh;
@@ -468,8 +464,7 @@ p {
 @media (min-width: 1367px) {
   .business-card .business-card-img {
     width: 40%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
     right: 0;
     min-width: 470px;
     height: 80vh;
@@ -835,9 +830,7 @@ header nav {
 .program-speech .uk-accordion-title::before {
   stroke: #ffa500;
   background-image: url(/images/icon/close.svg);
-  transition: 0.5s -webkit-transform;
   transition: 0.5s transform;
-  transition: 0.5s transform, 0.5s -webkit-transform;
 }
 
 .course-content .uk-open > .uk-accordion-title,
@@ -847,8 +840,7 @@ header nav {
 
 .course-content .uk-open > .uk-accordion-title::before,
 .program-speech .uk-open > .uk-accordion-title::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   content: "";
   width: 1.4em;
   height: 1.4em;
@@ -928,9 +920,7 @@ header nav {
 .course_video .uk-accordion .uk-accordion-title::before {
   stroke: #ffa500;
   background-image: url(/images/icon/arrow_down.svg);
-  transition: 0.5s -webkit-transform;
   transition: 0.5s transform;
-  transition: 0.5s transform, 0.5s -webkit-transform;
 }
 
 .course_video .uk-accordion .uk-open > .uk-accordion-title {
@@ -938,8 +928,7 @@ header nav {
 }
 
 .course_video .uk-accordion .uk-open > .uk-accordion-title::before {
-  -webkit-transform: rotateX(-180deg);
-          transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
   content: "";
   width: 1.4em;
   height: 1.4em;
@@ -1006,8 +995,7 @@ header nav {
 @media (min-width: 960px) {
   .uk-modal-close-outside {
     right: 0;
-    -webkit-transform: translate(300%, 0);
-            transform: translate(300%, 0);
+    transform: translate(300%, 0);
   }
 }
 
@@ -1021,8 +1009,7 @@ header nav {
   .uk-modal-close-outside {
     width: 30px;
     height: 30px;
-    -webkit-transform: translate(0, -140%);
-            transform: translate(0, -140%);
+    transform: translate(0, -140%);
   }
 }
 
@@ -1410,8 +1397,7 @@ header nav {
 .consulting #founder .uk-slideshow-dots-container {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-100%);
-          transform: translateY(-50%) translateX(-100%);
+  transform: translateY(-50%) translateX(-100%);
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -1424,18 +1410,15 @@ header nav {
     position: relative;
     top: 0;
     flex-direction: row !important;
-    -webkit-transform: translateY(0) translateX(0);
-            transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
   }
 
   .consulting #founder .uk-slideshow-dots-container .uk-slider-arrow-up {
-    -webkit-transform: rotate(-90deg) translate(0%, -70%);
-            transform: rotate(-90deg) translate(0%, -70%);
+    transform: rotate(-90deg) translate(0%, -70%);
   }
 
   .consulting #founder .uk-slideshow-dots-container .uk-slider-arrow-down {
-    -webkit-transform: rotate(-90deg) translate(0%, 70%);
-            transform: rotate(-90deg) translate(0%, 70%);
+    transform: rotate(-90deg) translate(0%, 70%);
   }
 
   .consulting #founder .uk-slideshow-dots-container .uk-slideshow-nav {
@@ -1515,8 +1498,7 @@ header nav {
     height: 31px;
     background: url(/images/consulting/strelka-vverh.png) no-repeat center center/cover;
     transition: background 0.5s;
-    -webkit-transform: rotate(-90deg) translate(0, -70%);
-            transform: rotate(-90deg) translate(0, -70%);
+    transform: rotate(-90deg) translate(0, -70%);
   }
 
   .consulting #mass-media .uk-arrow-container .uk-slider-arrow-left:hover {
@@ -1529,8 +1511,7 @@ header nav {
     height: 31px;
     background: url(/images/consulting/strelka-vniz.png) no-repeat center center/cover;
     transition: background 0.5s;
-    -webkit-transform: rotate(-90deg) translate(0, 70%);
-            transform: rotate(-90deg) translate(0, 70%);
+    transform: rotate(-90deg) translate(0, 70%);
   }
 
   .consulting #mass-media .uk-arrow-container .uk-slider-arrow-right:hover {
@@ -1592,8 +1573,7 @@ header nav {
 .consulting #mass-media .uk-slideshow-dots-container {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-100%);
-          transform: translateY(-50%) translateX(-100%);
+  transform: translateY(-50%) translateX(-100%);
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -1606,18 +1586,15 @@ header nav {
     position: relative;
     top: 0;
     flex-direction: row !important;
-    -webkit-transform: translateY(0) translateX(0);
-            transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
   }
 
   .consulting #mass-media .uk-slideshow-dots-container .uk-slider-arrow-up {
-    -webkit-transform: rotate(-90deg) translate(0%, -70%);
-            transform: rotate(-90deg) translate(0%, -70%);
+    transform: rotate(-90deg) translate(0%, -70%);
   }
 
   .consulting #mass-media .uk-slideshow-dots-container .uk-slider-arrow-down {
-    -webkit-transform: rotate(-90deg) translate(0%, 70%);
-            transform: rotate(-90deg) translate(0%, 70%);
+    transform: rotate(-90deg) translate(0%, 70%);
   }
 
   .consulting #mass-media .uk-slideshow-dots-container .uk-slideshow-nav {
@@ -1959,8 +1936,7 @@ header nav {
     height: 31px;
     background: url(/images/consulting/strelka-vverh.png) no-repeat center center/cover;
     transition: background 0.5s;
-    -webkit-transform: rotate(-90deg) translate(0, -70%);
-            transform: rotate(-90deg) translate(0, -70%);
+    transform: rotate(-90deg) translate(0, -70%);
   }
 
   .consulting #reviews .uk-arrow-container .uk-slider-arrow-left:hover {
@@ -1973,8 +1949,7 @@ header nav {
     height: 31px;
     background: url(/images/consulting/strelka-vniz.png) no-repeat center center/cover;
     transition: background 0.5s;
-    -webkit-transform: rotate(-90deg) translate(0, 70%);
-            transform: rotate(-90deg) translate(0, 70%);
+    transform: rotate(-90deg) translate(0, 70%);
   }
 
   .consulting #reviews .uk-arrow-container .uk-slider-arrow-right:hover {
@@ -2133,8 +2108,7 @@ header nav {
 @media (max-width: 640px) {
   .consulting #reviews .uk-slider-container .uk-position-center-left {
     left: 20vw;
-    -webkit-transform: translateY(-50%) translateY(5px);
-            transform: translateY(-50%) translateY(5px);
+    transform: translateY(-50%) translateY(5px);
   }
 }
 
@@ -2145,8 +2119,7 @@ header nav {
 @media (max-width: 640px) {
   .consulting #reviews .uk-slider-container .uk-position-center-right {
     right: 20vw;
-    -webkit-transform: translateY(-50%) translateY(5px);
-            transform: translateY(-50%) translateY(5px);
+    transform: translateY(-50%) translateY(5px);
   }
 }
 
@@ -2685,8 +2658,7 @@ footer.consulting .uk-text-copyright + a {
 
 .uk-lightbox-toolbar {
   opacity: 1;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
   background: transparent;
 }
 

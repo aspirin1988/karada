@@ -181,7 +181,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/karada/resources/js/app_icons.js */"./resources/js/app_icons.js");
+module.exports = __webpack_require__(/*! /home/serg/PhpstormProjects/karada_master/resources/js/app_icons.js */"./resources/js/app_icons.js");
 
 
 /***/ })

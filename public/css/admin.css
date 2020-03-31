@@ -1233,8 +1233,7 @@ select {
 
 .uk-notification-top-center {
   top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 
 .uk-notification-message-danger {

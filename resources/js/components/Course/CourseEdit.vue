@@ -127,7 +127,7 @@
                             <button @click="pageSave(false)" class="uk-button uk-button-success" type="button">
                                 Сохранить
                             </button>
-                            <a :href="'/admin/course/'" class="uk-button uk-button-danger" type="button">Отмена</a>
+                            <a :href="'/admin/courses/'" class="uk-button uk-button-danger" type="button">Отмена</a>
                         </div>
                     </div>
                 </header>

@@ -1532,8 +1532,7 @@ header nav .menu img {
 .pie {
   width: 200px;
   height: 200px;
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  transform: rotateY(0deg);
   box-sizing: border-box;
   border-radius: 100%;
   transition: all 1s ease-in;
@@ -1599,8 +1598,7 @@ header nav .menu img {
 }
 
 .pie .center {
-  -webkit-transform: translate(-50%, -50%) rotateY(0deg);
-          transform: translate(-50%, -50%) rotateY(0deg);
+  transform: translate(-50%, -50%) rotateY(0deg);
   width: 120px;
   height: 120px;
   background-color: #ffffff;
@@ -1627,8 +1625,7 @@ header nav .menu img {
   width: calc(var(--n) * 100%);
   height: 50vw;
   max-height: 100vh;
-  -webkit-transform: translate(calc(var(--i, 0) / var(--n) * -100%));
-          transform: translate(calc(var(--i, 0) / var(--n) * -100%));
+  transform: translate(calc(var(--i, 0) / var(--n) * -100%));
 }
 
 .slider .slide-items .slide-item {
@@ -1701,8 +1698,7 @@ header nav .menu img {
   position: absolute;
   top: 50%;
   width: 100%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  transform: translate(0, -50%);
   z-index: 2;
 }
 
@@ -2314,8 +2310,7 @@ footer .contacts a {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 768px) {
@@ -2380,8 +2375,7 @@ footer .contacts a {
 [rel=personal_goals_modal] .center-center .modal-body {
   width: 780px;
   height: 560px;
-  -webkit-transform: translate(0, 10px);
-          transform: translate(0, 10px);
+  transform: translate(0, 10px);
 }
 
 [ref=sales_program_modal] .sales_program,
@@ -2422,8 +2416,7 @@ footer .contacts a {
 [rel=sales_program_modal] .center-center .modal-body {
   width: 760px;
   height: 560px;
-  -webkit-transform: translate(0, 20px);
-          transform: translate(0, 20px);
+  transform: translate(0, 20px);
 }
 
 [ref=motivation_modal] .close,
@@ -3796,8 +3789,7 @@ main {
   border-bottom: 3px solid #0aa540;
   right: 20px;
   top: 20px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 @media (max-width: 768px) {
