@@ -8988,6 +8988,65 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['method', 'current_page', 'user_type'],
   data: function data() {
@@ -8998,9 +9057,13 @@ __webpack_require__.r(__webpack_exports__);
       delete_item: {},
       delete_dialog: false,
       video_modal: false,
+      add_modal: false,
       is_delete: false,
       path: window.location.pathname,
       current_motivation: {
+        title: ''
+      },
+      new_motivation: {
         title: ''
       },
       types: {
@@ -9017,14 +9080,27 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.delete_dialog = this.$refs['delete-save'];
     this.video_modal = this.$refs['video'];
+    this.add_modal = this.$refs['add'];
     this.getList();
   },
   methods: {
+    ShowAdd: function ShowAdd() {
+      UIkit.modal(this.add_modal).show();
+    },
+    CreateNew: function CreateNew() {
+      console.log(this.new_motivation);
+    },
     getDate: function getDate(date) {
       return date.substring(0, date.length - 9);
     },
     Checked: function Checked() {
       if (this.current_motivation.title.length >= 70) {
+        event.preventDefault();
+        return false;
+      }
+    },
+    CheckedNew: function CheckedNew() {
+      if (this.new_motivation.title.length >= 70) {
         event.preventDefault();
         return false;
       }
@@ -9059,9 +9135,20 @@ __webpack_require__.r(__webpack_exports__);
       this.video_name = '';
       this.video_list = [];
     },
+    addVideoNew: function addVideoNew(item) {
+      this.new_motivation.video_id = item.id;
+      this.new_motivation.video = item.video;
+      this.new_motivation.video_ = item;
+      this.video_name = '';
+      this.video_list = [];
+    },
     removeVideo: function removeVideo(item) {
       this.current_motivation.video = 0;
       this.current_motivation.video_ = {};
+    },
+    removeVideoNew: function removeVideoNew(item) {
+      this.new_motivation.video = 0;
+      this.new_motivation.video_ = {};
     },
     clone: function clone(item) {
       var _this2 = this;
@@ -63011,7 +63098,14 @@ var render = function() {
           _vm._v("Мотивации "),
           _c(
             "button",
-            { staticClass: "uk-button uk-button-primary" },
+            {
+              staticClass: "uk-button uk-button-small uk-button-primary",
+              on: {
+                click: function($event) {
+                  return _vm.ShowAdd()
+                }
+              }
+            },
             [_c("spna", { attrs: { "uk-icon": "plus" } })],
             1
           )
@@ -63602,6 +63696,290 @@ var render = function() {
                   }
                 },
                 [_vm._v("Сохранить")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "uk-button uk-button-danger uk-modal-close",
+                  attrs: { type: "button" }
+                },
+                [_vm._v("Закрыть")]
+              )
+            ])
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        ref: "add",
+        staticClass: "uk-flex-top",
+        attrs: { id: "add", "uk-modal": "" }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "uk-modal-dialog uk-modal-body uk-margin-auto-vertical"
+          },
+          [
+            _c("div", { staticClass: "uk-margin" }, [
+              _c(
+                "label",
+                { staticClass: "uk-form-label", attrs: { for: "title" } },
+                [_vm._v("Заголовок:*")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "uk-form-controls" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.new_motivation.title,
+                      expression: "new_motivation.title"
+                    }
+                  ],
+                  staticClass: "uk-input uk-form-width-large",
+                  attrs: {
+                    id: "title",
+                    type: "text",
+                    placeholder: "Заголовок",
+                    autocomplete: "off"
+                  },
+                  domProps: { value: _vm.new_motivation.title },
+                  on: {
+                    keypress: _vm.CheckedNew,
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.new_motivation, "title", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("label", [
+                  _vm._v(_vm._s(_vm.new_motivation.title.length) + "/70")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "uk-margin" }, [
+              _c(
+                "label",
+                { staticClass: "uk-form-label", attrs: { for: "day" } },
+                [_vm._v("День:*")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "uk-form-controls" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.new_motivation.day,
+                      expression: "new_motivation.day"
+                    }
+                  ],
+                  staticClass: "uk-input uk-form-width-large",
+                  attrs: {
+                    id: "day",
+                    type: "text",
+                    placeholder: "Заголовок",
+                    autocomplete: "off"
+                  },
+                  domProps: { value: _vm.new_motivation.day },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.new_motivation, "day", $event.target.value)
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "uk-margin" }, [
+              _c(
+                "label",
+                { staticClass: "uk-form-label", attrs: { for: "tag" } },
+                [_vm._v("Видео:")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "uk-form-controls" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.video_name,
+                      expression: "video_name"
+                    }
+                  ],
+                  staticClass: "uk-input uk-form-width-large",
+                  attrs: {
+                    type: "text",
+                    id: "tag",
+                    placeholder: "Название видео",
+                    autocomplete: "off"
+                  },
+                  domProps: { value: _vm.video_name },
+                  on: {
+                    keyup: _vm.findVideo,
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.video_name = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  {
+                    staticClass:
+                      "uk-list uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-2"
+                  },
+                  _vm._l(_vm.video_list, function(item) {
+                    return _c("li", [
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "uk-button uk-button-primary uk-width-1-2"
+                        },
+                        [_vm._v(_vm._s(item.title))]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "uk-button uk-button-success",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              return _vm.addVideoNew(item)
+                            }
+                          }
+                        },
+                        [_c("i", { attrs: { "uk-icon": "plus" } })]
+                      )
+                    ])
+                  }),
+                  0
+                ),
+                _vm._v(" "),
+                _vm.new_motivation.video_
+                  ? _c(
+                      "div",
+                      {
+                        staticClass: "uk-margin-top uk-margin-bottom",
+                        attrs: { id: "tag_list" }
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "uk-badge uk-margin-small-right uk-margin-small-bottom"
+                          },
+                          [
+                            _vm._v(
+                              "\n                                " +
+                                _vm._s(_vm.new_motivation.video_.title) +
+                                "\n                                "
+                            ),
+                            _c("a", {
+                              staticClass:
+                                "uk-button-danger uk-border-rounded uk-margin-small-left",
+                              attrs: { "uk-icon": "close" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.removeVideoNew(_vm.item)
+                                }
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    )
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c("video", {
+                attrs: { controls: "controls", src: _vm.new_motivation.video },
+                on: {
+                  click: function($event) {
+                    return _vm.PlayPause($event)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "uk-margin" }, [
+              _c(
+                "label",
+                { staticClass: "uk-form-label", attrs: { for: "description" } },
+                [_vm._v("Опсание:*")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "uk-form-controls" }, [
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.new_motivation.description,
+                      expression: "new_motivation.description"
+                    }
+                  ],
+                  staticClass: "uk-textarea",
+                  attrs: {
+                    rows: "5",
+                    id: "description",
+                    type: "text",
+                    placeholder: "Заголовок",
+                    autocomplete: "off"
+                  },
+                  domProps: { value: _vm.new_motivation.description },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.new_motivation,
+                        "description",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "uk-text-right" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "uk-button uk-button-primary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.CreateNew()
+                    }
+                  }
+                },
+                [_vm._v("Создать")]
               ),
               _vm._v(" "),
               _c(

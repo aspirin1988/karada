@@ -2,7 +2,7 @@
     <div>
         <header class="uk-content-header uk-background-default">
             <div class="title">
-                <h2>Мотивации <button class="uk-button uk-button-primary" ><spna uk-icon="plus"></spna></button> </h2>
+                <h2>Мотивации <button @click="ShowAdd()" class="uk-button uk-button-small uk-button-primary" ><spna uk-icon="plus"></spna></button> </h2>
             </div>
             <div class="js-upload uk-placeholder uk-text-center uk-position-relative">
                 <input :style="{opacity:0, zIndex: 1}" class="uk-height-1-1 uk-position-top-left uk-width-1-1"
@@ -146,6 +146,65 @@
                 </p>
             </div>
         </div>
+        <div id="add" class="uk-flex-top" ref="add" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="title">Заголовок:*</label>
+                    <div class="uk-form-controls">
+                        <input v-model="new_motivation.title" class="uk-input uk-form-width-large" id="title" type="text"
+                               placeholder="Заголовок" autocomplete="off" @keypress="CheckedNew" >
+                        <label>{{new_motivation.title.length}}/70</label>
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="day">День:*</label>
+                    <div class="uk-form-controls">
+                        <input v-model="new_motivation.day" class="uk-input uk-form-width-large" id="day" type="text"
+                               placeholder="Заголовок" autocomplete="off">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label for="tag" class="uk-form-label">Видео:</label>
+                    <div class="uk-form-controls">
+                        <input type="text" id="tag"
+                               class="uk-input uk-form-width-large"
+                               placeholder="Название видео" v-model="video_name" @keyup="findVideo" autocomplete="off">
+                        <ul class="uk-list uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-2">
+                            <li v-for="item in video_list">
+                                <a class="uk-button uk-button-primary uk-width-1-2">{{item.title}}</a>
+                                <button type="button" class="uk-button uk-button-success"
+                                        @click="addVideoNew(item)">
+                                    <i uk-icon="plus"></i>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="uk-margin-top uk-margin-bottom" id="tag_list" v-if="new_motivation.video_">
+                            <div class="uk-badge uk-margin-small-right uk-margin-small-bottom">
+                                {{new_motivation.video_.title}}
+                                <a uk-icon="close"
+                                   class="uk-button-danger uk-border-rounded uk-margin-small-left"
+                                   @click="removeVideoNew(item)"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <video controls="controls" @click="PlayPause($event)" :src="new_motivation.video"></video>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="description">Опсание:*</label>
+                    <div class="uk-form-controls">
+                        <textarea v-model="new_motivation.description" class="uk-textarea" rows="5" id="description"
+                                  type="text"
+                                  placeholder="Заголовок" autocomplete="off"></textarea>
+                    </div>
+                </div>
+                <p class="uk-text-right">
+                    <button class="uk-button uk-button-primary" @click="CreateNew()" type="button">Создать</button>
+                    <button class="uk-button uk-button-danger uk-modal-close" type="button">Закрыть</button>
+                </p>
+            </div>
+        </div>
 
     </div>
 </template>
@@ -161,9 +220,13 @@
                 delete_item: {},
                 delete_dialog: false,
                 video_modal: false,
+                add_modal: false,
                 is_delete: false,
                 path: window.location.pathname,
                 current_motivation: {
+                    title:'',
+                },
+                new_motivation: {
                     title:'',
                 },
                 types: {
@@ -180,15 +243,28 @@
         mounted() {
             this.delete_dialog = this.$refs['delete-save'];
             this.video_modal = this.$refs['video'];
+            this.add_modal = this.$refs['add'];
 
             this.getList();
         },
         methods: {
+            ShowAdd:function(){
+                UIkit.modal(this.add_modal).show();
+            },
+            CreateNew:function(){
+                console.log(this.new_motivation);
+            },
             getDate:function(date){
                 return date.substring(0, date.length - 9);
             },
             Checked: function () {
                 if (this.current_motivation.title.length >= 70) {
+                    event.preventDefault();
+                    return false;
+                }
+            },
+            CheckedNew: function () {
+                if (this.new_motivation.title.length >= 70) {
                     event.preventDefault();
                     return false;
                 }
@@ -222,9 +298,23 @@
                 this.video_name = '';
                 this.video_list = [];
             },
+            addVideoNew: function (item) {
+
+                this.new_motivation.video_id = item.id;
+                this.new_motivation.video = item.video;
+                this.new_motivation.video_ = item;
+
+                this.video_name = '';
+                this.video_list = [];
+            },
             removeVideo: function (item) {
                 this.current_motivation.video = 0;
                 this.current_motivation.video_ = {};
+
+            },
+            removeVideoNew: function (item) {
+                this.new_motivation.video = 0;
+                this.new_motivation.video_ = {};
 
             },
             clone: function (item) {
