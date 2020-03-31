@@ -9047,6 +9047,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['method', 'current_page', 'user_type'],
   data: function data() {
@@ -63106,8 +63107,7 @@ var render = function() {
                 }
               }
             },
-            [_c("spna", { attrs: { "uk-icon": "plus" } })],
-            1
+            [_c("span", { attrs: { "uk-icon": "plus" } })]
           )
         ])
       ]),
@@ -63762,6 +63762,8 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
                 _c("label", [
                   _vm._v(_vm._s(_vm.new_motivation.title.length) + "/70")
                 ])
@@ -63789,7 +63791,7 @@ var render = function() {
                   attrs: {
                     id: "day",
                     type: "text",
-                    placeholder: "Заголовок",
+                    placeholder: "День",
                     autocomplete: "off"
                   },
                   domProps: { value: _vm.new_motivation.day },
@@ -63947,7 +63949,7 @@ var render = function() {
                     rows: "5",
                     id: "description",
                     type: "text",
-                    placeholder: "Заголовок",
+                    placeholder: "Опсание",
                     autocomplete: "off"
                   },
                   domProps: { value: _vm.new_motivation.description },

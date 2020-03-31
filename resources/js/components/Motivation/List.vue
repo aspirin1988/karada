@@ -2,7 +2,9 @@
     <div>
         <header class="uk-content-header uk-background-default">
             <div class="title">
-                <h2>Мотивации <button @click="ShowAdd()" class="uk-button uk-button-small uk-button-primary" ><spna uk-icon="plus"></spna></button> </h2>
+                <h2>Мотивации <button @click="ShowAdd()" class="uk-button uk-button-small uk-button-primary" >
+                    <span uk-icon="plus"></span></button>
+                </h2>
             </div>
             <div class="js-upload uk-placeholder uk-text-center uk-position-relative">
                 <input :style="{opacity:0, zIndex: 1}" class="uk-height-1-1 uk-position-top-left uk-width-1-1"
@@ -153,6 +155,7 @@
                     <div class="uk-form-controls">
                         <input v-model="new_motivation.title" class="uk-input uk-form-width-large" id="title" type="text"
                                placeholder="Заголовок" autocomplete="off" @keypress="CheckedNew" >
+                        <br>
                         <label>{{new_motivation.title.length}}/70</label>
                     </div>
                 </div>
@@ -160,7 +163,7 @@
                     <label class="uk-form-label" for="day">День:*</label>
                     <div class="uk-form-controls">
                         <input v-model="new_motivation.day" class="uk-input uk-form-width-large" id="day" type="text"
-                               placeholder="Заголовок" autocomplete="off">
+                               placeholder="День" autocomplete="off">
                     </div>
                 </div>
                 <div class="uk-margin">
@@ -196,7 +199,7 @@
                     <div class="uk-form-controls">
                         <textarea v-model="new_motivation.description" class="uk-textarea" rows="5" id="description"
                                   type="text"
-                                  placeholder="Заголовок" autocomplete="off"></textarea>
+                                  placeholder="Опсание" autocomplete="off"></textarea>
                     </div>
                 </div>
                 <p class="uk-text-right">

@@ -130,4 +130,17 @@ class AdminMotivationController extends Controller
 
     }
 
+    public function create(Request $request)
+    {
+        $data = $request->all();
+        unset($data['id']);
+        unset($data['video']);
+        unset($data['video_']);
+        unset($data['thumb']);
+
+        $motivation = Motivation::create($data);
+
+        return response()->json(['result' => true]);
+    }
+
 }

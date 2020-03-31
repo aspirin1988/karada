@@ -176,6 +176,7 @@ Route::middleware(['admin', 'active'])->group(function () {
     Route::get('/admin/doc/{page?}', 'AdminDocController@index');
 
     Route::post('/admin/motivation/clone', 'AdminMotivationController@clone');
+    Route::post('/admin/motivation/create', 'AdminMotivationController@create');
     Route::post('/admin/motivation/update', 'AdminMotivationController@update');
     Route::post('/admin/video/upload/motivation', 'AdminMotivationController@uploadVideo');
     Route::post('/admin/motivation/get/{page?}', 'AdminMotivationController@getList');
