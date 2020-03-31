@@ -111,7 +111,7 @@
                                                :href="'/admin/section/edit/'+item.id">
                                                 <span class="uk-text-success" uk-icon="file-edit"></span>
                                             </a>
-                                            <button class="uk-button uk-button-default"><span uk-icon="trash"></span></button>
+                                            <button v-if="is_delete" class="uk-button uk-button-default"><span uk-icon="trash"></span></button>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -139,7 +139,7 @@
                                                :href="'/admin/lesson/edit/'+item.id">
                                                 <span class="uk-text-success" uk-icon="file-edit"></span>
                                             </a>
-                                            <button class="uk-button uk-button-default" @click="DeleteLesson(item)" ><span uk-icon="trash"></span></button>
+                                            <button v-if="is_delete" class="uk-button uk-button-default" @click="DeleteLesson(item)" ><span uk-icon="trash"></span></button>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -263,6 +263,7 @@
                 dir_name: '',
                 sort_field: 'created_at',
                 sort_method: true,
+                is_delete: true,
                 template: '',
                 template_content: '',
                 cmOptions: {
@@ -309,6 +310,7 @@
                     let data = response.data;
                     this.list = data;
                     this.list.description = data.description || '<p>&nbsp;</p>';
+                    this.is_delete = data.delete;
 
                 });
             },

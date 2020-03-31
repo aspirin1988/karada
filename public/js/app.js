@@ -11442,6 +11442,7 @@ window.DIFF_EQUAL = 0;
       dir_name: '',
       sort_field: 'created_at',
       sort_method: true,
+      is_delete: true,
       template: '',
       template_content: '',
       cmOptions: {
@@ -11493,6 +11494,7 @@ window.DIFF_EQUAL = 0;
         var data = response.data;
         _this3.list = data;
         _this3.list.description = data.description || '<p>&nbsp;</p>';
+        _this3.is_delete = data["delete"];
       });
     },
     closeAddDir: function closeAddDir() {
@@ -29358,7 +29360,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /*\n\n    Name:       Base16 Default Light\n    Author:     Chris Kempson (http://chriskempson.com)\n\n    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-codemirror)\n    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)\n\n*/\n.cm-s-base16-light.CodeMirror {\n        background: #f5f5f5;\n        color: #202020;\n}\n.cm-s-base16-light div.CodeMirror-selected {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::-moz-selection, .cm-s-base16-light .CodeMirror-line > span::-moz-selection, .cm-s-base16-light .CodeMirror-line > span > span::-moz-selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::selection, .cm-s-base16-light .CodeMirror-line > span::selection, .cm-s-base16-light .CodeMirror-line > span > span::selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::-moz-selection, .cm-s-base16-light .CodeMirror-line > span::-moz-selection, .cm-s-base16-light .CodeMirror-line > span > span::-moz-selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-gutters {\n        background: #f5f5f5;\n        border-right: 0px;\n}\n.cm-s-base16-light .CodeMirror-guttermarker {\n        color: #ac4142;\n}\n.cm-s-base16-light .CodeMirror-guttermarker-subtle {\n        color: #b0b0b0;\n}\n.cm-s-base16-light .CodeMirror-linenumber {\n        color: #b0b0b0;\n}\n.cm-s-base16-light .CodeMirror-cursor {\n        border-left: 1px solid #505050;\n}\n.cm-s-base16-light span.cm-comment {\n        color: #8f5536;\n}\n.cm-s-base16-light span.cm-atom {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-number {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-property, .cm-s-base16-light span.cm-attribute {\n        color: #90a959;\n}\n.cm-s-base16-light span.cm-keyword {\n        color: #ac4142;\n}\n.cm-s-base16-light span.cm-string {\n        color: #f4bf75;\n}\n.cm-s-base16-light span.cm-variable {\n        color: #90a959;\n}\n.cm-s-base16-light span.cm-variable-2 {\n        color: #6a9fb5;\n}\n.cm-s-base16-light span.cm-def {\n        color: #d28445;\n}\n.cm-s-base16-light span.cm-bracket {\n        color: #202020;\n}\n.cm-s-base16-light span.cm-tag {\n        color: #ac4142;\n}\n.cm-s-base16-light span.cm-link {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-error {\n        background: #ac4142;\n        color: #505050;\n}\n.cm-s-base16-light .CodeMirror-activeline-background {\n        background: #DDDCDC;\n}\n.cm-s-base16-light .CodeMirror-matchingbracket {\n        color: #f5f5f5 !important;\n        background-color: #6A9FB5 !important\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /*\n\n    Name:       Base16 Default Light\n    Author:     Chris Kempson (http://chriskempson.com)\n\n    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-codemirror)\n    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)\n\n*/\n.cm-s-base16-light.CodeMirror {\n        background: #f5f5f5;\n        color: #202020;\n}\n.cm-s-base16-light div.CodeMirror-selected {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::-moz-selection, .cm-s-base16-light .CodeMirror-line > span::-moz-selection, .cm-s-base16-light .CodeMirror-line > span > span::-moz-selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::selection, .cm-s-base16-light .CodeMirror-line > span::selection, .cm-s-base16-light .CodeMirror-line > span > span::selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::-moz-selection, .cm-s-base16-light .CodeMirror-line > span::-moz-selection, .cm-s-base16-light .CodeMirror-line > span > span::-moz-selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-gutters {\n        background: #f5f5f5;\n        border-right: 0px;\n}\n.cm-s-base16-light .CodeMirror-guttermarker {\n        color: #ac4142;\n}\n.cm-s-base16-light .CodeMirror-guttermarker-subtle {\n        color: #b0b0b0;\n}\n.cm-s-base16-light .CodeMirror-linenumber {\n        color: #b0b0b0;\n}\n.cm-s-base16-light .CodeMirror-cursor {\n        border-left: 1px solid #505050;\n}\n.cm-s-base16-light span.cm-comment {\n        color: #8f5536;\n}\n.cm-s-base16-light span.cm-atom {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-number {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-property, .cm-s-base16-light span.cm-attribute {\n        color: #90a959;\n}\n.cm-s-base16-light span.cm-keyword {\n        color: #ac4142;\n}\n.cm-s-base16-light span.cm-string {\n        color: #f4bf75;\n}\n.cm-s-base16-light span.cm-variable {\n        color: #90a959;\n}\n.cm-s-base16-light span.cm-variable-2 {\n        color: #6a9fb5;\n}\n.cm-s-base16-light span.cm-def {\n        color: #d28445;\n}\n.cm-s-base16-light span.cm-bracket {\n        color: #202020;\n}\n.cm-s-base16-light span.cm-tag {\n        color: #ac4142;\n}\n.cm-s-base16-light span.cm-link {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-error {\n        background: #ac4142;\n        color: #505050;\n}\n.cm-s-base16-light .CodeMirror-activeline-background {\n        background: #DDDCDC;\n}\n.cm-s-base16-light .CodeMirror-matchingbracket {\n        color: #f5f5f5 !important;\n        background-color: #6A9FB5 !important\n}\n\n", ""]);
 
 // exports
 
@@ -68135,7 +68137,20 @@ var render = function() {
                                     ]
                                   ),
                                   _vm._v(" "),
-                                  _vm._m(2, true)
+                                  _vm.is_delete
+                                    ? _c(
+                                        "button",
+                                        {
+                                          staticClass:
+                                            "uk-button uk-button-default"
+                                        },
+                                        [
+                                          _c("span", {
+                                            attrs: { "uk-icon": "trash" }
+                                          })
+                                        ]
+                                      )
+                                    : _vm._e()
                                 ])
                               ])
                             }),
@@ -68152,7 +68167,7 @@ var render = function() {
                         _c("table", { staticClass: "uk-table" }, [
                           _c("caption", [_vm._v("Уроки")]),
                           _vm._v(" "),
-                          _vm._m(3),
+                          _vm._m(2),
                           _vm._v(" "),
                           _c(
                             "tbody",
@@ -68180,23 +68195,25 @@ var render = function() {
                                     ]
                                   ),
                                   _vm._v(" "),
-                                  _c(
-                                    "button",
-                                    {
-                                      staticClass:
-                                        "uk-button uk-button-default",
-                                      on: {
-                                        click: function($event) {
-                                          return _vm.DeleteLesson(item)
-                                        }
-                                      }
-                                    },
-                                    [
-                                      _c("span", {
-                                        attrs: { "uk-icon": "trash" }
-                                      })
-                                    ]
-                                  )
+                                  _vm.is_delete
+                                    ? _c(
+                                        "button",
+                                        {
+                                          staticClass:
+                                            "uk-button uk-button-default",
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.DeleteLesson(item)
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("span", {
+                                            attrs: { "uk-icon": "trash" }
+                                          })
+                                        ]
+                                      )
+                                    : _vm._e()
                                 ])
                               ])
                             }),
@@ -68505,7 +68522,7 @@ var render = function() {
                   _vm._v("Перетащите файлы сюда или")
                 ]),
                 _vm._v(" "),
-                _vm._m(4)
+                _vm._m(3)
               ]
             )
           ]),
@@ -68598,14 +68615,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Action")])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("button", { staticClass: "uk-button uk-button-default" }, [
-      _c("span", { attrs: { "uk-icon": "trash" } })
     ])
   },
   function() {
