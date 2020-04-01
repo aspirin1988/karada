@@ -144,15 +144,17 @@ class SiteController extends Controller
     {
         $data = $request->all();
 
-//        config(['mail.username' => 'aspirin_1988@mail.ru']);
-//        config(['mail.password' => 'iron2008god']);
+        config(['mail.from.address' => env('MAIL_FROM_ADDRESS_INFO')]);
+        config(['mail.username' => env('MAIL_FROM_ADDRESS_INFO')]);
+        config(['mail.password' => env('MAIL_PASSWORD_INFO')]);
 
         Mail::send('emails.register_company', ['user' => $data], function ($m) {
             $email = config('mail.from.address');
             $m->from($email, 'Karada');
 //            $m->from('aspirin_1988@mail.ru', 'Sergey');
 
-            $m->to('info@karada.kz', 'Info Karada')->subject('Запрос на регистрацию');
+//            $m->to('info@karada.kz', 'Info Karada')->subject('Запрос на регистрацию');
+            $m->to('aspirin_1988@mail.ru', 'Sergey')->subject('Запрос на регистрацию');
         });
 
         header('/');
