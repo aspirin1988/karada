@@ -153,8 +153,8 @@ class SiteController extends Controller
             $m->from($email, 'Karada');
 //            $m->from('aspirin_1988@mail.ru', 'Sergey');
 
-            $m->to('info@karada.kz', 'Info Karada')->subject('Запрос на регистрацию');
-//            $m->to('aspirin_1988@mail.ru', 'Sergey')->subject('Запрос на регистрацию');
+//            $m->to('info@karada.kz', 'Info Karada')->subject('Запрос на регистрацию');
+            $m->to('aspirin_1988@mail.ru', 'Sergey')->subject('Запрос на регистрацию');
         });
 
         header('/');
