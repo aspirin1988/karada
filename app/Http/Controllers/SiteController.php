@@ -144,9 +144,9 @@ class SiteController extends Controller
     {
         $data = $request->all();
 
-        config(['mail.from.address' => env('MAIL_FROM_ADDRESS_INFO')]);
-        config(['mail.username' => env('MAIL_FROM_ADDRESS_INFO')]);
-        config(['mail.password' => env('MAIL_PASSWORD_INFO')]);
+//        config(['mail.from.address' => env('MAIL_FROM_ADDRESS_INFO')]);
+//        config(['mail.username' => env('MAIL_FROM_ADDRESS_INFO')]);
+//        config(['mail.password' => env('MAIL_PASSWORD_INFO')]);
 
         Mail::send('emails.register_company', ['user' => $data], function ($m) {
             $email = config('mail.from.address');
