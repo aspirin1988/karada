@@ -11,7 +11,7 @@
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
     <meta name="it-rating" content="it-rat-24ca1971faadab1e67e8692cad77ab81"/>
     <link rel="shortcut icon" href="/favicon.ico" type="image/png">
-    <link rel="stylesheet" href="/css/main-style.css?v=110" type="text/css"/>
+    <link rel="stylesheet" href="/css/main-style.css?v=111" type="text/css"/>
 
     <link rel="icon" type="image/png" href="/img/favicon.jpg"/>
     <link rel="canonical" href=""/>
@@ -97,7 +97,7 @@
     </div>
 </footer>
 
-<link rel="stylesheet" href="/js/animate.css?v=110" type="text/css"/>
+<link rel="stylesheet" href="/js/animate.css?v=111" type="text/css"/>
 <link
         href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
         rel="stylesheet">

@@ -222,7 +222,7 @@
             findVideo: function () {
                 if (this.video_name.length >= 2) {
                     this.$http.post('/admin/find/video', {video: this.video_name}).then(response => {
-                        // if (response.data.length) {
+                        // if (response.data.length) {k
                         this.video_list = response.data;
                         // }
                     });
