@@ -204,6 +204,7 @@
                 gallery_list: {},
                 current_thumb: null,
                 current_image: null,
+                is_delete: null,
             }
         },
         mounted() {
@@ -211,7 +212,7 @@
                 let data = response.data;
                 this.list = data;
                 this.list.description = data.description || '<p>&nbsp;</p>';
-
+                this.is_delete = data.delete;
             });
             this.getArbitraryFields();
         },

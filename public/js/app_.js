@@ -19233,7 +19233,7 @@ if (token) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/serg/PhpstormProjects/karada_master/resources/js/app_.js */"./resources/js/app_.js");
+module.exports = __webpack_require__(/*! /var/www/karada_master/resources/js/app_.js */"./resources/js/app_.js");
 
 
 /***/ })

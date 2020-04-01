@@ -2991,7 +2991,8 @@ window.DIFF_EQUAL = 0;
       ArbitraryFields: [],
       gallery_list: {},
       current_thumb: null,
-      current_image: null
+      current_image: null,
+      is_delete: null
     };
   },
   mounted: function mounted() {
@@ -3001,6 +3002,7 @@ window.DIFF_EQUAL = 0;
       var data = response.data;
       _this.list = data;
       _this.list.description = data.description || '<p>&nbsp;</p>';
+      _this.is_delete = data["delete"];
     });
     this.getArbitraryFields();
   },
@@ -29151,7 +29153,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /*\n\n    Name:       Base16 Default Light\n    Author:     Chris Kempson (http://chriskempson.com)\n\n    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-codemirror)\n    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)\n\n*/\n.cm-s-base16-light.CodeMirror {\n        background: #f5f5f5;\n        color: #202020;\n}\n.cm-s-base16-light div.CodeMirror-selected {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::-moz-selection, .cm-s-base16-light .CodeMirror-line > span::-moz-selection, .cm-s-base16-light .CodeMirror-line > span > span::-moz-selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::selection, .cm-s-base16-light .CodeMirror-line > span::selection, .cm-s-base16-light .CodeMirror-line > span > span::selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::-moz-selection, .cm-s-base16-light .CodeMirror-line > span::-moz-selection, .cm-s-base16-light .CodeMirror-line > span > span::-moz-selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-gutters {\n        background: #f5f5f5;\n        border-right: 0px;\n}\n.cm-s-base16-light .CodeMirror-guttermarker {\n        color: #ac4142;\n}\n.cm-s-base16-light .CodeMirror-guttermarker-subtle {\n        color: #b0b0b0;\n}\n.cm-s-base16-light .CodeMirror-linenumber {\n        color: #b0b0b0;\n}\n.cm-s-base16-light .CodeMirror-cursor {\n        border-left: 1px solid #505050;\n}\n.cm-s-base16-light span.cm-comment {\n        color: #8f5536;\n}\n.cm-s-base16-light span.cm-atom {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-number {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-property, .cm-s-base16-light span.cm-attribute {\n        color: #90a959;\n}\n.cm-s-base16-light span.cm-keyword {\n        color: #ac4142;\n}\n.cm-s-base16-light span.cm-string {\n        color: #f4bf75;\n}\n.cm-s-base16-light span.cm-variable {\n        color: #90a959;\n}\n.cm-s-base16-light span.cm-variable-2 {\n        color: #6a9fb5;\n}\n.cm-s-base16-light span.cm-def {\n        color: #d28445;\n}\n.cm-s-base16-light span.cm-bracket {\n        color: #202020;\n}\n.cm-s-base16-light span.cm-tag {\n        color: #ac4142;\n}\n.cm-s-base16-light span.cm-link {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-error {\n        background: #ac4142;\n        color: #505050;\n}\n.cm-s-base16-light .CodeMirror-activeline-background {\n        background: #DDDCDC;\n}\n.cm-s-base16-light .CodeMirror-matchingbracket {\n        color: #f5f5f5 !important;\n        background-color: #6A9FB5 !important\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /*\n\n    Name:       Base16 Default Light\n    Author:     Chris Kempson (http://chriskempson.com)\n\n    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-codemirror)\n    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)\n\n*/\n.cm-s-base16-light.CodeMirror {\n        background: #f5f5f5;\n        color: #202020;\n}\n.cm-s-base16-light div.CodeMirror-selected {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::-moz-selection, .cm-s-base16-light .CodeMirror-line > span::-moz-selection, .cm-s-base16-light .CodeMirror-line > span > span::-moz-selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::selection, .cm-s-base16-light .CodeMirror-line > span::selection, .cm-s-base16-light .CodeMirror-line > span > span::selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-line::-moz-selection, .cm-s-base16-light .CodeMirror-line > span::-moz-selection, .cm-s-base16-light .CodeMirror-line > span > span::-moz-selection {\n        background: #e0e0e0;\n}\n.cm-s-base16-light .CodeMirror-gutters {\n        background: #f5f5f5;\n        border-right: 0px;\n}\n.cm-s-base16-light .CodeMirror-guttermarker {\n        color: #ac4142;\n}\n.cm-s-base16-light .CodeMirror-guttermarker-subtle {\n        color: #b0b0b0;\n}\n.cm-s-base16-light .CodeMirror-linenumber {\n        color: #b0b0b0;\n}\n.cm-s-base16-light .CodeMirror-cursor {\n        border-left: 1px solid #505050;\n}\n.cm-s-base16-light span.cm-comment {\n        color: #8f5536;\n}\n.cm-s-base16-light span.cm-atom {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-number {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-property, .cm-s-base16-light span.cm-attribute {\n        color: #90a959;\n}\n.cm-s-base16-light span.cm-keyword {\n        color: #ac4142;\n}\n.cm-s-base16-light span.cm-string {\n        color: #f4bf75;\n}\n.cm-s-base16-light span.cm-variable {\n        color: #90a959;\n}\n.cm-s-base16-light span.cm-variable-2 {\n        color: #6a9fb5;\n}\n.cm-s-base16-light span.cm-def {\n        color: #d28445;\n}\n.cm-s-base16-light span.cm-bracket {\n        color: #202020;\n}\n.cm-s-base16-light span.cm-tag {\n        color: #ac4142;\n}\n.cm-s-base16-light span.cm-link {\n        color: #aa759f;\n}\n.cm-s-base16-light span.cm-error {\n        background: #ac4142;\n        color: #505050;\n}\n.cm-s-base16-light .CodeMirror-activeline-background {\n        background: #DDDCDC;\n}\n.cm-s-base16-light .CodeMirror-matchingbracket {\n        color: #f5f5f5 !important;\n        background-color: #6A9FB5 !important\n}\n\n", ""]);
 
 // exports
 
@@ -95818,12 +95820,12 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/serg/PhpstormProjects/karada_master/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /home/serg/PhpstormProjects/karada_master/resources/sass/app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /home/serg/PhpstormProjects/karada_master/resources/sass/courses.scss */"./resources/sass/courses.scss");
-__webpack_require__(/*! /home/serg/PhpstormProjects/karada_master/resources/sass/test.scss */"./resources/sass/test.scss");
-__webpack_require__(/*! /home/serg/PhpstormProjects/karada_master/resources/sass/profile.scss */"./resources/sass/profile.scss");
-module.exports = __webpack_require__(/*! /home/serg/PhpstormProjects/karada_master/resources/sass/admin.scss */"./resources/sass/admin.scss");
+__webpack_require__(/*! /var/www/karada_master/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/karada_master/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/karada_master/resources/sass/courses.scss */"./resources/sass/courses.scss");
+__webpack_require__(/*! /var/www/karada_master/resources/sass/test.scss */"./resources/sass/test.scss");
+__webpack_require__(/*! /var/www/karada_master/resources/sass/profile.scss */"./resources/sass/profile.scss");
+module.exports = __webpack_require__(/*! /var/www/karada_master/resources/sass/admin.scss */"./resources/sass/admin.scss");
 
 
 /***/ })

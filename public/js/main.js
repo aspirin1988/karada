@@ -43729,7 +43729,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/serg/PhpstormProjects/karada_master/resources/js/main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! /var/www/karada_master/resources/js/main.js */"./resources/js/main.js");
 
 
 /***/ })
