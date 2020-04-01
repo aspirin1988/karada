@@ -78,6 +78,7 @@ class CourseController extends Controller
 
     public function getEdit($id)
     {
+        $user = Auth::user();
 
         $course = Course::where('id', $id)->first();
 
@@ -88,6 +89,7 @@ class CourseController extends Controller
 
         $course->sections = Section::where('course_id', $course->id)->where('parent_id', 0)->get();
         $course->video_ = Video::where('id', $course->video)->first();
+        $course->delete = ($user->isRole('super admin') || $user->isRole('admin'));
 
         return response()->json($course);
     }
@@ -98,6 +100,7 @@ class CourseController extends Controller
         unset($data['thumb_section_url']);
         unset($data['thumb_category_url']);
         unset($data['sections']);
+        unset($data['delete']);
         unset($data['id']);
         unset($data['video_']);
 
