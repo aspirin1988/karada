@@ -3015,7 +3015,7 @@ window.DIFF_EQUAL = 0;
         this.$http.post('/admin/find/video', {
           video: this.video_name
         }).then(function (response) {
-          // if (response.data.length) {
+          // if (response.data.length) {k
           _this2.video_list = response.data; // }
         });
       } else {
@@ -53367,7 +53367,19 @@ var render = function() {
                                 ]
                               ),
                               _vm._v(" "),
-                              _vm._m(3, true)
+                              _vm.is_delete
+                                ? _c(
+                                    "button",
+                                    {
+                                      staticClass: "uk-button uk-button-default"
+                                    },
+                                    [
+                                      _c("span", {
+                                        attrs: { "uk-icon": "trash" }
+                                      })
+                                    ]
+                                  )
+                                : _vm._e()
                             ])
                           ])
                         }),
@@ -53459,7 +53471,7 @@ var render = function() {
                   _vm._v("Перетащите файлы сюда или")
                 ]),
                 _vm._v(" "),
-                _vm._m(4)
+                _vm._m(3)
               ]
             )
           ]),
@@ -53560,14 +53572,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Action")])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("button", { staticClass: "uk-button uk-button-default" }, [
-      _c("span", { attrs: { "uk-icon": "trash" } })
     ])
   },
   function() {

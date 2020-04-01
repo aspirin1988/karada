@@ -114,7 +114,7 @@
                                                :href="'/admin/section/edit/'+item.id">
                                                 <span class="uk-text-success" uk-icon="file-edit"></span>
                                             </a>
-                                            <button class="uk-button uk-button-default"><span uk-icon="trash"></span>
+                                            <button v-if="is_delete" class="uk-button uk-button-default"><span uk-icon="trash"></span>
                                             </button>
                                         </td>
                                     </tr>
