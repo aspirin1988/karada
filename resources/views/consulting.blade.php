@@ -6,8 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Малобюджетный маркетинг, реклама, продвижение и продажи</title>
-    <link rel="stylesheet" href="/css/uikit.css?v=111">
-    <link rel="stylesheet" href="/css/app.css?v=111">
+    <link rel="stylesheet" href="/css/uikit.css?v=112">
+    <link rel="stylesheet" href="/css/app.css?v=112">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>

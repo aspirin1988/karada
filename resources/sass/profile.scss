@@ -2977,7 +2977,7 @@ main {
 
             @media (max-width: 768px) {
                 display: block;
-                font-size: 10px;
+                font-size: 8px;
                 padding: 5px 10px;
             }
         }
@@ -2994,6 +2994,7 @@ main {
             @media (max-width: 786px) {
                 margin: -30px 0 0 40px;
                 z-index: 2;
+                font-size: 8px;
             }
         }
     }
