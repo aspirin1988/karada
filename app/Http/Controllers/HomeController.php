@@ -130,7 +130,6 @@ class HomeController extends Controller
             }
         }
 
-        dd($personal_goals);
 
         $resource->close();
         $data = [
