@@ -122,7 +122,7 @@ class HomeController extends Controller
         }
 
         if (count($personal_goals) < 3) {
-            for ($i = 0; $i < 4 - count($personal_goals); $i++) {
+            for ($i = 0; $i < 5 - count($personal_goals); $i++) {
                 $personal_goal = new PersonalGoal();
                 $personal_goal->image = '/img/empty.png';
 
