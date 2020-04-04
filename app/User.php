@@ -276,6 +276,7 @@ class User extends Authenticatable
                     return ($access && strtotime($access->date_end) > time() ? true : false);
                 }
             }
+            var_dump([strtotime($access->date_end), time()]);
             return ($access && strtotime($access->date_end) > time() ? true : false);
 
         }
