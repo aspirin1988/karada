@@ -12464,12 +12464,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['id'],
   data: function data() {
     return {
       showAdd: false,
       showEdit: false,
+      delete_id: false,
       questions: [],
       NewQuestion: {
         question: '',
@@ -12496,13 +12532,20 @@ __webpack_require__.r(__webpack_exports__);
         _this.questions = response.data;
       });
     },
-    Delete: function Delete(id) {
+    DeleteShow: function DeleteShow(id) {
+      this.delete_id = id;
+    },
+    Cancel: function Cancel() {
+      this.delete_id = false;
+    },
+    Delete: function Delete() {
       var _this2 = this;
 
-      axios.get('/admin/test/delete/questions/' + id + '/').then(function (response) {
+      axios["delete"]('/admin/test/delete/questions/' + this.delete_id + '/').then(function (response) {
         if (response.data.result) {
           axios.get('/admin/test/get/questions/' + _this2.id + '/').then(function (response) {
             _this2.questions = response.data;
+            _this2.delete_id = false;
           });
         }
       });
@@ -29400,7 +29443,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.question-grid{\n    display: grid;\n    grid-template-columns: 115px auto;\n    margin-bottom: 20px;\n}\n", ""]);
+exports.push([module.i, "\n.question-grid {\n    display: grid;\n    grid-template-columns: 115px auto;\n    margin-bottom: 20px;\n}\n", ""]);
 
 // exports
 
@@ -69729,7 +69772,9 @@ var render = function() {
                         }
                       }
                     }),
-                    _vm._v(" Ответ №" + _vm._s(index + 1) + "\n\t\t\t\t\t\t"),
+                    _vm._v(
+                      " Ответ №" + _vm._s(index + 1) + "\n                    "
+                    ),
                     _c("br"),
                     _vm._v(" "),
                     _c(
@@ -69886,20 +69931,56 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("li", [
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "uk-button uk-button-small uk-button-default",
-                      attrs: { title: "Удалить" },
-                      on: {
-                        click: function($event) {
-                          return _vm.Delete(item.id)
-                        }
-                      }
-                    },
-                    [_c("span", { attrs: { "uk-icon": "trash" } })]
-                  )
+                  !_vm.delete_id || _vm.delete_id !== item.id
+                    ? _c(
+                        "span",
+                        {
+                          staticClass:
+                            "uk-button uk-button-small uk-button-default",
+                          attrs: { title: "Удалить" },
+                          on: {
+                            click: function($event) {
+                              return _vm.DeleteShow(item.id)
+                            }
+                          }
+                        },
+                        [_c("span", { attrs: { "uk-icon": "trash" } })]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.delete_id && _vm.delete_id === item.id
+                    ? _c("div", { staticClass: "uk-button-group" }, [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "uk-button uk-button-small uk-button-danger",
+                            attrs: { title: "Удалить" },
+                            on: {
+                              click: function($event) {
+                                return _vm.Delete()
+                              }
+                            }
+                          },
+                          [_c("span", { attrs: { "uk-icon": "check" } })]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "uk-button uk-button-small uk-button-primary",
+                            attrs: { title: "Удалить" },
+                            on: {
+                              click: function($event) {
+                                return _vm.Cancel()
+                              }
+                            }
+                          },
+                          [_c("span", { attrs: { "uk-icon": "close" } })]
+                        )
+                      ])
+                    : _vm._e()
                 ])
               ])
             ])
@@ -70017,7 +70098,7 @@ var render = function() {
                             _vm._v(
                               " Ответ №" +
                                 _vm._s(index + 1) +
-                                "\n\t\t\t\t\t\t\t\t\t\t"
+                                "\n                                    "
                             ),
                             _c("br"),
                             _vm._v(" "),
@@ -70137,7 +70218,7 @@ var render = function() {
                   attrs: { type: "button" },
                   on: { click: _vm.SaveQuestion }
                 },
-                [_vm._v("Сохранить")]
+                [_vm._v("\n                    Сохранить\n                ")]
               ),
               _vm._v(" "),
               _c(
@@ -70147,7 +70228,7 @@ var render = function() {
                   attrs: { type: "button" },
                   on: { click: _vm.HideEditQuestion }
                 },
-                [_vm._v("Отмена")]
+                [_vm._v("\n                    Отмена\n                ")]
               )
             ])
           ]

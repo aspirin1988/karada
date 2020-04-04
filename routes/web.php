@@ -286,6 +286,7 @@ Route::middleware(['admin', 'active'])->group(function () {
     Route::get('/admin/test/add', 'TestController@add')->name('admin_test_add');
     Route::get('/admin/test/edit/{id}', 'TestController@edit')->name('admin_test_edit');
     Route::delete('/admin/test/delete/{id}', 'TestController@delete')->name('admin_test_delete');
+    Route::delete('/admin/test/delete/questions/{id}', 'TestController@deleteQuestion')->name('admin_test_delete');
     Route::put('/admin/test/add', 'TestController@addTest')->name('admin_test_create');
 
 

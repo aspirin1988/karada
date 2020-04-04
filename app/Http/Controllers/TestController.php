@@ -182,6 +182,13 @@ class TestController extends Controller
         return response()->json(['result' => $result]);
     }
 
+    public function deleteQuestion($id)
+    {
+        $result = TestQuestion::where('id', $id)->delete();
+
+        return response()->json(['result' => $result]);
+    }
+
 //    public function getList($page)
 //    {
 //        $tests=Test::limit(20)->offset($page*20)->get();
