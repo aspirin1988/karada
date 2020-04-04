@@ -267,18 +267,16 @@ class User extends Authenticatable
             return true;
         } else {
 
-            $access = Access::where('user_id', $this->id)->where('date_end', '>=', date('Y-m-d'))->orderBy('updated_at', 'DESC')->first();
-
+            $access = Access::where('user_id', $this->id)->orderBy('updated_at', 'DESC')->first();
             if (!$access && $this->company_id && $this->type != 'chief') {
 
                 $user = User::where('type', 'chief')->where('company_id', $this->company_id)->first();
                 if ($user) {
-                    $access = Access::where('user_id', $user->id)->where('date_end', '>=', date('Y-m-d'))->orderBy('updated_at', 'DESC')->first();
+                    $access = Access::where('user_id', $user->id)->orderBy('updated_at', 'DESC')->first();
+                    return ($access && strtotime($access->date_end) > time() ? true : false);
                 }
-
             }
-            return ($access ? true : false);
-
+            return ($access && strtotime($access->date_end) > time() ? true : false);
         }
 
     }
