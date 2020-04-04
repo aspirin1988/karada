@@ -3757,8 +3757,11 @@ __webpack_require__.r(__webpack_exports__);
 
       for (var i = 0; i < files.length; i++) {
         if (files[i].size <= 1024000) {
+          this.error = '';
+          this.nocorrect = false;
           formData.append('file[]', files[i]);
         } else {
+          this.error = 'Размер файла больше 1 мб.';
           this.nocorrect = true;
           return false;
         }
@@ -3780,6 +3783,7 @@ __webpack_require__.r(__webpack_exports__);
           _this.getGalleryList();
         } else {
           _this.error = response.data.message;
+          _this.nocorrect = true;
         }
       })["catch"](function () {
         UIkit.notification({
@@ -3835,8 +3839,11 @@ __webpack_require__.r(__webpack_exports__);
 
       for (var i = 0; i < files.length; i++) {
         if (files[i].size <= 1024000) {
+          this.error = '';
+          this.nocorrect = false;
           formData.append('file[]', files[i]);
         } else {
+          this.error = 'Размер файла больше 1 мб.';
           this.nocorrect = true;
           return false;
         }

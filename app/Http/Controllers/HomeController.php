@@ -121,15 +121,15 @@ class HomeController extends Controller
             }
         }
 
-
         if (count($personal_goals) < 3) {
-            for ($i = 0; $i < 3 - count($personal_goals); $i++) {
+            for ($i = 0; $i < 4 - count($personal_goals); $i++) {
                 $personal_goal = new PersonalGoal();
                 $personal_goal->image = '/img/empty.png';
 
                 $personal_goals[] = $personal_goal;
             }
         }
+
         $resource->close();
         $data = [
             'sales_cer' => $sales_cer,

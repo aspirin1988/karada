@@ -384,14 +384,14 @@ class User extends Authenticatable
                 Mail::send('emails.register', ['password' => $password, 'user' => $user], function ($m) use ($user) {
                     $email = config('mail.from.address');
                     $m->from($email, 'KARADA Школа Продаж');
-                    $m->to($user->email, $user->first_name . ' ' . $user->last_name)->subject('Регистрация на сайте "" ');
+                    $m->to($user->email, $user->first_name . ' ' . $user->last_name)->subject('Регистрация в Школе Продаж KARADA');
                 });
 
                 Mail::send('emails.register_user', ['user' => $user], function ($m) use ($user) {
                     $email = config('mail.from.address');
                     $m->from($email, 'KARADA Школа Продаж');
                     //                $m->to('karada.help@mail.ru', 'Karadau')->subject('Регистрация на сайте "" ');
-                    $m->to('vladimir.aiki@gmail.com', 'Karadau')->subject('Регистрация на сайте "" ');
+                    $m->to('vladimir.aiki@gmail.com', 'Karadau')->subject('Регистрация в Школе Продаж KARADA');
                 });
 
                 return [true, 'ok'];

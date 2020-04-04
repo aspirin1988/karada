@@ -24,8 +24,11 @@
 
                 for (let i = 0; i < files.length; i++) {
                     if (files[i].size <= 1024000) {
+                        this.error = '';
+                        this.nocorrect = false;
                         formData.append('file[]', files[i]);
                     } else {
+                        this.error = 'Размер файла больше 1 мб.';
                         this.nocorrect = true;
                         return false;
                     }
@@ -45,6 +48,7 @@
                         this.getGalleryList();
                     }else{
                         this.error = response.data.message;
+                        this.nocorrect = true;
                     }
                 })
                     .catch(function () {

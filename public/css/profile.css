@@ -1132,10 +1132,6 @@ header nav .menu img {
   width: 1050px;
 }
 
-.team .button {
-  margin-top: 30px;
-}
-
 .team .news_count + img {
   width: 300px;
   border-radius: 5px;
@@ -1156,7 +1152,7 @@ header nav .menu img {
 }
 
 .team .button {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .help_block {

@@ -111,7 +111,7 @@ class RegisterController extends Controller
             $email = config('mail.from.address');
             $m->from($email, 'KARADA Школа Продаж');
 //            $m->from('aspirin_1988@mail.ru', 'Sergey');
-            $m->to($user->email, $user->first_name . ' ' . $user->last_name)->subject('Регистрация на сайте "" ');
+            $m->to($user->email, $user->first_name . ' ' . $user->last_name)->subject('Регистрация в Школе Продаж KARADA');
 //            $m->to('karada.help@mail.ru', 'Karadau')->subject('Регистрация на сайте "" ');
 //            $m->to('vladimir.aiki@gmail.com', 'Karadau')->subject('Регистрация на сайте "" ');
         });
