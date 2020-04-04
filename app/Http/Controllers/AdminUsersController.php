@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Access;
 use App\Certificat;
 use App\Course;
+use App\RedisData;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -80,9 +81,10 @@ class AdminUsersController extends Controller
 
         $data['password'] = Hash::make($data['password']);
         $user = User::create($data);
-
+        $resource = new RedisData('karada');
+        $trial = (int)$resource->getKey('trial', 'limit');
         $date_end = Carbon::now();
-        $date_end->add(7, 'day');
+        $date_end->add($trial, 'day');
         $date_end = $date_end->format('Y-m-d');
 
         $user->addAccess($date_end);
