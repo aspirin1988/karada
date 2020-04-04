@@ -19,7 +19,7 @@
                 <p style="font-family: Arial; color: #000000; margin-bottom: 60px;">Количество продавцов: <span
                         style="color: #005bd1;">{{$user['count_sales']}}</span></p>
             @endif
-            <p style="font-family: Arial; color: #000000; margin-bottom: 40px;">С уважением,</p>
+            <p style="font-family: Arial; color: #000000; margin-bottom: 20px;">С уважением,</p>
             <p style="font-family: Arial; color: #000000; margin-bottom: 60px; line-height: 27px;">
                 Администрация <br>
                 KARADA Школа Продаж <br>

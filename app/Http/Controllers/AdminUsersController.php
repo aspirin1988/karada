@@ -94,7 +94,7 @@ class AdminUsersController extends Controller
 
         Mail::send('emails.register', ['user' => $user, 'password' => $password], function ($m) use ($data, $user) {
             $email = config('mail.from.address');
-            $m->from($email, 'Karada');
+            $m->from($email, 'KARADA Школа Продаж');
             $m->to($user->email, $data['first_name'] . ' ' . $data['last_name'])->subject('Регистрация на сайте');
         });
 

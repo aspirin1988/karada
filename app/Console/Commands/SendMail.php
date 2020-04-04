@@ -51,7 +51,7 @@ class SendMail extends Command
 
         Mail::send('emails.test', [], function ($m) use ($email) {
 //            $email = config('mail.from.address');
-            $m->from($email, 'Karada');
+            $m->from($email, 'KARADA Школа Продаж');
 //            $m->from('aspirin_1988@mail.ru', 'Sergey');
 
 //            $m->to('info@karada.kz', 'Karadau')->subject('Запрос на регистрацию');

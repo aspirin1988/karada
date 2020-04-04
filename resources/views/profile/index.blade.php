@@ -85,7 +85,7 @@
             @endif
             {{--            @if(!$user->isChief())--}}
             <div class="block personal_goals {{(!$user->isChief()?'chief':'')}}">
-                <a href="#" class="personal_goals_title">мои личные цели:</a>
+                <span class="personal_goals_title">мои личные цели:</span>
                 <div class="slider">
                     <div class="slider-container owl-carousel">
                         @foreach($personal_goals as $key => $personal_goal)
@@ -160,7 +160,7 @@
             {{--            @endif--}}
 
             <div class="block online courses">
-                <a href="#" class="courses_title">Курс "Альфа Продавец"</a>
+                <span class="courses_title">Курс "Альфа Продавец"</span>
                 <div class="courses_items">
                     <div class="courses_item">
                         <div>
@@ -207,7 +207,7 @@
                 <p>Полный функционал портала доступен на компьютере / ноутбуке / планшете.</p>
             </div>
             <div class="block my_rewards hidden-mobile">
-                <a href="#" class="my_rewards_title">Мои награды:</a>
+                <span class="my_rewards_title">Мои награды:</span>
                 <div class="my_rewards_item">
                     <img src="/img/Sert-visual.png" alt="">
                     <div>

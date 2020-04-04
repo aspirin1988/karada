@@ -134,7 +134,7 @@ class CompanyController extends Controller
 
         Mail::send('emails.register', ['password' => $password, 'user' => $user], function ($m) use ($user) {
             $email = config('mail.from.address');
-            $m->from($email, 'Karada');
+            $m->from($email, 'KARADA Школа Продаж');
             $m->to($user->email, $user->first_name . ' ' . $user->last_name)->subject('Регистрация на сайте "" ');
         });
 

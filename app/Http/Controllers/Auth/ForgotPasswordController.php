@@ -50,7 +50,7 @@ class ForgotPasswordController extends Controller
 
                 Mail::send('emails.password_change', ['password' => $password, 'user' => $user], function ($m) use ($user) {
                     $email = config('mail.from.address');
-                    $m->from($email, 'Karada');
+                    $m->from($email, 'KARADA Школа Продаж');
                     $m->to($user->email, $user->first_name . ' ' . $user->last_name)->subject('Смена пароля');
                 });
 

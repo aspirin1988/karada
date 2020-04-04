@@ -957,7 +957,7 @@ class HomeController extends Controller
 
             Mail::send('emails.password_update', ['password' => $password_new, 'user' => $user], function ($m) use ($user) {
                 $email = config('mail.from.address');
-                $m->from($email, 'Karadau');
+                $m->from($email, 'KARADA Школа Продаж');
                 $m->to($user->email, $user->first_name . ' ' . $user->last_name)->subject('Смена пароля');
             });
 
@@ -1042,7 +1042,7 @@ class HomeController extends Controller
         $user = User::where('id', $id)->first();
         Mail::send('emails.edit', ['user' => $user], function ($m) use ($user) {
             $email = config('mail.from.address');
-            $m->from($email, 'Karada');
+            $m->from($email, 'KARADA Школа Продаж');
 //            $m->to('karada.help@mail.ru', 'Karadau')->subject('Изменение личных данных');
             $m->to('vladimir.aiki@gmail.com', 'Karadau')->subject('Изменение личных данных');
         });

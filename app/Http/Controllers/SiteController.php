@@ -112,7 +112,7 @@ class SiteController extends Controller
 
         Mail::send('emails.consulting', ['data' => $data, 'type' => $type], function ($m) use ($data, $type) {
             $email = config('mail.from.address');
-            $m->from($email, 'Karadau');
+            $m->from($email, 'KARADA Школа Продаж');
             $m->to('info@karada.kz', 'karada.kz')->subject('Заявка на услугу ' . $type[$data['type']]);
         });
 
@@ -150,7 +150,7 @@ class SiteController extends Controller
 
         Mail::send('emails.register_company', ['user' => $data], function ($m) {
             $email = config('mail.from.address');
-            $m->from($email, 'Karada');
+            $m->from($email, 'KARADA Школа Продаж');
 //            $m->from('aspirin_1988@mail.ru', 'Sergey');
 
             $m->to('info@karada.kz', 'Info Karada')->subject('Запрос на регистрацию');
