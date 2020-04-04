@@ -130,6 +130,8 @@ class HomeController extends Controller
             }
         }
 
+        dd($personal_goals);
+
         $resource->close();
         $data = [
             'sales_cer' => $sales_cer,
