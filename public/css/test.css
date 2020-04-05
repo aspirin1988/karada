@@ -35,7 +35,7 @@
   font-size: 20px;
   color: #000000;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 27px;
 }
 
 @media (max-width: 640px) {
@@ -61,7 +61,7 @@
 .answer-list li {
   cursor: pointer;
   border-bottom: 1px solid #efefef;
-  padding: 10px 40px;
+  padding: 15px 40px;
   display: grid;
   grid-template-columns: 50px auto;
   align-items: center;
@@ -100,23 +100,46 @@
 }
 
 .answer-list li .text {
-  color: #000000;
   font-family: "Open Sans";
-  font-size: 20px;
+  font-size: 18px;
   color: #000000;
+  line-height: 25px;
 }
 
-.answer-list li:hover {
-  background: #37a2e9;
+@media (max-width: 640px) {
+  .answer-list li .text {
+    font-size: 16px;
+  }
 }
 
-.answer-list li:hover .number {
-  color: #fff;
-  border: 1px solid #fff;
+@media (max-width: 640px) {
+  .answer-list li:active {
+    background: #37a2e9;
+  }
+
+  .answer-list li:active .number {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .answer-list li:active .text {
+    color: #fff;
+  }
 }
 
-.answer-list li:hover .text {
-  color: #fff;
+@media (min-width: 641px) {
+  .answer-list li:hover {
+    background: #37a2e9;
+  }
+
+  .answer-list li:hover .number {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .answer-list li:hover .text {
+    color: #fff;
+  }
 }
 
 .answer-list + .button.round.button-gray-stroke {

@@ -444,7 +444,7 @@
                                     $resource->close();
                                 @endphp
                                 <span class="old">{{number_format($price_old, 0, ',', ' ')}}</span>
-                                <span class="new">{{number_format($price, 0, ',', ' ')}}<b>тг</b></span>
+                                <span class="new">{{number_format($price, 0, ',', ' ')}} <b>тг</b></span>
                             </strong>
                             <p>тенге</p>
                         </div>

@@ -30488,6 +30488,11 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
+            _c("div", {
+              staticClass: "error",
+              domProps: { innerHTML: _vm._s(_vm.messages) }
+            }),
+            _vm._v(" "),
             _c("div", { staticClass: "row" }, [
               _c(
                 "button",
@@ -30498,11 +30503,6 @@ var render = function() {
                 [_vm._v("Войти")]
               )
             ]),
-            _vm._v(" "),
-            _c("div", {
-              staticClass: "error",
-              domProps: { innerHTML: _vm._s(_vm.messages) }
-            }),
             _vm._v(" "),
             _c("div", {}, [
               _c("label", { staticClass: "label-checkbox" }, [
