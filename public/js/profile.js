@@ -2247,13 +2247,11 @@ __webpack_require__.r(__webpack_exports__);
     onUpload: function onUpload(e) {
       var _this = this;
 
-      console.log(this.image);
       var files = e.target.files;
       this.file = files[0];
       var type = this.file.type;
       var mime = type.split('/');
       mime = mime[0];
-      console.log(mime);
 
       if (mime === 'image') {
         this.error = '';
@@ -2261,8 +2259,6 @@ __webpack_require__.r(__webpack_exports__);
 
         reader.onload = function (e) {
           var data = e.target.result;
-          console.log(e.target.result);
-          console.log(_this.image);
 
           _this.image.setAttribute('src', '/images/add-photo.png');
 

@@ -118,8 +118,6 @@
             },
             onUpload: function (e) {
 
-                console.log(this.image);
-
                 let files = e.target.files;
 
                 this.file = files[0];
@@ -127,16 +125,12 @@
                 let type = this.file.type;
                 let mime = type.split('/');
                 mime = mime[0];
-                console.log(mime);
-
                 if (mime === 'image') {
 
                     this.error = '';
                     let reader = new FileReader();
                     reader.onload = (e) => {
                         let data = e.target.result;
-                        console.log(e.target.result);
-                        console.log(this.image);
                         this.image.setAttribute('src', '/images/add-photo.png');
                         setTimeout(()=>{
                             this.image.setAttribute('src', data);

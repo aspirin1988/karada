@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
 class Lesson extends Model
 {
@@ -118,38 +119,17 @@ class Lesson extends Model
 
     public function getNext()
     {
-        $section = $this->getSection();
-        if ($section) {
-            $lessons = $section->getLesson();
-            $next = false;
-            foreach ($lessons as $key => $lesson) {
-                if ($next) {
-                    return $lesson;
-                }
-                if ($lesson->id == $this->id && (count($lessons) != ($key + 1))) {
-                    $next = true;
-                }
+        $lessons_list = Cache::remember('lessons_list_cache', now()->addMinutes(10), function () {
+            $course = Course::where('id', 1)->first();
+            return $course->getLessons();
+        });
+        $next_ = false;
+        foreach ($lessons_list as $key => $item) {
+            if ($next_) {
+                return $item;
             }
-
-            if (!$next) {
-
-                $next_ = false;
-
-                $parent = $section->getParent();
-                $childs = $parent->getChild();
-                foreach ($childs as $child) {
-                    if ($next_) {
-                        $lessons = $child->getLesson();
-                        if (count($lessons)) {
-                            return $lessons[0];
-                        } else {
-                            return null;
-                        }
-                    }
-                    if ($child->id == $section->id) {
-                        $next_ = true;
-                    }
-                }
+            if ($this->id == $item->id) {
+                $next_ = true;
             }
         }
         return null;
