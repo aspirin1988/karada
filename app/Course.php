@@ -24,13 +24,17 @@ class Course extends Model
     {
         $lessons = [];
 
-        $sections = Section::where('course_id', $this->id)->get();
+        $sections_parent = Section::where('course_id', $this->id)
+            ->where('parent_id', 0)
+            ->orderBy('sort', 'desc')
+            ->get();
 
-        foreach ($sections as $section) {
-
-            $lessons_ = $section->getLesson();
-            foreach ($lessons_ as $item) {
-                $lessons[] = $item;
+        foreach ($sections_parent as $section_parent) {
+            foreach ($section_parent->getChild() as $section) {
+                $lessons_ = $section->getLesson();
+                foreach ($lessons_ as $item) {
+                    $lessons[] = $item;
+                }
             }
         }
         return $lessons;
