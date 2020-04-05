@@ -1802,7 +1802,6 @@ __webpack_require__.r(__webpack_exports__);
           }
         }
       });
-      console.log(obj);
     }
   },
   watch: {}
@@ -30490,6 +30489,7 @@ var render = function() {
             _vm._v(" "),
             _c("div", {
               staticClass: "error",
+              staticStyle: { "margin-bottom": "15px" },
               domProps: { innerHTML: _vm._s(_vm.messages) }
             }),
             _vm._v(" "),

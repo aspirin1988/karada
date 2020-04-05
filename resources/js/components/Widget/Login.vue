@@ -12,7 +12,7 @@
                     <label for="name">Пароль:</label>
                     <input type="password" v-model="password" name="password">
                 </div>
-                <div class="error" v-html="messages"></div>
+                <div style="margin-bottom: 15px;" class="error" v-html="messages"></div>
                 <div class="row">
                     <button @click="Send" class="button-yellow-stroke">Войти</button>
                 </div>
@@ -103,8 +103,6 @@
                         }
                     }
                 });
-
-                console.log(obj);
             }
 
         },
