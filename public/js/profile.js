@@ -2236,13 +2236,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     setPlus: function setPlus() {
-      if (this.$refs['edit-photo_goals'].getAttribute('src') === '/images/add-photo.png') {
-        this.$refs['edit-photo_goals'].setAttribute('src', '/images/add-photo_blue.png');
+      if (this.image.getAttribute('src') === '/images/add-photo.png') {
+        this.image.setAttribute('src', '/images/add-photo_blue.png');
       }
     },
     unsetPlus: function unsetPlus() {
-      if (this.$refs['edit-photo_goals'].getAttribute('src') === '/images/add-photo_blue.png') {
-        this.$refs['edit-photo_goals'].setAttribute('src', '/images/add-photo.png');
+      if (this.image.getAttribute('src') === '/images/add-photo_blue.png') {
+        this.image.setAttribute('src', '/images/add-photo.png');
       }
     },
     onUpload: function onUpload(e) {
@@ -2262,12 +2262,12 @@ __webpack_require__.r(__webpack_exports__);
         reader.onload = function (e) {
           var data = e.target.result;
           console.log(e.target.result);
-          console.log(_this.$refs['edit-photo_goals']);
+          console.log(_this.image);
 
-          _this.$refs['edit-photo_goals'].setAttribute('src', '/images/add-photo.png');
+          _this.image.setAttribute('src', '/images/add-photo.png');
 
           setTimeout(function () {
-            _this.$refs['edit-photo_goals'].setAttribute('src', data);
+            _this.image.setAttribute('src', data);
           });
         };
 
