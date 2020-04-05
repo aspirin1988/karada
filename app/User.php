@@ -72,12 +72,12 @@ class User extends Authenticatable
 
     public function getAva()
     {
-        return $this->ava;
+        return $this->ava.'?v='.time();
     }
 
     public function getBackground()
     {
-        return $this->background;
+        return $this->background.'?v='.time();
     }
 
     public function getUserStat()
