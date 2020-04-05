@@ -2258,10 +2258,15 @@ __webpack_require__.r(__webpack_exports__);
         var reader = new FileReader();
 
         reader.onload = function (e) {
+          var data = e.target.result;
           console.log(e.target.result);
           console.log(_this.$refs['edit-photo']);
 
-          _this.$refs['edit-photo'].setAttribute('src', e.target.result);
+          _this.$refs['edit-photo'].setAttribute('src', '/images/add-photo.png');
+
+          setTimeout(function () {
+            _this.$refs['edit-photo'].setAttribute('src', data);
+          });
         };
 
         reader.readAsDataURL(this.file); // axios.post('/home/upload/background',

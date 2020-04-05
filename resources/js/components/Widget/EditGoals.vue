@@ -130,9 +130,14 @@
                     this.error = '';
                     let reader = new FileReader();
                     reader.onload = (e) => {
+                        let data = e.target.result;
                         console.log(e.target.result);
                         console.log(this.$refs['edit-photo']);
-                        this.$refs['edit-photo'].setAttribute('src', e.target.result);
+                        this.$refs['edit-photo'].setAttribute('src', '/images/add-photo.png');
+                        setTimeout(()=>{
+                            this.$refs['edit-photo'].setAttribute('src', data);
+                        })
+
                     };
 
                     reader.readAsDataURL(this.file);
