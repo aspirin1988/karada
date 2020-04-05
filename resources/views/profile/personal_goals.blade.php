@@ -47,8 +47,7 @@
                                                 <goals-approve-component
                                                     :id="'{{$in_process->id}}'"
                                                     :image="'{{$in_process->image??'/img/empty.png'}}'"></goals-approve-component>
-                                                <goals-edit-component
-                                                    :id="'{{$in_process->id}}'"></goals-edit-component>
+                                                <goals-edit-component :key="{{$in_process->id}}" :id="'{{$in_process->id}}'"></goals-edit-component>
                                             </div>
                                         </div>
                                     </div>
