@@ -781,6 +781,8 @@ class HomeController extends Controller
         $lesson = Lesson::where('id', $lesson_id)->first();
         $next_lesson = $lesson->getNext();
 
+        dd($next_lesson->getUrl());
+
         return view('profile.test_single', [
             'test' => $test,
             'title' => 'Курс "Альфа Продавец"',

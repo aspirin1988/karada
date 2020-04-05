@@ -123,6 +123,7 @@ class Lesson extends Model
             $course = Course::where('id', 1)->first();
             return $course->getLessons();
         });
+
         $next_ = false;
         foreach ($lessons_list as $key => $item) {
             if ($next_) {
