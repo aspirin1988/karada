@@ -2,7 +2,7 @@
 
 @section('script')
     @parent
-    <script src="/js/main.js?v=117"></script>
+    <script src="/js/main.js?v=118"></script>
 
     <script>
         $('header').addClass('hidden');
@@ -50,7 +50,7 @@
         new WOW().init();
     </script>
 
-    <link rel="stylesheet" href="/js/owl.carousel.css?v=117">
+    <link rel="stylesheet" href="/js/owl.carousel.css?v=118">
     <script src="/js/owl.carousel.js"></script>
 
     <script>
@@ -110,7 +110,7 @@
 @stop
 
 @section('content')
-    <link rel="stylesheet" href="/css/index.css?v=117" type="text/css"/>
+    <link rel="stylesheet" href="/css/index.css?v=118" type="text/css"/>
     <section class="IndexTop"
              style="background: url(/img/index/1920_Вижуал.jpg) center center no-repeat; background-size: cover;">
         <div class="IndexTopH">
