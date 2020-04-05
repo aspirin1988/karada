@@ -2248,6 +2248,7 @@ __webpack_require__.r(__webpack_exports__);
     onUpload: function onUpload(e) {
       var _this = this;
 
+      console.log(this.image);
       var files = e.target.files;
       this.file = files[0];
       var type = this.file.type;

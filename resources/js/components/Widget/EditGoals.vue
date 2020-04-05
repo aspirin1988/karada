@@ -118,6 +118,9 @@
                 }
             },
             onUpload: function (e) {
+
+                console.log(this.image);
+
                 let files = e.target.files;
 
                 this.file = files[0];
