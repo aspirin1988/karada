@@ -114,21 +114,6 @@
   }
 }
 
-@media (max-width: 640px) {
-  .answer-list li:active {
-    background: #37a2e9;
-  }
-
-  .answer-list li:active .number {
-    color: #fff;
-    border: 1px solid #fff;
-  }
-
-  .answer-list li:active .text {
-    color: #fff;
-  }
-}
-
 @media (min-width: 641px) {
   .answer-list li:hover {
     background: #37a2e9;

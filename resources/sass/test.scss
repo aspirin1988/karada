@@ -35,7 +35,7 @@
 
         }
     }
-k
+
     .question-number {
         font-family: "Open Sans";
         font-size: 20px;
@@ -95,18 +95,6 @@ k
             }
         }
 
-        @media (max-width: 640px) {
-            &:active {
-                background: #37a2e9;
-                .number {
-                    color: #fff;
-                    border: 1px solid #fff;
-                }
-                .text {
-                    color: #fff;
-                }
-            }
-        }
         @media (min-width: 641px) {
             &:hover {
                 background: #37a2e9;
