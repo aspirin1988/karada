@@ -2231,7 +2231,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.modal = this.$refs['delete_teammate'];
-    this.image = this.$refs['edit-photo_goals'];
+    this.image = this.$refs['edit-photo_goals_' + this.id];
     console.log(this.image);
   },
   methods: {
@@ -41284,7 +41284,7 @@ var render = function() {
             _c("div", { staticStyle: { position: "relative" } }, [
               _c("label", { attrs: { for: "upload_goals" } }, [
                 _c("img", {
-                  ref: "edit-photo_goals",
+                  ref: "edit-photo_goals_" + _vm.id,
                   staticClass: "add-photo",
                   staticStyle: {
                     width: "160px",
