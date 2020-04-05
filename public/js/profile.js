@@ -2254,6 +2254,8 @@ __webpack_require__.r(__webpack_exports__);
         var reader = new FileReader();
 
         reader.onload = function (e) {
+          console.log(e.target.result);
+
           _this.$refs['add-photo'].setAttribute('src', e.target.result);
         };
 
