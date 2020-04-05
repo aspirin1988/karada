@@ -1485,3 +1485,7 @@ footer .col.col-links p a {
 .display-none {
     display: none !important;
 }
+
+.error{
+    color: #f00;
+}
