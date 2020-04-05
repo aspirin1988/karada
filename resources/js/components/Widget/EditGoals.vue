@@ -103,6 +103,8 @@
         },
         mounted() {
             this.modal = this.$refs['delete_teammate'];
+            this.image = this.$refs['edit-photo_goals'];
+            console.log(this.image);
         },
         methods: {
             setPlus: function () {
