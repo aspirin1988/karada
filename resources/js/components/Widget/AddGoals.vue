@@ -116,9 +116,8 @@
                 }
             },
             onUpload: function (e) {
-                console.log(e);
-                let files = e.target.files;
 
+                let files = e.target.files;
                 this.file = files[0];
 
                 let type = this.file.type;

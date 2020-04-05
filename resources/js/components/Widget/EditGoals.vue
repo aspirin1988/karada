@@ -17,9 +17,11 @@
                         </label>
                         <label for="upload_goals" style="width: 190px;margin: 10px auto;height: 40px;"
                                class="button round button-blue-stroke">заменить фото</label>
-                        <input id="upload_goals" style="opacity: 0;z-index: 1;position: absolute;width: 100%;height: 160px;;left: 0;top: 0;"
+                        <input id="upload_goals"
+                               style="opacity: 0;z-index: 1;position: absolute;width: 100%;height: 160px;;left: 0;top: 0;"
                                class="uk-height-1-1 uk-position-top-left uk-width-1-1"
-                               type="file" @change="onUpload" @mouseover="setPlus()" @mouseout="unsetPlus()" >
+                               accept=".jpg,.png,.jpeg"
+                               type="file" @change="onUpload" @mouseover="setPlus()" @mouseout="unsetPlus()">
                     </div>
                     <div class="form">
                         <div class="row" style="position: relative;">
@@ -42,10 +44,13 @@
                             </select>
                         </div>
                         <div class="row flex-center" style="margin-top: 15px;">
-                            <button style="width: 250px; height: 50px; padding: 10px 15px; font-size: 18px;" @click="Save()" class="button round button-yellow-stroke">сохранить</button>
+                            <button style="width: 250px; height: 50px; padding: 10px 15px; font-size: 18px;"
+                                    @click="Save()" class="button round button-yellow-stroke">сохранить
+                            </button>
                         </div>
                         <div class="row flex-center" style="margin-top: 15px;">
-                            <a href="#" style="width: 200px; height: 50px; padding: 10px 15px; font-size: 18px;" class="button round button-gray-stroke" @click="Cancel">отменить</a>
+                            <a href="#" style="width: 200px; height: 50px; padding: 10px 15px; font-size: 18px;"
+                               class="button round button-gray-stroke" @click="Cancel">отменить</a>
                         </div>
                     </div>
                 </div>
@@ -111,36 +116,46 @@
 
                 this.file = files[0];
 
-                let reader = new FileReader();
+                let type = this.file.type;
+                let mime = type.split('/');
+                mime = mime[0];
+                console.log(type);
 
-                reader.onload = (e) => {
-                    this.$refs['add-photo'].setAttribute('src', e.target.result);
-                };
+                if (mime === 'image') {
 
-                reader.readAsDataURL(this.file);
+                    let reader = new FileReader();
 
-                // axios.post('/home/upload/background',
-                //     formData,
-                //     {
-                //         headers: {
-                //             'Content-Type': 'multipart/form-data'
-                //         }
-                //     }
-                // ).then(response => {
-                //     if (response.data.result) {
-                //         location.reload();
-                //         UIkit.notification({message: 'Изображения успешно загружено!', status: 'success'});
-                //         this.getGalleryList();
-                //     }
-                // })
-                //     .catch(function () {
-                //         UIkit.notification({message: 'При загрузки изображений произошла ошибка!', status: 'danger'});
-                //     });
+                    reader.onload = (e) => {
+                        this.$refs['add-photo'].setAttribute('src', e.target.result);
+                    };
+
+                    reader.readAsDataURL(this.file);
+
+                    // axios.post('/home/upload/background',
+                    //     formData,
+                    //     {
+                    //         headers: {
+                    //             'Content-Type': 'multipart/form-data'
+                    //         }
+                    //     }
+                    // ).then(response => {
+                    //     if (response.data.result) {
+                    //         location.reload();
+                    //         UIkit.notification({message: 'Изображения успешно загружено!', status: 'success'});
+                    //         this.getGalleryList();
+                    //     }
+                    // })
+                    //     .catch(function () {
+                    //         UIkit.notification({message: 'При загрузки изображений произошла ошибка!', status: 'danger'});
+                    //     });
+                }else {
+                    this.error = 'Данный тип файла запрещен для загрузки!';
+                }
 
             },
             Checked: function () {
                 if (this.list.description.length >= 30) {
-                    this.list.description = this.list.description.substr(0,30);
+                    this.list.description = this.list.description.substr(0, 30);
                     event.preventDefault();
                     return false;
                 }

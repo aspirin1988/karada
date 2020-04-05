@@ -1806,7 +1806,6 @@ __webpack_require__.r(__webpack_exports__);
     onUpload: function onUpload(e) {
       var _this = this;
 
-      console.log(e);
       var files = e.target.files;
       this.file = files[0];
       var type = this.file.type;
@@ -2192,6 +2191,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['id'],
   data: function data() {
@@ -2240,29 +2244,38 @@ __webpack_require__.r(__webpack_exports__);
 
       var files = e.target.files;
       this.file = files[0];
-      var reader = new FileReader();
+      var type = this.file.type;
+      var mime = type.split('/');
+      mime = mime[0];
+      console.log(type);
 
-      reader.onload = function (e) {
-        _this.$refs['add-photo'].setAttribute('src', e.target.result);
-      };
+      if (mime === 'image') {
+        var reader = new FileReader();
 
-      reader.readAsDataURL(this.file); // axios.post('/home/upload/background',
-      //     formData,
-      //     {
-      //         headers: {
-      //             'Content-Type': 'multipart/form-data'
-      //         }
-      //     }
-      // ).then(response => {
-      //     if (response.data.result) {
-      //         location.reload();
-      //         UIkit.notification({message: 'Изображения успешно загружено!', status: 'success'});
-      //         this.getGalleryList();
-      //     }
-      // })
-      //     .catch(function () {
-      //         UIkit.notification({message: 'При загрузки изображений произошла ошибка!', status: 'danger'});
-      //     });
+        reader.onload = function (e) {
+          _this.$refs['add-photo'].setAttribute('src', e.target.result);
+        };
+
+        reader.readAsDataURL(this.file); // axios.post('/home/upload/background',
+        //     formData,
+        //     {
+        //         headers: {
+        //             'Content-Type': 'multipart/form-data'
+        //         }
+        //     }
+        // ).then(response => {
+        //     if (response.data.result) {
+        //         location.reload();
+        //         UIkit.notification({message: 'Изображения успешно загружено!', status: 'success'});
+        //         this.getGalleryList();
+        //     }
+        // })
+        //     .catch(function () {
+        //         UIkit.notification({message: 'При загрузки изображений произошла ошибка!', status: 'danger'});
+        //     });
+      } else {
+        this.error = 'Данный тип файла запрещен для загрузки!';
+      }
     },
     Checked: function Checked() {
       if (this.list.description.length >= 30) {
@@ -41302,7 +41315,11 @@ var render = function() {
                   left: "0",
                   top: "0"
                 },
-                attrs: { id: "upload_goals", type: "file" },
+                attrs: {
+                  id: "upload_goals",
+                  accept: ".jpg,.png,.jpeg",
+                  type: "file"
+                },
                 on: {
                   change: _vm.onUpload,
                   mouseover: function($event) {
@@ -41505,7 +41522,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("сохранить")]
+                    [_vm._v("сохранить\n                        ")]
                   )
                 ]
               ),
