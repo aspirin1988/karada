@@ -1,7 +1,7 @@
 <template>
     <div>
         <button style="width: 50px;padding: 10px; margin-left: 10px;" class="button round button-blue-stroke"
-                @click="Edit">
+                @click="Edit()">
             <i style="margin:0;" class="icon config"></i>
         </button>
         <div ref="delete_teammate" class="offcanvas">
@@ -18,10 +18,10 @@
                         <label for="upload_goals" style="width: 190px;margin: 10px auto;height: 40px;"
                                class="button round button-blue-stroke">заменить фото</label>
                         <input id="upload_goals"
-                               style="opacity: 0;z-index: 1;position: absolute;width: 100%;height: 160px;;left: 0;top: 0;"
+                               style="opacity: 0;z-index: 1;position: absolute;width: 100%;height: 225px; left: 0;top: 0;"
                                class="uk-height-1-1 uk-position-top-left uk-width-1-1"
                                accept=".jpg,.png,.jpeg"
-                               type="file" @change="onUpload" @mouseover="setPlus()" @mouseout="unsetPlus()">
+                               type="file" @change="onUpload($event)" @mouseover="setPlus()" @mouseout="unsetPlus()">
                     </div>
                     <div style="text-align: center;" class="error" v-html="error"></div>
                     <p style="color: #37a2e9; font-family: Montserrat; font-size: 13px; font-weight: 400; line-height: 18px;">
@@ -105,6 +105,7 @@
             this.modal = this.$refs['delete_teammate'];
             this.image = this.$refs['edit-photo_goals_'+this.id];
             console.log(this.image);
+            this.getData();
         },
         methods: {
             setPlus: function () {
@@ -220,7 +221,6 @@
             },
             Edit: function () {
                 this.modal.classList.add('active');
-                this.getData();
             },
             Cancel: function () {
                 this.modal.classList.remove('active');

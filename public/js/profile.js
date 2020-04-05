@@ -2233,6 +2233,7 @@ __webpack_require__.r(__webpack_exports__);
     this.modal = this.$refs['delete_teammate'];
     this.image = this.$refs['edit-photo_goals_' + this.id];
     console.log(this.image);
+    this.getData();
   },
   methods: {
     setPlus: function setPlus() {
@@ -2340,7 +2341,6 @@ __webpack_require__.r(__webpack_exports__);
     },
     Edit: function Edit() {
       this.modal.classList.add('active');
-      this.getData();
     },
     Cancel: function Cancel() {
       this.modal.classList.remove('active');
@@ -41262,7 +41262,11 @@ var render = function() {
       {
         staticClass: "button round button-blue-stroke",
         staticStyle: { width: "50px", padding: "10px", "margin-left": "10px" },
-        on: { click: _vm.Edit }
+        on: {
+          click: function($event) {
+            return _vm.Edit()
+          }
+        }
       },
       [_c("i", { staticClass: "icon config", staticStyle: { margin: "0" } })]
     ),
@@ -41328,7 +41332,7 @@ var render = function() {
                   "z-index": "1",
                   position: "absolute",
                   width: "100%",
-                  height: "160px",
+                  height: "225px",
                   left: "0",
                   top: "0"
                 },
@@ -41338,7 +41342,9 @@ var render = function() {
                   type: "file"
                 },
                 on: {
-                  change: _vm.onUpload,
+                  change: function($event) {
+                    return _vm.onUpload($event)
+                  },
                   mouseover: function($event) {
                     return _vm.setPlus()
                   },
