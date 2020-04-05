@@ -2247,9 +2247,10 @@ __webpack_require__.r(__webpack_exports__);
       var type = this.file.type;
       var mime = type.split('/');
       mime = mime[0];
-      console.log(type);
+      console.log(mime);
 
       if (mime === 'image') {
+        this.error = '';
         var reader = new FileReader();
 
         reader.onload = function (e) {

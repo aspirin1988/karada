@@ -119,12 +119,12 @@
                 let type = this.file.type;
                 let mime = type.split('/');
                 mime = mime[0];
-                console.log(type);
+                console.log(mime);
 
                 if (mime === 'image') {
 
+                    this.error = '';
                     let reader = new FileReader();
-
                     reader.onload = (e) => {
                         this.$refs['add-photo'].setAttribute('src', e.target.result);
                     };
