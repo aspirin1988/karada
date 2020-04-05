@@ -12,7 +12,7 @@
                     <div style="position: relative">
                         <label for="upload_goals">
                             <img style="width: 160px; height: 160px; object-fit: cover;" class="add-photo"
-                                 @mouseover="setPlus()" @mouseout="unsetPlus()" ref="add-photo"
+                                 @mouseover="setPlus()" @mouseout="unsetPlus()" ref="edit-photo"
                                  :src="list.image||'/images/add-photo.png'" alt="">
                         </label>
                         <label for="upload_goals" style="width: 190px;margin: 10px auto;height: 40px;"
@@ -23,6 +23,9 @@
                                accept=".jpg,.png,.jpeg"
                                type="file" @change="onUpload" @mouseover="setPlus()" @mouseout="unsetPlus()">
                     </div>
+                    <div style="text-align: center;" class="error" v-html="error"></div>
+                    <p style="color: #37a2e9; font-family: Montserrat; font-size: 13px; font-weight: 400; line-height: 18px;">
+                        Фото будет обработано под наш формат.</p>
                     <div class="form">
                         <div class="row" style="position: relative;">
                             <label for="">Описание:</label>
@@ -102,13 +105,13 @@
         },
         methods: {
             setPlus: function () {
-                if (this.$refs['add-photo'].getAttribute('src') === '/images/add-photo.png') {
-                    this.$refs['add-photo'].setAttribute('src', '/images/add-photo_blue.png')
+                if (this.$refs['edit-photo'].getAttribute('src') === '/images/add-photo.png') {
+                    this.$refs['edit-photo'].setAttribute('src', '/images/add-photo_blue.png')
                 }
             },
             unsetPlus: function () {
-                if (this.$refs['add-photo'].getAttribute('src') === '/images/add-photo_blue.png') {
-                    this.$refs['add-photo'].setAttribute('src', '/images/add-photo.png')
+                if (this.$refs['edit-photo'].getAttribute('src') === '/images/add-photo_blue.png') {
+                    this.$refs['edit-photo'].setAttribute('src', '/images/add-photo.png')
                 }
             },
             onUpload: function (e) {
@@ -127,7 +130,8 @@
                     let reader = new FileReader();
                     reader.onload = (e) => {
                         console.log(e.target.result);
-                        this.$refs['add-photo'].setAttribute('src', e.target.result);
+                        console.log(this.$refs['edit-photo']);
+                        this.$refs['edit-photo'].setAttribute('src', e.target.result);
                     };
 
                     reader.readAsDataURL(this.file);

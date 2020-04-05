@@ -1818,8 +1818,6 @@ __webpack_require__.r(__webpack_exports__);
         var reader = new FileReader();
 
         reader.onload = function (e) {
-          console.log(_this.$refs['add-photo']);
-
           _this.$refs['add-photo'].setAttribute('src', e.target.result);
         };
 
@@ -2198,6 +2196,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['id'],
   data: function data() {
@@ -2232,13 +2233,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     setPlus: function setPlus() {
-      if (this.$refs['add-photo'].getAttribute('src') === '/images/add-photo.png') {
-        this.$refs['add-photo'].setAttribute('src', '/images/add-photo_blue.png');
+      if (this.$refs['edit-photo'].getAttribute('src') === '/images/add-photo.png') {
+        this.$refs['edit-photo'].setAttribute('src', '/images/add-photo_blue.png');
       }
     },
     unsetPlus: function unsetPlus() {
-      if (this.$refs['add-photo'].getAttribute('src') === '/images/add-photo_blue.png') {
-        this.$refs['add-photo'].setAttribute('src', '/images/add-photo.png');
+      if (this.$refs['edit-photo'].getAttribute('src') === '/images/add-photo_blue.png') {
+        this.$refs['edit-photo'].setAttribute('src', '/images/add-photo.png');
       }
     },
     onUpload: function onUpload(e) {
@@ -2257,8 +2258,9 @@ __webpack_require__.r(__webpack_exports__);
 
         reader.onload = function (e) {
           console.log(e.target.result);
+          console.log(_this.$refs['edit-photo']);
 
-          _this.$refs['add-photo'].setAttribute('src', e.target.result);
+          _this.$refs['edit-photo'].setAttribute('src', e.target.result);
         };
 
         reader.readAsDataURL(this.file); // axios.post('/home/upload/background',
@@ -41273,7 +41275,7 @@ var render = function() {
             _c("div", { staticStyle: { position: "relative" } }, [
               _c("label", { attrs: { for: "upload_goals" } }, [
                 _c("img", {
-                  ref: "add-photo",
+                  ref: "edit-photo",
                   staticClass: "add-photo",
                   staticStyle: {
                     width: "160px",
@@ -41336,6 +41338,30 @@ var render = function() {
                 }
               })
             ]),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: "error",
+              staticStyle: { "text-align": "center" },
+              domProps: { innerHTML: _vm._s(_vm.error) }
+            }),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                staticStyle: {
+                  color: "#37a2e9",
+                  "font-family": "Montserrat",
+                  "font-size": "13px",
+                  "font-weight": "400",
+                  "line-height": "18px"
+                }
+              },
+              [
+                _vm._v(
+                  "\n                    Фото будет обработано под наш формат."
+                )
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "form" }, [
               _c(
