@@ -41292,7 +41292,7 @@ var render = function() {
                     "object-fit": "cover"
                   },
                   attrs: {
-                    rel: "edit-photo_goals",
+                    rel: "edit-photo_goals" + _vm.id,
                     src: _vm.list.image || "/images/add-photo.png",
                     alt: ""
                   },

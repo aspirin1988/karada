@@ -12,7 +12,7 @@
                     <div style="position: relative">
                         <label for="upload_goals">
                             <img style="width: 160px; height: 160px; object-fit: cover;" class="add-photo"
-                                 @mouseover="setPlus()" @mouseout="unsetPlus()" rel="edit-photo_goals" :ref="'edit-photo_goals_'+id"
+                                 @mouseover="setPlus()" @mouseout="unsetPlus()" :rel="'edit-photo_goals'+id" :ref="'edit-photo_goals_'+id"
                                  :src="list.image||'/images/add-photo.png'" alt="">
                         </label>
                         <label for="upload_goals" style="width: 190px;margin: 10px auto;height: 40px;"
