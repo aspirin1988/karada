@@ -45,10 +45,10 @@
                                             <div class="date">{{$in_process->date_end}}</div>
                                             <div class="button-group">
                                                 <goals-approve-component
-                                                    :key="{{$in_process->id}}"
+                                                    :key="approve_{{$in_process->id}}"
                                                     :id="'{{$in_process->id}}'"
                                                     :image="'{{$in_process->image??'/img/empty.png'}}'"></goals-approve-component>
-                                                <goals-edit-component :key="{{$in_process->id}}" :id="'{{$in_process->id}}'"></goals-edit-component>
+                                                <goals-edit-component :key="edit_{{$in_process->id}}" :id="'{{$in_process->id}}'"></goals-edit-component>
                                             </div>
                                         </div>
                                     </div>
