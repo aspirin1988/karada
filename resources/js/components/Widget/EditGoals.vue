@@ -104,8 +104,6 @@
         mounted() {
             this.modal = this.$refs['delete_teammate'];
             this.image = this.$refs['edit-photo_goals_'+this.id];
-            console.log(this.image);
-            this.getData();
         },
         methods: {
             setPlus: function () {
@@ -221,6 +219,7 @@
             },
             Edit: function () {
                 this.modal.classList.add('active');
+                this.getData();
             },
             Cancel: function () {
                 this.modal.classList.remove('active');

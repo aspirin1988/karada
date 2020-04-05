@@ -2232,8 +2232,6 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.modal = this.$refs['delete_teammate'];
     this.image = this.$refs['edit-photo_goals_' + this.id];
-    console.log(this.image);
-    this.getData();
   },
   methods: {
     setPlus: function setPlus() {
@@ -2341,6 +2339,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     Edit: function Edit() {
       this.modal.classList.add('active');
+      this.getData();
     },
     Cancel: function Cancel() {
       this.modal.classList.remove('active');
