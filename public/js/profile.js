@@ -2234,13 +2234,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     setPlus: function setPlus() {
-      if (this.$refs['edit-photo'].getAttribute('src') === '/images/add-photo.png') {
-        this.$refs['edit-photo'].setAttribute('src', '/images/add-photo_blue.png');
+      if (this.$refs['edit-photo_goals'].getAttribute('src') === '/images/add-photo.png') {
+        this.$refs['edit-photo_goals'].setAttribute('src', '/images/add-photo_blue.png');
       }
     },
     unsetPlus: function unsetPlus() {
-      if (this.$refs['edit-photo'].getAttribute('src') === '/images/add-photo_blue.png') {
-        this.$refs['edit-photo'].setAttribute('src', '/images/add-photo.png');
+      if (this.$refs['edit-photo_goals'].getAttribute('src') === '/images/add-photo_blue.png') {
+        this.$refs['edit-photo_goals'].setAttribute('src', '/images/add-photo.png');
       }
     },
     onUpload: function onUpload(e) {
@@ -2260,12 +2260,12 @@ __webpack_require__.r(__webpack_exports__);
         reader.onload = function (e) {
           var data = e.target.result;
           console.log(e.target.result);
-          console.log(_this.$refs['edit-photo']);
+          console.log(_this.$refs['edit-photo_goals']);
 
-          _this.$refs['edit-photo'].setAttribute('src', '/images/add-photo.png');
+          _this.$refs['edit-photo_goals'].setAttribute('src', '/images/add-photo.png');
 
           setTimeout(function () {
-            _this.$refs['edit-photo'].setAttribute('src', data);
+            _this.$refs['edit-photo_goals'].setAttribute('src', data);
           });
         };
 
@@ -41281,7 +41281,7 @@ var render = function() {
             _c("div", { staticStyle: { position: "relative" } }, [
               _c("label", { attrs: { for: "upload_goals" } }, [
                 _c("img", {
-                  ref: "edit-photo",
+                  ref: "edit-photo_goals",
                   staticClass: "add-photo",
                   staticStyle: {
                     width: "160px",
@@ -41289,6 +41289,7 @@ var render = function() {
                     "object-fit": "cover"
                   },
                   attrs: {
+                    rel: "edit-photo_goals",
                     src: _vm.list.image || "/images/add-photo.png",
                     alt: ""
                   },

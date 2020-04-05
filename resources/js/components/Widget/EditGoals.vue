@@ -12,7 +12,7 @@
                     <div style="position: relative">
                         <label for="upload_goals">
                             <img style="width: 160px; height: 160px; object-fit: cover;" class="add-photo"
-                                 @mouseover="setPlus()" @mouseout="unsetPlus()" ref="edit-photo"
+                                 @mouseover="setPlus()" @mouseout="unsetPlus()" rel="edit-photo_goals" ref="edit-photo_goals"
                                  :src="list.image||'/images/add-photo.png'" alt="">
                         </label>
                         <label for="upload_goals" style="width: 190px;margin: 10px auto;height: 40px;"
@@ -106,13 +106,13 @@
         },
         methods: {
             setPlus: function () {
-                if (this.$refs['edit-photo'].getAttribute('src') === '/images/add-photo.png') {
-                    this.$refs['edit-photo'].setAttribute('src', '/images/add-photo_blue.png')
+                if (this.$refs['edit-photo_goals'].getAttribute('src') === '/images/add-photo.png') {
+                    this.$refs['edit-photo_goals'].setAttribute('src', '/images/add-photo_blue.png')
                 }
             },
             unsetPlus: function () {
-                if (this.$refs['edit-photo'].getAttribute('src') === '/images/add-photo_blue.png') {
-                    this.$refs['edit-photo'].setAttribute('src', '/images/add-photo.png')
+                if (this.$refs['edit-photo_goals'].getAttribute('src') === '/images/add-photo_blue.png') {
+                    this.$refs['edit-photo_goals'].setAttribute('src', '/images/add-photo.png')
                 }
             },
             onUpload: function (e) {
@@ -132,10 +132,10 @@
                     reader.onload = (e) => {
                         let data = e.target.result;
                         console.log(e.target.result);
-                        console.log(this.$refs['edit-photo']);
-                        this.$refs['edit-photo'].setAttribute('src', '/images/add-photo.png');
+                        console.log(this.$refs['edit-photo_goals']);
+                        this.$refs['edit-photo_goals'].setAttribute('src', '/images/add-photo.png');
                         setTimeout(()=>{
-                            this.$refs['edit-photo'].setAttribute('src', data);
+                            this.$refs['edit-photo_goals'].setAttribute('src', data);
                         })
 
                     };
