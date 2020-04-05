@@ -1818,6 +1818,8 @@ __webpack_require__.r(__webpack_exports__);
         var reader = new FileReader();
 
         reader.onload = function (e) {
+          console.log(_this.$refs['add-photo']);
+
           _this.$refs['add-photo'].setAttribute('src', e.target.result);
         };
 

@@ -129,6 +129,7 @@
                     this.error = '';
                     let reader = new FileReader();
                     reader.onload = (e) => {
+                        console.log(this.$refs['add-photo']);
                         this.$refs['add-photo'].setAttribute('src', e.target.result);
                     };
 
