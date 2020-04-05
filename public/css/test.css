@@ -41,7 +41,7 @@
 @media (max-width: 640px) {
   .question-container .question-text {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 22px;
   }
 }
 
@@ -109,7 +109,7 @@
 
 @media (max-width: 640px) {
   .answer-list li .text {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
   }
 }
