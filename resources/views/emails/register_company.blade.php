@@ -24,6 +24,8 @@
                 Администрация <br>
                 KARADA Школа Продаж <br>
                 <a href="tel:+7(705)2711177"><strong style="color: #005bd1;" >+7 (705) 271 11 77</strong></a>
+                <br>
+                <a href="www.karada.kz"><strong style="color: #005bd1;" >www.karada.kz</strong></a>
             </p>
         </div>
     </div>
