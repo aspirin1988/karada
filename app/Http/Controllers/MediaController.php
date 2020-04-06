@@ -223,6 +223,10 @@ class MediaController extends Controller
             $collections_count = [1];
         }
 
+        foreach ($collections as $key => $value){
+            $collections[$key]->video_url = $value->getVideo();
+        }
+
         return response()->json([
             'list' => $collections,
             'page_list' => $collections_count,
