@@ -75893,7 +75893,10 @@ var render = function() {
             _c("div", [
               _c("video", {
                 ref: "modal-video",
-                attrs: { controls: "controls", src: _vm.current_video.video }
+                attrs: {
+                  controls: "controls",
+                  src: _vm.current_video.video_url
+                }
               })
             ]),
             _vm._v(" "),

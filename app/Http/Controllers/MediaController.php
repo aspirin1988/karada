@@ -239,6 +239,7 @@ class MediaController extends Controller
         $data = $request->all();
         $id = $data['id'];
         unset($data['id']);
+        unset($data['video_url']);
 
         $video = Video::where('id', $id)->update($data);
 

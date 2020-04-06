@@ -148,7 +148,7 @@
                 <!--                    </div>-->
                 <!--                </div>-->
                 <div>
-                    <video ref="modal-video" controls="controls" :src="current_video.video"></video>
+                    <video ref="modal-video" controls="controls" :src="current_video.video_url"></video>
                 </div>
                 <div class="uk-margin">
                     <label class="uk-form-label" for="description">Опсание:*</label>
