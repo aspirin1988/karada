@@ -224,7 +224,7 @@ class MediaController extends Controller
         }
 
         foreach ($collections as $key => $value){
-            $collections[$key]->video_url = $value->getVideo();
+            $collections[$key]->video_url = $value->getVideoSize();
         }
 
         return response()->json([
