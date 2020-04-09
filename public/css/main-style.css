@@ -153,7 +153,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 120px) and (max-width: 709px) {
+@media only screen and (min-width: 120px) and (max-width: 640px) {
     /* line 70, ../sass/all/wrapper.scss */
     .container {
         max-width: 100%;
@@ -515,7 +515,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 120px) and (max-width: 709px) {
+@media only screen and (min-width: 120px) and (max-width: 1112px) {
     /* line 308, ../sass/all/text.scss */
     .section-title-md {
         font-size: 4vw;
@@ -652,7 +652,7 @@ header.hidden {
     display: none;
 }
 
-@media only screen and (max-width: 709px) and (min-width: 120px) {
+@media only screen and (max-width: 1112px) and (min-width: 120px) {
     /* line 95, ../sass/all/header.scss */
     header {
         padding-top: 8px;
@@ -876,7 +876,7 @@ footer .col.col-links p a {
     font-size: 12px;
 }
 
-@media only screen and (max-width: 709px) and (min-width: 120px) {
+@media only screen and (max-width: 1112px) and (min-width: 120px) {
     /* line 136, ../sass/all/footer.scss */
     footer {
         padding: 5vw 0;
@@ -1488,4 +1488,35 @@ footer .col.col-links p a {
 
 .error{
     color: #f00;
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1112px) {
+    main{
+        min-height: calc( 100vh - 350px);
+    }
+    /* line 54, ../sass/all/wrapper.scss */
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    footer .col.col-contact p a.phone{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    footer .col.col-contact p a{
+        font-size: 18px;
+    }
+    footer .col.col-address{
+        margin-bottom: 20px;
+    }
+    footer .col.col-social ul li a{
+        width: 34px;
+        height: 34px;
+    }
+    footer .col.col-links{
+        margin-bottom: 10px;
+    }
+    footer .col.col-policy p{
+        font-size: 10px;
+    }
 }

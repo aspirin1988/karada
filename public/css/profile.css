@@ -727,6 +727,12 @@ header nav .menu img {
   line-height: 25px;
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .progress-label {
+    font-size: 14px;
+  }
+}
+
 .progress-label + b {
   display: block;
   color: #000000;
@@ -740,6 +746,12 @@ header nav .menu img {
   .progress-label + b {
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .progress-label + b {
+    font-size: 18px;
   }
 }
 
@@ -781,6 +793,12 @@ header nav .menu img {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .profile-grid {
+    margin-top: 25px;
+  }
+}
+
 .profile {
   display: grid;
   grid-template-columns: 300px 360px;
@@ -791,7 +809,7 @@ header nav .menu img {
   margin-bottom: 20px;
 }
 
-@media (max-width: 799px) {
+@media (min-width: 120px) and (max-width: 640px) {
   .profile {
     grid-template-columns: 110px auto;
     max-width: 100vw;
@@ -799,6 +817,27 @@ header nav .menu img {
     padding: 20px;
     margin-right: 0;
     grid-gap: 10px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .profile {
+    grid-template-columns: 100%;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .profile {
+    grid-template-columns: 200px auto;
+    box-sizing: border-box;
+    grid-gap: 15px;
+    padding: 30px 20px;
+    width: 495px;
+    margin-right: 15px;
+    margin-bottom: 15px;
   }
 }
 
@@ -810,7 +849,7 @@ header nav .menu img {
      object-fit: cover;
 }
 
-@media (max-width: 799px) {
+@media (min-width: 120px) and (max-width: 640px) {
   .profile .profile-ava {
     text-align: center;
   }
@@ -821,8 +860,36 @@ header nav .menu img {
   }
 }
 
+@media (min-width: 641px) and (max-width: 799px) {
+  .profile .profile-ava {
+    text-align: center;
+  }
+
+  .profile .profile-ava img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .profile .profile-ava {
+    text-align: center;
+  }
+
+  .profile .profile-ava img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .profile .profile-data {
   padding: 0 15px;
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .profile .profile-data {
+    padding: 0;
+  }
 }
 
 .profile .profile-data .name {
@@ -839,7 +906,7 @@ header nav .menu img {
   }
 }
 
-@media (max-width: 799px) {
+@media (min-width: 120px) and (max-width: 640px) {
   .profile .profile-data .name {
     font-family: Montserrat;
     font-size: 6vw;
@@ -848,15 +915,40 @@ header nav .menu img {
   }
 }
 
+@media (min-width: 641px) and (max-width: 799px) {
+  .profile .profile-data .name {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .profile .profile-data .name {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 799px) {
   .container {
     width: 100%;
+    max-width: 768px;
     padding: 15px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .container {
+    width: 750px;
     box-sizing: border-box;
   }
 }
@@ -875,10 +967,24 @@ header nav .menu img {
   width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 120px) and (max-width: 640px) {
   .motivation {
     padding: 20px;
     max-width: 100vw;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .motivation {
+    width: 50%;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .motivation {
+    max-width: 240px;
+    margin-bottom: 15px;
   }
 }
 
@@ -919,10 +1025,25 @@ header nav .menu img {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .motivation .button-yellow-fill {
+    font-size: 10px;
+    width: 160px;
+    padding: 0;
+    height: 28px;
+  }
+}
+
 .motivation .button-yellow-stroke {
   width: 230px;
   height: 50px;
   margin-top: 30px;
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .motivation .button-yellow-stroke {
+    width: 197px;
+  }
 }
 
 .sales_program {
@@ -1257,6 +1378,18 @@ header nav .menu img {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .button {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px;
+  }
+
+  .button .icon.config {
+    margin-right: 2px;
+  }
+}
+
 .button.circle {
   border-radius: 18px;
 }
@@ -1398,21 +1531,21 @@ header nav .menu img {
   box-sizing: border-box;
 }
 
-.personal_goals.chief {
-  width: 1180px;
+@media (min-width: 800px) and (max-width: 1199px) {
+  .personal_goals {
+    height: 369px;
+  }
 }
 
-@media (min-width: 768px) {
-  .personal_goals.chief {
-    height: 483px;
-  }
+.personal_goals.chief {
+  width: 1180px;
 }
 
 .personal_goals.chief .slider-container {
   width: 920px;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 120px) and (max-width: 799px) {
   .personal_goals.chief {
     width: 100%;
   }
@@ -1421,6 +1554,19 @@ header nav .menu img {
     width: 100%;
     padding: 0 15px;
     box-sizing: border-box;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .personal_goals.chief {
+    width: 100%;
+  }
+
+  .personal_goals.chief .slider-container {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin: 20px auto;
   }
 }
 
@@ -1465,6 +1611,12 @@ header nav .menu img {
   text-transform: uppercase;
   text-align: center;
   display: block;
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .personal_goals .personal_goals_title {
+    font-size: 16px;
+  }
 }
 
 .personal_goals .button {
@@ -1674,6 +1826,14 @@ header nav .menu img {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .slider .slider-container .slider-item img {
+    width: 210px;
+    height: 210px;
+    margin: 0 auto;
+  }
+}
+
 .slider .slider-container .slider-item.active {
   display: block;
 }
@@ -1746,6 +1906,29 @@ header nav .menu img {
   padding: 25px 40px 35px;
 }
 
+@media (min-width: 120px) and (max-width: 640px) {
+  .courses {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .courses {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .courses {
+    width: 495px;
+    box-sizing: border-box;
+    padding: 30px 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+}
+
 .courses .courses_title {
   display: block;
   text-align: center;
@@ -1756,6 +1939,12 @@ header nav .menu img {
   line-height: 25px;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .courses .courses_title {
+    height: 16px;
+  }
 }
 
 .courses .courses_sub_title {
@@ -1775,10 +1964,24 @@ header nav .menu img {
   grid-template-columns: 700px;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 120px) and (max-width: 640px) {
   .courses .courses_items {
     grid-template-columns: 1fr;
     box-sizing: border-box;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .courses .courses_items {
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .courses .courses_items {
+    grid-template-columns: 100%;
   }
 }
 
@@ -1787,14 +1990,14 @@ header nav .menu img {
   grid-template-columns: 1fr 1fr;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 799px) {
   .courses .courses_items .courses_item {
     grid-template-columns: 100%;
     text-align: center;
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 799px) {
   .courses .courses_items .courses_item > div:first-child {
     border: none;
     border-right: 1px solid;
@@ -1809,15 +2012,27 @@ header nav .menu img {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 799px) {
   .courses .courses_items .courses_item > div:first-child {
     display: none;
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 800px) and (max-width: 1199px) {
+  .courses .courses_items .courses_item > div:first-child {
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 799px) {
   .courses .courses_items .courses_item > div:last-child {
     padding-left: 40px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .courses .courses_items .courses_item > div:last-child {
+    padding-left: 15px;
   }
 }
 
@@ -1867,7 +2082,7 @@ header nav .menu img {
   margin-bottom: 7px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 799px) {
   .courses {
     padding: 25px 20px 20px;
     box-sizing: border-box;
@@ -1878,6 +2093,7 @@ header nav .menu img {
 
   .courses .actions {
     align-items: center;
+    flex-direction: column;
   }
 
   .courses .actions .button.button-blue-stroke {
@@ -1902,6 +2118,15 @@ header nav .menu img {
 @media (max-width: 767px) {
   .my_rewards {
     max-width: 100%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .my_rewards {
+    width: 240px;
+    box-sizing: border-box;
+    padding: 30px 10px;
+    margin-top: 15px;
   }
 }
 
@@ -1938,8 +2163,21 @@ header nav .menu img {
   height: 197px;
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .my_rewards .my_rewards_item img {
+    width: 211px;
+    height: 175px;
+  }
+}
+
 .my_rewards .button {
   margin-top: 55px;
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .my_rewards .button {
+    margin-top: 15px;
+  }
 }
 
 footer {
@@ -1953,10 +2191,17 @@ footer {
   margin-top: 100px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 799px) {
   footer {
     height: auto;
     margin-top: 0;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  footer {
+    height: auto;
+    margin-top: 50px;
   }
 }
 
@@ -1966,7 +2211,7 @@ footer .footer-grid {
   padding-right: 20px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   footer .footer-grid {
     grid-template-columns: 1fr;
     box-sizing: border-box;
@@ -1977,6 +2222,12 @@ footer .footer-grid {
   footer .footer-grid .privacy_policy,
   footer .footer-grid .contacts {
     text-align: center;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  footer .footer-grid {
+    grid-template-columns: 440px auto 1fr;
   }
 }
 
@@ -2011,6 +2262,12 @@ footer .privacy_policy {
   font-weight: 700;
   line-height: 25px;
   text-align: center;
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  footer .privacy_policy {
+    padding: 0;
+  }
 }
 
 footer .contacts {
@@ -2467,6 +2724,13 @@ footer .contacts a {
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .profile-edit .profile-ava img {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .profile-edit .profile-ava .button {
@@ -3485,6 +3749,8 @@ main {
 
 @media (max-width: 768px) {
   .personal_goals_section .personal_goals_header {
+    width: 453px;
+    margin: 0 auto;
     grid-template-columns: 1fr;
   }
 
@@ -3585,16 +3851,43 @@ main {
   }
 }
 
+@media (min-width: 641px) and (max-width: 799px) {
+  .add-goals {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .add-goals .img {
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+  }
+
+  .add-goals .title {
+    margin-top: 0;
+    font-size: 12px;
+  }
+}
+
 .goals-tabs {
   display: flex;
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .goals-tabs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .goals-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 453px;
+    margin: 0 auto;
   }
 }
 
@@ -3628,11 +3921,20 @@ main {
   padding: 10px 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .goals-tabs li a {
     display: block;
     font-size: 8px;
     padding: 5px 10px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .goals-tabs li a {
+    display: block;
+    font-size: 8px;
+    padding: 5px 10px;
+    text-align: center;
   }
 }
 
@@ -3647,9 +3949,17 @@ main {
   margin: -7px 0 0 -23px;
 }
 
-@media (max-width: 786px) {
+@media (max-width: 640px) {
   .goals-tabs li span {
     margin: -30px 0 0 40px;
+    z-index: 2;
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .goals-tabs li span {
+    margin: -30px 0 0 115px;
     z-index: 2;
     font-size: 8px;
   }
@@ -3662,10 +3972,16 @@ main {
   margin: 30px auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .personal_goals_body_grid {
     grid-template-columns: 100%;
     margin: 15px auto;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+  .personal_goals_body_grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -3732,7 +4048,14 @@ main {
   word-break: break-word;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
+  .personal_goals_body_grid .personal_goals_body_grid_item .title {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
   .personal_goals_body_grid .personal_goals_body_grid_item .title {
     display: block;
     width: 100%;
@@ -3913,9 +4236,15 @@ main {
   grid-gap: 20px;
 }
 
-@media (max-width: 786px) {
+@media (max-width: 640px) {
   .motivation-grid {
     grid-template-columns: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .motivation-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -4549,6 +4878,19 @@ video {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .motivation_count {
+    width: 30px;
+    height: 30px;
+    top: -3px;
+    right: -35px;
+  }
+
+  .motivation_count span {
+    font-size: 12px !important;
+  }
+}
+
 .motivation_count span {
   color: #ffffff;
   font-family: Montserrat;
@@ -4611,13 +4953,9 @@ video {
   }
 }
 
-.visible-mobile {
-  display: none !important;
-}
-
-@media (max-width: 799px) {
+@media (min-width: 799px) {
   .visible-mobile {
-    display: block !important;
+    display: none !important;
   }
 }
 

@@ -145,7 +145,7 @@
                     <a href="#IndexProgramm">подробнее</a>
                 </div>
             </div>
-            <div class="IndexTopR" style="visibility: hidden;">
+            <div class="IndexTopR" style="display: none;">
                 <img src="/img/lion.png" alt="Главная">
             </div>
         </div>
@@ -376,7 +376,7 @@
     <section class="index-logo">
         <div class="container">
             <h2 class="section-title-md" style="text-transform: uppercase;">Портфолио клиентов</h2>
-            <h2 class="section-title-md mob" style="text-transform: uppercase;">Портфолио клиентов</h2>
+            <h2 class="section-title-md mob">Портфолио клиентов</h2>
             <div class="logo-wr">
                 <div class="logo-box"><img src="/img/logo/l01b.jpg"/></div>
                 <div class="logo-box"><img src="/img/logo/l02.jpg"/></div>

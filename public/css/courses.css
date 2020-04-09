@@ -189,10 +189,17 @@ header {
   grid-gap: 10px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 641px) and (max-width: 799px) {
   .courses-main-grid {
-    grid-template-columns: 1fr;
-    padding: 15px 15px 60px;
+    grid-gap: 20px;
+    padding: 20px 20px 60px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .courses-main-grid {
+    grid-gap: 20px;
+    padding: 20px 20px 60px;
   }
 }
 
@@ -264,6 +271,29 @@ header {
   font-family: Montserrat;
 }
 
+@media (min-width: 641px) and (max-width: 799px) {
+  .courses-main-list .courses-main-list-item {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-main-list .courses-main-list-item .border-right {
+    padding-right: 15px;
+  }
+
+  .courses-main-list .courses-main-list-item span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .courses-main-list .courses-main-list-item .status-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media (min-width: 1200px) {
   .courses-main-list .courses-main-list-item .status-container {
     display: grid;
@@ -328,9 +358,15 @@ header {
   max-width: 795px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .lesson {
     padding: 15px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .lesson {
+    padding: 20px;
   }
 }
 
@@ -346,6 +382,12 @@ header {
   font-weight: 700;
   line-height: 45px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .lesson .lesson-title {
+    font-size: 25px;
+  }
 }
 
 .lesson .text {

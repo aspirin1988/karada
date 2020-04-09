@@ -19,6 +19,12 @@
   }
 }
 
+@media (min-width: 641px) and (max-width: 799px) {
+  .test-container .test-title {
+    font-size: 25px;
+  }
+}
+
 .question-container {
   padding: 15px 40px;
   border-bottom: none;
@@ -51,6 +57,22 @@
   color: #37a2e9;
   font-weight: 700;
   line-height: 30px;
+}
+
+@media (max-width: 640px) {
+  .question-container .question-number {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  .question-container .question-number {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
 }
 
 .answer-list {
@@ -100,6 +122,14 @@
   }
 }
 
+@media (min-width: 641px) and (max-width: 799px) {
+  .answer-list li .number {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
+
 .answer-list li .text {
   font-family: "Open Sans";
   font-size: 18px;
@@ -114,7 +144,14 @@
   }
 }
 
-@media (min-width: 641px) {
+@media (min-width: 641px) and (max-width: 799px) {
+  .answer-list li .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 799px) {
   .answer-list li:hover {
     background: #37a2e9;
   }
