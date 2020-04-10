@@ -11,7 +11,19 @@
             margin-top: 70px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 640px) {
+            #app {
+                grid-template-columns: 100%;
+                margin-top: 65px;
+            }
+        }
+        @media (min-width: 641px) and (max-width: 799px) {
+            #app {
+                grid-template-columns: 100%;
+                margin-top: 65px;
+            }
+        }
+        @media (min-width: 800px) and (max-width: 1199px) {
             #app {
                 grid-template-columns: 100%;
                 margin-top: 65px;
@@ -72,6 +84,9 @@
                 let nav = document.querySelector('header');
                 app.style.marginTop = nav.clientHeight+'px';
             }
+            let open_ = document.querySelector('.accordion-content .parent.open');
+            let ul = document.querySelector('.accordion-content .parent.open ul');
+            ul.style.height=open_.scrollHeight+'px';
         });
 
     </script>

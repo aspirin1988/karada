@@ -72,9 +72,37 @@ aside {
   position: fixed;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   aside {
     width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 799px) {
+  aside {
+    width: 100%;
+  }
+
+  aside .hidden-mobile {
+    display: none !important;
+  }
+
+  aside .visible-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  aside {
+    width: 100%;
+  }
+
+  aside .hidden-mobile {
+    display: none !important;
+  }
+
+  aside .visible-mobile {
+    display: block !important;
   }
 }
 
@@ -124,6 +152,12 @@ aside ul li.parent.open > a {
 
 aside ul li.parent.open .parent-btn {
   background-image: url("/images/nav-x.png");
+}
+
+@media (max-width: 1199px) {
+  aside ul li.parent.open > ul {
+    height: auto;
+  }
 }
 
 aside ul li.parent > ul {
@@ -193,6 +227,7 @@ header {
   .courses-main-grid {
     grid-gap: 20px;
     padding: 20px 20px 60px;
+    margin: 0 auto;
   }
 }
 
@@ -200,6 +235,7 @@ header {
   .courses-main-grid {
     grid-gap: 20px;
     padding: 20px 20px 60px;
+    margin: 0 auto;
   }
 }
 
@@ -361,12 +397,21 @@ header {
 @media (max-width: 640px) {
   .lesson {
     padding: 15px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: 641px) and (max-width: 799px) {
   .lesson {
     padding: 20px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .lesson {
+    padding: 20px;
+    margin: 0 auto;
   }
 }
 

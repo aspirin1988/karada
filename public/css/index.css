@@ -74,6 +74,7 @@
     display: -o-flex;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 30px;
 }
 
 /* line 55, ../sass/index/index-top.scss */
