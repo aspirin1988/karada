@@ -1244,7 +1244,7 @@
 }
 
 
-@media only screen and (min-width: 641px) and (max-width: 1112px) {
+@media only screen and (min-width: 641px) and (max-width: 799px) {
     .IndexTop {
         padding-bottom: 65%;
         background: url(/img/index/Мобильный_вижуал.jpg) center bottom no-repeat !important;
@@ -1340,12 +1340,14 @@
     .owl-carousel-bullets {
         display: block !important;
     }
+
     .icon-box {
         text-align: left;
         width: 100%;
         margin-bottom: 50px;
         margin-right: 20px;
     }
+
     .icon-box img {
         position: absolute;
         top: 0;
@@ -1354,6 +1356,7 @@
         width: auto !important;
         margin-bottom: 0;
     }
+
     .icon-box h3 {
         margin-bottom: 0;
         padding-left: 70px;
@@ -1376,6 +1379,7 @@
         display: flex;
         justify-content: center;
     }
+
     .owl-carousel-bullets .owl-dots .owl-dot {
         display: block;
         -webkit-box-sizing: border-box;
@@ -1391,24 +1395,29 @@
     .owl-carousel-bullets .owl-dots .owl-dot.active {
         background: #136db8;
     }
-    .index-logo{
+
+    .index-logo {
         padding-top: 50px;
     }
-    .index-logo .logo-wr{
+
+    .index-logo .logo-wr {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .index-logo .logo-box{
+
+    .index-logo .logo-box {
         width: calc((100% - 120px) / 4);
         padding: 25px;
         box-sizing: border-box;
     }
-    .price-wr .tab-links{
+
+    .price-wr .tab-links {
         display: flex;
         justify-content: center;
         margin-bottom: 8vw;
     }
+
     .price-wr .tab-links li {
         position: relative;
         -webkit-box-sizing: border-box;
@@ -1419,6 +1428,7 @@
         width: 141px;
         height: 51px;
     }
+
     .price-wr .tab-links li a {
         display: -webkit-flex;
         display: -moz-flex;
@@ -1435,48 +1445,117 @@
         font-weight: 700;
         line-height: 25px;
     }
+
     .price-wr .tab-links li.activeTab a {
         background: #37a2e9;
         color: #fff;
     }
+
     .price-box {
         display: none;
         width: 100%;
     }
-    .price-box .price-box-top p{
+
+    .price-box .price-box-top p {
         margin: 0 auto;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
         width: 375px;
     }
-    .price-box .price-box-mid{
+
+    .price-box .price-box-mid {
         margin: 0 auto;
         min-height: auto;
         max-width: 380px;
+    }
+
+    .price-box .price-box-mid ul li {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .price-box .price-box-price strong span {
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 27px;
+    }
+
+    .price-box .price-box-price strong span.new {
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 27px;
+    }
+
+    .price-box .price-box-buttons {
+        margin: 30px auto;
+    }
+
+    .owl-carousel .owl-item .row {
+        display: flex;
+    }
+
+    .IndexBanner {
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
+    .IndexTop .IndexTopL h1 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 50px;
+    }
+
+    .IndexTop .IndexTopL strong {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 35px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .IndexTop .IndexTopL .buttons {
+        display: none;
+    }
+
+    .card-box ul {
+        display: none;
+    }
+
+    .index-bullets {
+        padding-top: 50px;
+        margin-bottom: 30px;
+    }
+    .index-bullets .section-title-md{
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 35px;
+        margin-bottom: 30px;
+    }
+    .index-logo{
+        padding-top: 50px;
+    }
+    .index-logo h2{
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 35px;
+        margin-bottom: 30px;
+    }
+    .index-price h2{
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 35px;
+    }
+    .price-box .price-box-top p{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
     }
     .price-box .price-box-mid ul li{
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
-    }
-    .price-box .price-box-price strong span{
-        font-size: 35px;
-        font-weight: 700;
-        line-height: 27px;
-    }
-    .price-box .price-box-price strong span.new{
-        font-size: 35px;
-        font-weight: 700;
-        line-height: 27px;
-    }
-    .price-box .price-box-buttons{
-        margin: 30px auto;
-    }
-    .owl-carousel .owl-item .row{
-        display: flex;
-    }
-    .IndexBanner{
-        padding-bottom: 50px;
     }
 }

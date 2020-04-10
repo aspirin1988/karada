@@ -515,7 +515,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 120px) and (max-width: 1112px) {
+@media only screen and (min-width: 120px) and (max-width: 799px) {
     /* line 308, ../sass/all/text.scss */
     .section-title-md {
         font-size: 4vw;
@@ -652,7 +652,7 @@ header.hidden {
     display: none;
 }
 
-@media only screen and (max-width: 1112px) and (min-width: 120px) {
+@media only screen and (max-width: 799px) and (min-width: 120px) {
     /* line 95, ../sass/all/header.scss */
     header {
         padding-top: 8px;
@@ -876,7 +876,7 @@ footer .col.col-links p a {
     font-size: 12px;
 }
 
-@media only screen and (max-width: 1112px) and (min-width: 120px) {
+@media only screen and (max-width: 799px) and (min-width: 120px) {
     /* line 136, ../sass/all/footer.scss */
     footer {
         padding: 5vw 0;
@@ -1490,7 +1490,7 @@ footer .col.col-links p a {
     color: #f00;
 }
 
-@media only screen and (min-width: 641px) and (max-width: 1112px) {
+@media only screen and (min-width: 641px) and (max-width: 799px) {
     main{
         min-height: calc( 100vh - 350px);
     }
@@ -1518,5 +1518,16 @@ footer .col.col-links p a {
     }
     footer .col.col-policy p{
         font-size: 10px;
+    }
+
+    .container {
+        max-width: 600px;
+    }
+
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
+    .container {
+        max-width: 800px;
     }
 }
