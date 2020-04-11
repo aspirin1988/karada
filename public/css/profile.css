@@ -3113,6 +3113,10 @@ footer .contacts a {
 }
 
 @media (min-width: 800px) and (max-width: 1199px) {
+  .my_team .my_team_header {
+    grid-template-columns: 300px 1fr;
+  }
+
   .my_team .my_team_header .title {
     font-size: 16px;
     font-weight: 700;

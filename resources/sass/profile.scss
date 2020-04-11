@@ -2359,15 +2359,16 @@ footer {
             }
         }
         @media (min-width: 800px) and (max-width: 1199px) {
-            .title{
+            grid-template-columns: 300px 1fr;
+            .title {
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 25px;
             }
-            .price{
+            .price {
                 font-size: 22px;
             }
-            [rel="add_teammate_button"]{
+            [rel="add_teammate_button"] {
                 display: block;
                 width: 100%;
             }
