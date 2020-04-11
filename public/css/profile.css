@@ -1582,7 +1582,7 @@ header nav .menu img {
 
   .personal_goals.chief .slider-container {
     width: 100%;
-    padding: 0 25px;
+    padding: 0 15px 0 30px;
     box-sizing: border-box;
     margin: 20px auto;
   }
@@ -4293,6 +4293,12 @@ footer .contacts a {
   border: none;
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .personal_goals_body_grid .personal_goals_body_grid_item {
+    padding: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .personal_goals_body_grid .personal_goals_body_grid_item {
     display: flex;
@@ -4336,7 +4342,7 @@ footer .contacts a {
 
 @media (min-width: 800px) and (max-width: 1199px) {
   .personal_goals_body_grid .personal_goals_body_grid_item .data {
-    padding: 10px;
+    padding: 0;
   }
 }
 
@@ -4450,10 +4456,19 @@ footer .contacts a {
   transform: rotate(45deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
   .personal_goals_body_grid .personal_goals_body_grid_item.complete:after {
     right: 10px;
     top: 10px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .personal_goals_body_grid .personal_goals_body_grid_item.complete:after {
+    width: 7px;
+    height: 7px;
+    right: 7px;
+    top: 7px;
   }
 }
 
@@ -4484,10 +4499,19 @@ footer .contacts a {
   border-radius: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
   .personal_goals_body_grid .personal_goals_body_grid_item.in-process:after {
     right: 10px;
     top: 10px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .personal_goals_body_grid .personal_goals_body_grid_item.in-process:after {
+    width: 7px;
+    height: 7px;
+    right: 7px;
+    top: 7px;
   }
 }
 
@@ -4502,10 +4526,19 @@ footer .contacts a {
   border-radius: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
   .personal_goals_body_grid .personal_goals_body_grid_item.failed:after {
     right: 10px;
     top: 10px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .personal_goals_body_grid .personal_goals_body_grid_item.failed:after {
+    width: 7px;
+    height: 7px;
+    right: 7px;
+    top: 7px;
   }
 }
 

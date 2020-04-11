@@ -906,7 +906,7 @@ header {
             width: 100%;
             .slider-container {
                 width: 100%;
-                padding: 0 25px;
+                padding: 0 15px 0 30px;
                 box-sizing: border-box;
                 margin: 20px auto;
             }
@@ -3447,6 +3447,9 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         border: none;
+        @media (min-width: 800px) and (max-width: 1199px) {
+            padding: 15px;
+        }
 
         @media (max-width: 768px) {
             display: flex;
@@ -3479,7 +3482,7 @@ main {
                 padding: 10px;
             }
             @media (min-width: 800px) and (max-width: 1199px) {
-                padding: 10px;
+                padding: 0;
             }
 
             .status:before {
@@ -3570,9 +3573,15 @@ main {
                 right: 20px;
                 top: 20px;
                 transform: rotate(45deg);
-                @media (max-width: 768px) {
+                @media (max-width: 799px) {
                     right: 10px;
                     top: 10px;
+                }
+                @media (min-width: 800px) and (max-width: 1199px) {
+                    width: 7px;
+                    height: 7px;
+                    right: 7px;
+                    top: 7px;
                 }
 
             }
@@ -3601,9 +3610,15 @@ main {
                 right: 20px;
                 top: 20px;
                 border-radius: 50%;
-                @media (max-width: 768px) {
+                @media (max-width: 799px) {
                     right: 10px;
                     top: 10px;
+                }
+                @media (min-width: 800px) and (max-width: 1199px) {
+                    width: 7px;
+                    height: 7px;
+                    right: 7px;
+                    top: 7px;
                 }
             }
 
@@ -3619,9 +3634,15 @@ main {
                 right: 20px;
                 top: 20px;
                 border-radius: 50%;
-                @media (max-width: 768px) {
+                @media (max-width: 799px) {
                     right: 10px;
                     top: 10px;
+                }
+                @media (min-width: 800px) and (max-width: 1199px) {
+                    width: 7px;
+                    height: 7px;
+                    right: 7px;
+                    top: 7px;
                 }
             }
 
