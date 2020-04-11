@@ -2484,7 +2484,7 @@ footer {
                     display: none;
                 }
                 @media (min-width: 800px) and (max-width: 1199px) {
-                    padding: 20px;
+                    padding: 20px 10px ;
                 }
 
                 .name {
@@ -2532,7 +2532,7 @@ footer {
                     }
                 }
                 @media (min-width: 800px) and (max-width: 1199px) {
-                    padding: 20px;
+                    padding: 20px 10px ;
                 }
                 //@media (min-width: 800px) and (max-width: 1199px) {
                 //    .hidden-mobile {
@@ -2648,7 +2648,7 @@ footer {
                     display: none !important;
                 }
                 @media (min-width: 800px) and (max-width: 1199px) {
-                    padding: 20px;
+                    padding: 0 15px 0 0;
                 }
 
                 .sales_program {
