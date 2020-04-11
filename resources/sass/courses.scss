@@ -325,7 +325,7 @@ header {
         }
 
         .status-container {
-            @media (min-width: 641px) and (max-width: 799px) {
+            @media (min-width: 641px) and (max-width: 1199px) {
                 display: flex;
                 justify-content: center;
             }
@@ -492,6 +492,9 @@ header {
     border-right: 1px solid #d5d5d5;
     margin-right: 15px;
     @media (max-width: 640px) {
+        padding-right: 18px;
+    }
+    @media (min-width: 641px) and (max-width: 1199px) {
         padding-right: 18px;
     }
 }

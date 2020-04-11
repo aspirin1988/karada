@@ -62,9 +62,7 @@
             <ul class="menu-list">
                 <li><i class="icon copy"></i><a href="/home/course/1">Курс "Альфа Продавец"</a></li>
                 <li><i class="icon user"></i><a href="/home">личный кабинет</a></li>
-                @mobile
-                <li><i class="icon lock"></i><a href="/home/password/update">сменить пароль</a></li>
-                @endmobile
+                <li class="visible-mobile" ><i class="icon lock"></i><a href="/home/password/update">сменить пароль</a></li>
                 {{--                <li><i class="icon goals"></i><a href="/home/personal_goals">личные цели</a></li>--}}
                 {{--                <li><i class="icon motivation_"></i><a href="/home/motivation">Мотивация</a></li>--}}
                 {{--                <li><i class="icon medal"></i><a href="/home/rewards">Дипломы и сертификаты</a></li>--}}

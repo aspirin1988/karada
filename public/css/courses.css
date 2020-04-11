@@ -323,7 +323,7 @@ header {
   }
 }
 
-@media (min-width: 641px) and (max-width: 799px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .courses-main-list .courses-main-list-item .status-container {
     display: flex;
     justify-content: center;
@@ -492,6 +492,12 @@ header {
 }
 
 @media (max-width: 640px) {
+  .border-right {
+    padding-right: 18px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
   .border-right {
     padding-right: 18px;
   }

@@ -46,9 +46,6 @@
             margin-top: 0;
         }
 
-        header {
-            z-index: 1;
-        }
         .accordion-content{
             height: 0;
             overflow: hidden;
@@ -84,7 +81,7 @@
             }
             let open_ = document.querySelector('.accordion-content .parent.open');
             let ul = document.querySelector('.accordion-content .parent.open ul');
-            ul.style.height=open_.scrollHeight+'px';
+            ul.style.height=ul.scrollHeight+'px';
         });
     </script>
 @stop

@@ -369,8 +369,9 @@ header {
             font-weight: 700;
             line-height: 25px;
             text-transform: uppercase;
-            width: 195px;
+            width: 190px;
             padding: 0;
+            height: 28px;
         }
         @media (min-width: 800px) and (max-width: 1199px) {
             font-size: 10px;
@@ -896,7 +897,7 @@ header {
             width: 100%;
             .slider-container {
                 width: 100%;
-                padding: 0 15px;
+                padding: 0 30px;
                 box-sizing: border-box;
             }
         }
@@ -905,7 +906,7 @@ header {
             width: 100%;
             .slider-container {
                 width: 100%;
-                padding: 0 15px;
+                padding: 0 25px;
                 box-sizing: border-box;
                 margin: 20px auto;
             }
@@ -1279,6 +1280,13 @@ header {
     justify-content: flex-start;
     align-items: center;
 
+    @media (min-width: 641px) and (max-width: 799px) {
+        margin-right: 0;
+    }
+    @media (min-width: 800px) and (max-width: 1199px) {
+        margin-right: 0;
+    }
+
     b {
         font-family: "Montserrat";
         font-weight: 700;
@@ -1584,7 +1592,7 @@ footer {
             }
         }
         @media (min-width: 800px) and (max-width: 1199px) {
-            grid-template-columns: 440px auto 1fr;
+            grid-template-columns: 300px auto 1fr;
         }
     }
 
@@ -1676,20 +1684,20 @@ footer {
 .offcanvas {
     display: none;
     top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: absolute;
     left: -100%;
-
+    overflow-y: auto;
 
     .overlay {
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
         background-color: rgba(9, 4, 32, 0.93);
+        z-index: -1;
     }
 
     &.active {
@@ -1715,6 +1723,9 @@ footer {
         @media (max-width: 767px) {
             top: 10px;
             right: 10px;
+        }
+        @media (max-width: 1199px) {
+            color: transparent
         }
 
         &:hover {
@@ -1745,9 +1756,19 @@ footer {
         padding: 30px;
         box-sizing: border-box;
         text-align: center;
-        @media (max-width: 768px) {
+        margin: 10% auto;
+        @media (max-width: 640px) {
             width: 100% !important;
+            max-width: 380px;
             padding: 5px 20px;
+        }
+        @media (min-width: 641px) and (max-width: 799px) {
+            width: 100% !important;
+            max-width: 640px;
+        }
+        @media (min-width: 800px) and (max-width: 1199px) {
+            width: 100% !important;
+            max-width: 800px;
         }
 
         .modal-body-header {
@@ -1906,18 +1927,17 @@ footer {
 }
 
 .center-center {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    height: 100%;
-
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    @media (max-width: 768px) {
-        width: 98%;
+    margin: 20px auto;
+    //display: flex;
+    //justify-content: center;
+    //align-content: center;
+    //align-items: center;
+    //position: absolute;
+    //left: 50%;
+    //top: 50%;
+    //transform: translate(-50%, -50%);
+    @media (max-width: 640px) {
+        max-width: 98%;
     }
 }
 
@@ -2044,10 +2064,15 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
+    @media (min-width: 641px) and (max-width: 1199px) {
+        padding: 20px;
+        grid-gap: 20px;
+    }
+
     .profile-ava {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
 
         img {
@@ -2062,8 +2087,9 @@ footer {
                 height: 180px;
             }
             @media (min-width: 800px) and (max-width: 1199px) {
-                width: 200px;
-                height: 200px;
+                width: 180px;
+                height: 180px;
+                margin-bottom: 0;
             }
         }
 
@@ -2072,6 +2098,9 @@ footer {
             width: 100%;
             height: 50px;
             margin-bottom: 10px;
+            @media (min-width: 641px) and (max-width: 1199px) {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -2330,8 +2359,17 @@ footer {
             }
         }
         @media (min-width: 800px) and (max-width: 1199px) {
-            &.hidden-mobile {
-                display: none !important;
+            .title{
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 25px;
+            }
+            .price{
+                font-size: 22px;
+            }
+            [rel="add_teammate_button"]{
+                display: block;
+                width: 100%;
             }
         }
 
@@ -2428,19 +2466,25 @@ footer {
             grid-template-columns: 360px 480px auto;
             margin: 0 auto;
 
-            @media (max-width: 1199px) {
+            @media (max-width: 799px) {
                 grid-template-columns: 100%;
                 margin-bottom: 10px;
+            }
+
+            @media (min-width: 800px) and (max-width: 1199px) {
+                grid-template-columns: repeat(3, 1fr);
             }
 
             .profile-ava {
                 justify-content: flex-start;
                 padding: 40px;
                 border-right: 1px solid #eaeaea;
-                @media (max-width: 1199px) {
+                @media (max-width: 799px) {
                     display: none;
                 }
-
+                @media (min-width: 800px) and (max-width: 1199px) {
+                    padding: 20px;
+                }
 
                 .name {
                     color: #010101;
@@ -2459,6 +2503,10 @@ footer {
                 img {
                     width: 250px;
                     height: 250px;
+                    @media (min-width: 800px) and (max-width: 1199px) {
+                        width: 180px;
+                        height: 180px;
+                    }
                 }
             }
 
@@ -2483,13 +2531,16 @@ footer {
                     }
                 }
                 @media (min-width: 800px) and (max-width: 1199px) {
-                    .hidden-mobile {
-                        display: none !important;
-                    }
-                    .visible-mobile {
-                        display: block !important;
-                    }
+                    padding: 20px;
                 }
+                //@media (min-width: 800px) and (max-width: 1199px) {
+                //    .hidden-mobile {
+                //        display: none !important;
+                //    }
+                //    .visible-mobile {
+                //        display: block !important;
+                //    }
+                //}
 
                 .job {
                     color: #7c7c7c;
@@ -2559,21 +2610,26 @@ footer {
                         display: flex;
                         flex-direction: column;
                         align-content: center;
-                        align-items: center;
+                        align-items: flex-start;
                         label {
-                            display: inline-block;
+                            font-size: 13px;
+                            font-weight: 400;
+                            line-height: 18px;
                         }
                         .big-text {
-                            display: inline-block;
-                            margin-left: 5px;
+                            font-size: 18px;
+                            font-weight: 700;
+                            line-height: 18px;
                         }
                         .progress-label {
-                            display: inline-block;
+                            font-size: 13px;
+                            font-weight: 400;
+                            line-height: 18px;
 
                             & + b {
-                                display: inline-block;
-                                font-size: 20px;
-                                margin-left: 5px;
+                                font-size: 18px;
+                                font-weight: 700;
+                                line-height: 18px;
                             }
                         }
                         .button {
@@ -2587,9 +2643,13 @@ footer {
 
             .profile-buttons {
                 padding: 40px;
-                @media (max-width: 1199px) {
+                @media (max-width: 799px) {
                     display: none !important;
                 }
+                @media (min-width: 800px) and (max-width: 1199px) {
+                    padding: 20px;
+                }
+
                 .sales_program {
                     padding: 0;
                     width: auto;
@@ -2889,7 +2949,9 @@ footer {
 }
 
 main {
-    //min-height: calc(100vh - 170px);
+    @media (min-width: 641px) {
+        min-height: calc(100vh - 170px);
+    }
 }
 
 .rewards-grid {
@@ -3162,7 +3224,15 @@ main {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 640px) {
+            width: 100%;
+            margin: 0 auto;
+            grid-template-columns: 1fr;
+            .motivation {
+                display: none !important;
+            }
+        }
+        @media (min-width: 641px) and (max-width: 799px) {
             width: 453px;
             margin: 0 auto;
             grid-template-columns: 1fr;
@@ -3387,7 +3457,7 @@ main {
             justify-content: space-between;
             align-items: flex-start;
             align-content: flex-end;
-            @media (max-width: 768px) {
+            @media (max-width: 640px) {
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
@@ -3397,6 +3467,12 @@ main {
                 .button-group {
                     justify-content: center;
                 }
+            }
+            @media (min-width: 641px) and (max-width: 799px) {
+                padding: 10px;
+            }
+            @media (min-width: 800px) and (max-width: 1199px) {
+                padding: 10px;
             }
 
             .status:before {
@@ -3408,6 +3484,14 @@ main {
             width: 280px;
             height: 280px;
             object-fit: cover;
+            @media (min-width: 641px) and (max-width: 799px) {
+                width: 240px;
+                height: 240px;
+            }
+            @media (min-width: 800px) and (max-width: 1199px) {
+                width: 150px;
+                height: 150px;
+            }
         }
 
         .title {
@@ -3425,6 +3509,14 @@ main {
             @media (min-width: 641px) and (max-width: 799px) {
                 display: block;
                 width: 100%;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 25px;
+            }
+            @media (min-width: 800px) and (max-width: 1199px) {
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 21px;
             }
         }
 
@@ -3485,7 +3577,7 @@ main {
                 font-weight: 700;
                 line-height: 25px;
                 text-transform: uppercase;
-                @media (max-width: 768px) {
+                @media (max-width: 640px) {
                     display: block;
                     width: 100%;
                 }
@@ -3645,8 +3737,22 @@ main {
             line-height: 30px;
             margin-top: 15px;
             text-align: center;
-            @media (max-width: 768px) {
+            @media (max-width: 640px) {
                 text-align: center;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 27px;
+            }
+            @media (min-width: 641px) and (max-width: 799px) {
+                text-align: center;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 27px;
+            }
+            @media (min-width: 800px) and (max-width: 1199px) {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
             }
         }
 
@@ -4146,6 +4252,10 @@ video {
         padding: 15px 0 10px;
         display: block;
         text-align: center;
+        @media (min-width: 641px) and (max-width: 1199px) {
+            font-size: 12px;
+            padding: 0 10px 10px 10px;
+        }
     }
 
     .button.round.button-yellow-stroke {
@@ -4256,8 +4366,8 @@ video {
     @media (max-width: 799px) {
         width: 30px;
         height: 30px;
-        right: -40px;
-        top: 1px;
+        right: -35px;
+        top: -1px;
     }
     @media (min-width: 800px) and (max-width: 1199px) {
         width: 30px;
