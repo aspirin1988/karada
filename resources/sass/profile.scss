@@ -3168,6 +3168,12 @@ main {
 
     }
 
+    @media (max-width: 640px) {
+        .overlay{
+            top: 70px;
+        }
+    }
+
     &.no-active {
         .offcanvas-container {
             animation-name: close;

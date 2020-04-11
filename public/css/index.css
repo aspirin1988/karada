@@ -477,7 +477,7 @@
 }
 
 /* line 85, ../sass/index/bullets.scss */
-.icon-box:nth-child(5) h3 {
+.icon-box h3 {
     min-height: 50px;
 }
 
@@ -593,9 +593,6 @@
     }
 
     /* line 189, ../sass/index/bullets.scss */
-    .icon-box:nth-child(5) h3 {
-        min-height: auto;
-    }
 }
 
 /* line 4, ../sass/index/logo.scss */
@@ -1577,5 +1574,13 @@
     }
     .price-box .price-box-price strong span{
         font-size: 30px;
+    }
+    .icon-box h3{
+        font-size: 16px;
+        min-height: 50px;
+    }
+
+    .icon-box h3:nth-child(n+3){
+        min-height: 75px;
     }
 }

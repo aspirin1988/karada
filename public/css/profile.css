@@ -3964,6 +3964,13 @@ footer .contacts a {
   }
 }
 
+@media (max-width: 640px) {
+  [ref=menu_modal] .overlay,
+  [rel=menu_modal] .overlay {
+    top: 70px;
+  }
+}
+
 [ref=menu_modal].no-active .offcanvas-container,
 [rel=menu_modal].no-active .offcanvas-container {
   -webkit-animation-name: close;
