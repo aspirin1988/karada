@@ -1580,7 +1580,7 @@
         min-height: 50px;
     }
 
-    .icon-box h3:nth-child(n+3){
+    .icon-box:nth-child(n+3) h3{
         min-height: 75px;
     }
 }
