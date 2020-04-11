@@ -1515,7 +1515,7 @@
     }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1199px) {
+@media (min-width: 800px) and (max-width: 1199px) {
     .IndexTop .IndexTopL h1 {
         font-size: 40px;
         font-weight: 700;
