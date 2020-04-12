@@ -626,17 +626,17 @@ const app = new Vue({
 
         if (menu_modal_overlay) {
             let img = menu_mobile.querySelector('img');
-            console.log(img);
 
             menu_modal_overlay.addEventListener('click', function () {
                 menu_modal.classList.remove('active');
                 menu_modal.classList.add('no-active');
                 document.body.style.overflowY = 'auto';
+                if (!menu_modal.classList.contains('active')) {
+                    document.body.style.overflowY = 'auto';
+                    img.src = '/img/menu_mobile.svg';
+                }
             });
-            if (!menu_modal.classList.contains('active')) {
-                document.body.style.overflowY = 'auto';
-                img.src = '/img/menu_mobile.svg';
-            }
+
         }
 
         motivation_modal_close.forEach(function (i) {
