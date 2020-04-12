@@ -62335,6 +62335,7 @@ var app = new Vue({
   });
 
   if (menu_modal_close) {
+    var img = menu_mobile.querySelector('img');
     menu_modal_close.addEventListener('click', function () {
       menu_modal.classList.remove('active');
       menu_modal.classList.add('no-active');
