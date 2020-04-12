@@ -616,6 +616,10 @@ const app = new Vue({
                 menu_modal.classList.add('no-active');
                 document.body.style.overflowY = 'auto';
             });
+            if (!menu_modal.classList.contains('active')) {
+                document.body.style.overflowY = 'auto';
+                img.src = '/img/menu_mobile.svg';
+            }
         }
 
         motivation_modal_close.forEach(function (i) {
