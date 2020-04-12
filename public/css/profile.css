@@ -4442,6 +4442,16 @@ footer .contacts a {
   height: 50px;
 }
 
+@media (min-width: 412px) and (max-width: 799px) {
+  .personal_goals_body_grid .personal_goals_body_grid_item .button-blue-stroke {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 17px;
+    height: 45px;
+    width: auto;
+  }
+}
+
 .personal_goals_body_grid .personal_goals_body_grid_item.complete:after {
   content: "";
   position: absolute;

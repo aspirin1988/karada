@@ -3556,6 +3556,14 @@ main {
         .button-blue-stroke {
             width: 156px;
             height: 50px;
+            @media (min-width: 412px) and (max-width: 799px) {
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 17px;
+                height: 45px;
+                width: auto;
+            }
+
         }
 
         &.complete {
