@@ -2,7 +2,7 @@
 
 @section('script')
     @parent
-    <script src="/js/main.js?v=123"></script>
+    <script src="/js/main.js?v=124"></script>
     <script>
         $(".open_popup").on("click", function () {
             location.href = "/#IndexPrice";
