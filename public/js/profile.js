@@ -62217,7 +62217,7 @@ var app = new Vue({
   var menu_mobile = document.querySelector('[rel="menu_mobile"]');
   var menu_modal = document.querySelector('[rel="menu_modal"]');
   var menu_modal_close = document.querySelector('[rel="menu_modal_close"]');
-  var menu_modal_overlay = document.querySelector('[rel="menu_modal_close"] .overlay');
+  var menu_modal_overlay = document.querySelector('[rel="menu_modal"] .overlay');
   var motivation_modal = document.querySelector('[rel="motivation_modal"]');
   var motivation_modal_close = document.querySelectorAll('[rel="motivation_modal_close"]');
   var personal_goals_modal = document.querySelector('[rel="personal_goals_modal"]');

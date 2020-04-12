@@ -487,7 +487,7 @@ const app = new Vue({
         let menu_mobile = document.querySelector('[rel="menu_mobile"]');
         let menu_modal = document.querySelector('[rel="menu_modal"]');
         let menu_modal_close = document.querySelector('[rel="menu_modal_close"]');
-        let menu_modal_overlay = document.querySelector('[rel="menu_modal_close"] .overlay');
+        let menu_modal_overlay = document.querySelector('[rel="menu_modal"] .overlay');
 
         let motivation_modal = document.querySelector('[rel="motivation_modal"]');
         let motivation_modal_close = document.querySelectorAll('[rel="motivation_modal_close"]');
