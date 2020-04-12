@@ -624,6 +624,7 @@ const app = new Vue({
         }
 
         if (menu_modal_overlay) {
+            let img = menu_mobile.querySelector('img');
             menu_modal_overlay.addEventListener('click', function () {
                 menu_modal.classList.remove('active');
                 menu_modal.classList.add('no-active');
