@@ -134,7 +134,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/serg/PhpstormProjects/karada_master/resources/js/courses.js */"./resources/js/courses.js");
+module.exports = __webpack_require__(/*! /var/www/karada_master/resources/js/courses.js */"./resources/js/courses.js");
 
 
 /***/ })
