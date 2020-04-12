@@ -482,7 +482,7 @@ const app = new Vue({
             });
         });
 
-        let offcanvas = document.querySelectorAll('.offcanvas');
+        let offcanvas = document.querySelectorAll('.offcanvas:not([rel="menu_modal"])');
         let menu = document.querySelector('[rel="menu"]');
         let menu_mobile = document.querySelector('[rel="menu_mobile"]');
         let menu_modal = document.querySelector('[rel="menu_modal"]');

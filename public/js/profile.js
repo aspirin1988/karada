@@ -62212,7 +62212,7 @@ var app = new Vue({
       // span_size[2].dataset['size'] = i.dataset['video-480'];
     });
   });
-  var offcanvas = document.querySelectorAll('.offcanvas');
+  var offcanvas = document.querySelectorAll('.offcanvas:not([rel="menu_modal"])');
   var menu = document.querySelector('[rel="menu"]');
   var menu_mobile = document.querySelector('[rel="menu_mobile"]');
   var menu_modal = document.querySelector('[rel="menu_modal"]');
