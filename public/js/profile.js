@@ -62217,6 +62217,7 @@ var app = new Vue({
   var menu_mobile = document.querySelector('[rel="menu_mobile"]');
   var menu_modal = document.querySelector('[rel="menu_modal"]');
   var menu_modal_close = document.querySelector('[rel="menu_modal_close"]');
+  var menu_modal_overlay = document.querySelector('[rel="menu_modal_close"] .overlay');
   var motivation_modal = document.querySelector('[rel="motivation_modal"]');
   var motivation_modal_close = document.querySelectorAll('[rel="motivation_modal_close"]');
   var personal_goals_modal = document.querySelector('[rel="personal_goals_modal"]');
@@ -62339,6 +62340,24 @@ var app = new Vue({
       menu_modal.classList.add('no-active');
       document.body.style.overflowY = 'auto';
     });
+
+    if (!menu_modal.classList.contains('active')) {
+      document.body.style.overflowY = 'auto';
+      img.src = '/img/menu_mobile.svg';
+    }
+  }
+
+  if (menu_modal_overlay) {
+    menu_modal_overlay.addEventListener('click', function () {
+      menu_modal.classList.remove('active');
+      menu_modal.classList.add('no-active');
+      document.body.style.overflowY = 'auto';
+    });
+
+    if (!menu_modal.classList.contains('active')) {
+      document.body.style.overflowY = 'auto';
+      img.src = '/img/menu_mobile.svg';
+    }
   }
 
   motivation_modal_close.forEach(function (i) {

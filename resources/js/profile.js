@@ -487,6 +487,7 @@ const app = new Vue({
         let menu_mobile = document.querySelector('[rel="menu_mobile"]');
         let menu_modal = document.querySelector('[rel="menu_modal"]');
         let menu_modal_close = document.querySelector('[rel="menu_modal_close"]');
+        let menu_modal_overlay = document.querySelector('[rel="menu_modal_close"] .overlay');
 
         let motivation_modal = document.querySelector('[rel="motivation_modal"]');
         let motivation_modal_close = document.querySelectorAll('[rel="motivation_modal_close"]');
@@ -612,6 +613,18 @@ const app = new Vue({
         });
         if (menu_modal_close) {
             menu_modal_close.addEventListener('click', function () {
+                menu_modal.classList.remove('active');
+                menu_modal.classList.add('no-active');
+                document.body.style.overflowY = 'auto';
+            });
+            if (!menu_modal.classList.contains('active')) {
+                document.body.style.overflowY = 'auto';
+                img.src = '/img/menu_mobile.svg';
+            }
+        }
+
+        if (menu_modal_overlay) {
+            menu_modal_overlay.addEventListener('click', function () {
                 menu_modal.classList.remove('active');
                 menu_modal.classList.add('no-active');
                 document.body.style.overflowY = 'auto';
