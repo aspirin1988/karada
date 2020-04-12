@@ -893,11 +893,20 @@ header {
             width: 920px;
         }
 
-        @media (min-width: 120px) and (max-width: 799px) {
+        @media (min-width: 120px) and (max-width: 412px) {
             width: 100%;
             .slider-container {
                 width: 100%;
                 padding: 0 30px;
+                box-sizing: border-box;
+            }
+        }
+
+        @media (min-width: 413px) and (max-width: 799px) {
+            width: 100%;
+            .slider-container {
+                width: 100%;
+                padding: 0 5px 0 50px;
                 box-sizing: border-box;
             }
         }
@@ -1760,7 +1769,7 @@ footer {
         @media (max-width: 640px) {
             width: 100% !important;
             max-width: 380px;
-            padding: 5px 20px;
+            padding: 20px;
         }
         @media (min-width: 641px) and (max-width: 799px) {
             width: 100% !important;

@@ -547,6 +547,9 @@
         text-align: left;
         width: 100%;
         margin-bottom: 11vw;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
     }
 
     /* line 150, ../sass/index/bullets.scss */
@@ -564,7 +567,7 @@
         margin-bottom: 3.5vw;
         font-size: 4.5vw;
         padding-left: 17vw;
-        min-height: 12vw;
+        min-height: 6vh;
     }
 
     /* line 165, ../sass/index/bullets.scss */
