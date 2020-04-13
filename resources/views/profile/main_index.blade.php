@@ -3,12 +3,6 @@
 @section('script')
     @parent
 
-    <script !src="">
-        setInterval(function(){
-            document.querySelector('.undertitle').innerText = 'WS '+screen.width + ' HS '+screen.height + ' WD '+document.body.clientWidth + ' HD '+document.body.clientHeight
-        },300)
-    </script>
-
     <script src="/js/main.js?v=126"></script>
 
     <script>
@@ -118,7 +112,7 @@
 
 @section('content')
     <link rel="stylesheet" href="/css/index.css?v=126" type="text/css"/>
-    <section class="IndexTop" style="background: url(/img/index/1920_Вижуал.jpg) no-repeat center center / cover;">
+    <section class="IndexTop" style="background: url(/img/index/1920_Вижуал.jpg) no-repeat 50% / cover;">
         <div class="IndexTopH">
             <div class="container">
                 <div class="hLogo">
