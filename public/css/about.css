@@ -48,7 +48,7 @@
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 27px;
-  line-height: 1;
+  line-height: 0.7;
 }
 /* line 42, ../sass/about.scss */
 .AboutB .AboutBDesc h2.big {
