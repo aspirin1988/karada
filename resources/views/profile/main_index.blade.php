@@ -2,6 +2,13 @@
 
 @section('script')
     @parent
+
+    <script !src="">
+        setInterval(function(){
+            document.querySelector('.undertitle').innerText = 'WS '+screen.width + ' HS '+screen.height + ' WD '+document.body.clientWidth + ' HD '+document.body.clientHeight
+        },300)
+    </script>
+
     <script src="/js/main.js?v=126"></script>
 
     <script>
