@@ -1600,4 +1600,17 @@
         padding-top: 50px;
         padding-bottom: 0;
     }
+    .price-box{
+        width: calc((100% - 40px) / 2);
+    }
+    .price-box .price-box-buttons{
+        padding: 0 5px;
+    }
+    .price-box .price-box-buttons a{
+        font-size: 16px;
+        width: 280px;
+        height: 45px;
+        line-height: 45px;
+        padding: 0 15px;
+    }
 }
