@@ -1576,11 +1576,6 @@
         line-height: 24px;
     }
 
-    .price-box .price-box-price{
-        flex-direction: column;
-        text-align: center;
-    }
-
     .price-box .price-box-price strong span{
         font-size: 30px;
     }
@@ -1612,5 +1607,8 @@
         height: 45px;
         line-height: 45px;
         padding: 0 15px;
+    }
+    .price-box .price-box-price{
+        padding: 0 5px;
     }
 }
