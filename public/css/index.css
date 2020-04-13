@@ -1590,10 +1590,14 @@
         margin-bottom: 10px;
     }
 
-    .icon-box:nth-child(n+3) h3{
+    .icon-box:nth-child(n+4) h3{
         min-height: 75px;
     }
     .icon-box p{
         font-size: 14px;
+    }
+    .index-programm{
+        padding-top: 50px;
+        padding-bottom: 0;
     }
 }
