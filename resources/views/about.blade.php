@@ -2,7 +2,7 @@
 
 @section('script')
     @parent
-    <script src="/js/main.js?v=125"></script>
+    <script src="/js/main.js?v=126"></script>
     <script>
         (function($) {
             $(function() {

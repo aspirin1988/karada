@@ -2,7 +2,7 @@
 
 @section('script')
     @parent
-    <script src="/js/main.js?v=125"></script>
+    <script src="/js/main.js?v=126"></script>
 
     <script>
         $('header').addClass('hidden');
@@ -50,7 +50,7 @@
         new WOW().init();
     </script>
 
-    <link rel="stylesheet" href="/js/owl.carousel.css?v=125">
+    <link rel="stylesheet" href="/js/owl.carousel.css?v=126">
     <script src="/js/owl.carousel.js"></script>
 
     <script>
@@ -110,7 +110,7 @@
 @stop
 
 @section('content')
-    <link rel="stylesheet" href="/css/index.css?v=125" type="text/css"/>
+    <link rel="stylesheet" href="/css/index.css?v=126" type="text/css"/>
     <section class="IndexTop" style="background: url(/img/index/1920_Вижуал.jpg) no-repeat center center / cover;">
         <div class="IndexTopH">
             <div class="container">
@@ -143,9 +143,6 @@
                     <a href="#IndexPrice" class="yellow">попробовать бесплатно</a>
                     <a href="#IndexProgramm">подробнее</a>
                 </div>
-            </div>
-            <div class="IndexTopR" style="display: none;">
-                <img src="/img/lion.png" alt="Главная">
             </div>
         </div>
         <div id="IndexProgramm" class="scroll-block"></div>
