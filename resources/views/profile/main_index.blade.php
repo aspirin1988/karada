@@ -431,7 +431,7 @@
                                 <li>Мониторинг достижения личных целей</li>
                             </ul>
                         </div>
-                        <div class="price-box-price" style="margin-top: 10px;">
+                        <div class="price-box-price">
                             <p>Цена:</p>
                             <strong>
                                 @php
