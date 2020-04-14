@@ -1651,3 +1651,8 @@
         display: none;
     }
 }
+@media (min-width: 800px) and (max-width: 1280px) {
+    .IndexTop{
+        background: url(/img/index/фон.jpg) 50% center / cover no-repeat !important;
+    }
+}
