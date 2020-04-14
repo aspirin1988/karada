@@ -1,3 +1,6 @@
+.visible-mobile{
+    display: none;
+}
 .card-wr {
     position: relative;
     display: -webkit-flex;
@@ -1245,10 +1248,23 @@
     .IndexBanner img.mob {
         display: block;
     }
+    .hidden-mobile {
+        display: none;
+    }
+    .visible-mobile {
+        display: block;
+    }
 }
 
 
 @media only screen and (min-width: 641px) and (max-width: 799px) {
+    .hidden-mobile {
+        display: none;
+    }
+    .visible-mobile {
+        display: block;
+    }
+
     .IndexTop {
         padding-bottom: 65%;
         background: url(/img/index/Мобильный_вижуал.jpg) center bottom no-repeat !important;
@@ -1325,7 +1341,8 @@
         line-height: 35px;
         margin-bottom: 30px;
     }
-    .index-bullets{
+
+    .index-bullets {
         padding-top: 50px;
     }
 
@@ -1509,10 +1526,12 @@
     .IndexBanner {
         padding: 25px 0;
     }
-    .index-logo h2{
+
+    .index-logo h2 {
         margin-bottom: 20px;
     }
-    .index-price h2{
+
+    .index-price h2 {
         margin-bottom: 30px;
     }
 }
@@ -1545,70 +1564,90 @@
         margin-bottom: 30px;
         padding-bottom: 10px;
     }
-    .index-bullets .section-title-md{
+
+    .index-bullets .section-title-md {
         font-size: 25px;
         font-weight: 700;
         line-height: 35px;
         margin-bottom: 30px;
     }
-    .index-logo{
+
+    .index-logo {
         padding-top: 50px;
     }
-    .index-logo h2{
+
+    .index-logo h2 {
         font-size: 25px;
         font-weight: 700;
         line-height: 35px;
         margin-bottom: 30px;
     }
-    .index-price h2{
+
+    .index-price h2 {
         font-size: 25px;
         font-weight: 700;
         line-height: 35px;
     }
-    .price-box .price-box-top p{
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 24px;
-    }
-    .price-box .price-box-mid ul li{
+
+    .price-box .price-box-top p {
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
     }
 
-    .price-box .price-box-price strong span{
+    .price-box .price-box-mid ul li {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .price-box .price-box-price strong span {
         font-size: 30px;
     }
-    .icon-box h3{
+
+    .icon-box h3 {
         font-size: 16px;
         min-height: 50px;
         margin-bottom: 10px;
     }
 
-    .icon-box:nth-child(n+4) h3{
+    .icon-box:nth-child(n+4) h3 {
         min-height: 75px;
     }
-    .icon-box p{
+
+    .icon-box p {
         font-size: 14px;
     }
-    .index-programm{
+
+    .index-programm {
         padding-top: 50px;
         padding-bottom: 0;
     }
-    .price-box{
+
+    .price-box {
         width: calc((100% - 40px) / 2);
     }
-    .price-box .price-box-buttons{
+
+    .price-box .price-box-buttons {
         padding: 0 5px;
     }
-    .price-box .price-box-buttons a{
+
+    .price-box .price-box-buttons a {
         font-size: 16px;
         width: 280px;
         height: 45px;
         line-height: 45px;
         padding: 0 15px;
     }
-    .price-box .price-box-price{
+
+    .price-box .price-box-price {
         padding: 0 5px;
+    }
+
+    .hidden-mobile {
+        display: block;
+    }
+    .visible-mobile {
+        display: none;
     }
 }
