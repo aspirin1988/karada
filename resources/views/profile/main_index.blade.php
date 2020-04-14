@@ -113,6 +113,7 @@
 @section('content')
     <link rel="stylesheet" href="/css/index.css?v=127" type="text/css"/>
     <section class="IndexTop" style="background: url(/img/index/1920_Вижуал.jpg) no-repeat 50% / cover;">
+        <img style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;" src="/img/index/1920_Вижуал.jpg" alt="">
         <div class="IndexTopH">
             <div class="container">
                 <div class="hLogo">
