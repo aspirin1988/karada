@@ -1611,8 +1611,8 @@
     }
 
     .icon-box h3 {
-        font-size: 16px;
-        min-height: 50px;
+        font-size: 13px;
+        min-height: 40px;
         margin-bottom: 10px;
     }
 
@@ -1621,7 +1621,7 @@
     }
 
     .icon-box p {
-        font-size: 14px;
+        font-size: 11px;
     }
 
     .index-programm {
