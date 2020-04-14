@@ -1373,13 +1373,15 @@
         width: 100%;
         margin-bottom: 50px;
         margin-left: 20px;
+        align-content: flex-start;
+        align-items: flex-start;
     }
 
     .icon-box img {
         position: absolute;
         top: 0;
         left: 0;
-        height: 50px;
+        height: 40px;
         width: auto !important;
         margin-bottom: 0;
     }
@@ -1387,11 +1389,14 @@
     .icon-box h3 {
         margin-bottom: 0;
         padding-left: 60px;
-        min-height: 65px;
+        min-height: 55px;
 
         font-size: 14px;
         font-weight: 700;
         line-height: 18px;
+    }
+    .icon-box p{
+        font-size: 12px;
     }
 
     .owl-carousel-bullets .owl-dots {
