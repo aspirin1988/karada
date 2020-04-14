@@ -1617,7 +1617,7 @@
     }
 
     .icon-box:nth-child(n+4) h3 {
-        min-height: 75px;
+        min-height: 40px;
     }
 
     .icon-box p {
