@@ -264,7 +264,7 @@ header {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 641px) and (max-width: 768px) {
   .courses-main-grid .courses-main-grid-item {
     background-position: 100% 0;
     height: 270px;

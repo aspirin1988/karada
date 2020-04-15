@@ -261,7 +261,7 @@ header {
             background-position: 75% 0;
             height: 192px;
         }
-        @media (max-width: 768px) {
+        @media (min-width: 641px) and (max-width: 768px) {
             background-position: 100% 0;
             height: 270px;
         }
