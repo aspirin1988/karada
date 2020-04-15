@@ -2424,7 +2424,7 @@ footer .contacts a {
   left: 0;
   position: fixed;
   display: block;
-  z-index: 5;
+  z-index: 25;
 }
 
 .offcanvas .close {
