@@ -16,9 +16,9 @@
 <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @section('styles')
-        <link rel="stylesheet" href="/css/profile.css?v=136">
-        <link rel="stylesheet" href="/js/owl.carousel.css?v=136">
-        <link rel="stylesheet" href="/js/owl.theme.default.min.css?v=136">
+        <link rel="stylesheet" href="/css/profile.css?v=137">
+        <link rel="stylesheet" href="/js/owl.carousel.css?v=137">
+        <link rel="stylesheet" href="/js/owl.theme.default.min.css?v=137">
     @show
     <link rel="stylesheet" href="/plyr/plyr.css">
 
