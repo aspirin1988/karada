@@ -2496,14 +2496,12 @@ footer .contacts a {
 
 @media (min-width: 641px) and (max-width: 799px) {
   .offcanvas .modal-body {
-    width: 100% !important;
     max-width: 640px;
   }
 }
 
 @media (min-width: 800px) and (max-width: 1199px) {
   .offcanvas .modal-body {
-    width: 100% !important;
     max-width: 800px;
   }
 }

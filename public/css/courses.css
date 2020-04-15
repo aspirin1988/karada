@@ -223,6 +223,14 @@ header {
   grid-gap: 10px;
 }
 
+@media (max-width: 640px) {
+  .courses-main-grid {
+    grid-gap: 20px;
+    padding: 20px 15px 60px;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 641px) and (max-width: 799px) {
   .courses-main-grid {
     grid-gap: 20px;
@@ -249,9 +257,16 @@ header {
   background: #efefef url("") no-repeat left center/cover;
 }
 
+@media (max-width: 640px) {
+  .courses-main-grid .courses-main-grid-item {
+    background-position: 75% 0;
+    height: 192px;
+  }
+}
+
 @media (max-width: 768px) {
   .courses-main-grid .courses-main-grid-item {
-    background-position: 72% 0;
+    background-position: 100% 0;
     height: 270px;
   }
 }
