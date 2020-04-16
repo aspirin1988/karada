@@ -4307,7 +4307,7 @@ footer .contacts a {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
   .personal_goals_body_grid .personal_goals_body_grid_item {
     display: flex;
     flex-direction: column;
