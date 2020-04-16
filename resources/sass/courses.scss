@@ -261,9 +261,12 @@ header {
             background-position: 75% 0;
             height: 192px;
         }
-        @media (min-width: 641px) and (max-width: 768px) {
+        @media (min-width: 641px) and (max-width: 799px) {
             background-position: 100% 0;
             height: 270px;
+        }
+        @media (min-width: 800px) and (max-width: 1199px) {
+            background-position: 100% 0;
         }
 
         .data {

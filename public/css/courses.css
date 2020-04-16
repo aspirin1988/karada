@@ -264,10 +264,16 @@ header {
   }
 }
 
-@media (min-width: 641px) and (max-width: 768px) {
+@media (min-width: 641px) and (max-width: 799px) {
   .courses-main-grid .courses-main-grid-item {
     background-position: 100% 0;
     height: 270px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .courses-main-grid .courses-main-grid-item {
+    background-position: 100% 0;
   }
 }
 
