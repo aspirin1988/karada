@@ -826,6 +826,7 @@ header nav .menu img {
     width: 275px;
     box-sizing: border-box;
     grid-gap: 20px;
+    padding: 20px 0;
   }
 }
 
@@ -911,13 +912,13 @@ header nav .menu img {
     font-family: Montserrat;
     font-size: 6vw;
     font-weight: 700;
-    line-height: 30px;
+    line-height: 24px;
   }
 }
 
 @media (min-width: 641px) and (max-width: 799px) {
   .profile .profile-data .name {
-    font-size: 23px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 30px;
     text-align: center;

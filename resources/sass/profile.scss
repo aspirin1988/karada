@@ -219,6 +219,7 @@ header {
         width: 275px;
         box-sizing: border-box;
         grid-gap: 20px;
+        padding: 20px 0;
     }
     @media (min-width: 800px) and (max-width: 1199px) {
         grid-template-columns: 200px auto;
@@ -280,10 +281,10 @@ header {
                 font-family: Montserrat;
                 font-size: 6vw;
                 font-weight: 700;
-                line-height: 30px;
+                line-height: 24px;
             }
             @media (min-width: 641px) and (max-width: 799px) {
-                font-size: 23px;
+                font-size: 16px;
                 font-weight: 700;
                 line-height: 30px;
                 text-align: center;
@@ -2491,7 +2492,7 @@ footer {
                     display: none;
                 }
                 @media (min-width: 800px) and (max-width: 1199px) {
-                    padding: 20px 10px ;
+                    padding: 20px 10px;
                 }
 
                 .name {
@@ -2539,7 +2540,7 @@ footer {
                     }
                 }
                 @media (min-width: 800px) and (max-width: 1199px) {
-                    padding: 20px 10px ;
+                    padding: 20px 10px;
                 }
                 //@media (min-width: 800px) and (max-width: 1199px) {
                 //    .hidden-mobile {
@@ -3172,7 +3173,7 @@ main {
             //    background: url(/images/close_blue.svg) no-repeat left center;
             display: none;
         }
-        .overlay{
+        .overlay {
             top: 70px;
         }
     }
