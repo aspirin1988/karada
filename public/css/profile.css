@@ -895,7 +895,7 @@ header nav .menu img {
 
 .profile .profile-data .name {
   font-family: Montserrat;
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 700;
   line-height: 42px;
   margin-bottom: 20px;
@@ -910,7 +910,7 @@ header nav .menu img {
 @media (min-width: 120px) and (max-width: 640px) {
   .profile .profile-data .name {
     font-family: Montserrat;
-    font-size: 6vw;
+    font-size: 4.5vw;
     font-weight: 700;
     line-height: 24px;
   }
@@ -918,7 +918,7 @@ header nav .menu img {
 
 @media (min-width: 641px) and (max-width: 799px) {
   .profile .profile-data .name {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 30px;
     text-align: center;
@@ -927,7 +927,7 @@ header nav .menu img {
 
 @media (min-width: 800px) and (max-width: 1199px) {
   .profile .profile-data .name {
-    font-size: 23px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 30px;
     text-align: center;
