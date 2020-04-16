@@ -107,6 +107,11 @@
                 e.preventDefault();
             });
         });
+
+        setInterval(()=>{
+            document.querySelector('.undertitle').innerText ='WD '+document.body.clientWidth + ' HD '+document.body.clientHeight+ ' WS '+screen.width + ' HS '+screen.height;
+        },300);
+
     </script>
 @stop
 
