@@ -2,7 +2,7 @@
 
 @section('styles')
     @parent
-    <link rel="stylesheet" href="/css/courses.css?v=137">
+    <link rel="stylesheet" href="/css/courses.css?v=139">
     <style>
         #app {
             display: grid;
