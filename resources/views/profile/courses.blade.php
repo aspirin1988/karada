@@ -2,7 +2,7 @@
 
 @section('styles')
     @parent
-    <link rel="stylesheet" href="/css/courses.css?v=141">
+    <link rel="stylesheet" href="/css/courses.css?v=142">
 
 @stop
 

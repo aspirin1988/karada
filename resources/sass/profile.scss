@@ -3458,7 +3458,7 @@ main {
         @media (max-width: 799px) {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-content: center;
             align-items: center;
             padding: 20px;
@@ -3483,7 +3483,8 @@ main {
                 }
             }
             @media (min-width: 641px) and (max-width: 799px) {
-                padding: 10px;
+                padding: 10px 0;
+                width: 100%;
             }
             @media (min-width: 800px) and (max-width: 1199px) {
                 padding: 0;
@@ -3523,7 +3524,7 @@ main {
             @media (min-width: 641px) and (max-width: 799px) {
                 display: block;
                 width: 100%;
-                font-size: 18px;
+                font-size: 14px;
                 font-weight: 700;
                 line-height: 25px;
             }
@@ -3537,7 +3538,7 @@ main {
         .sub-title {
             color: #000000;
             font-family: Montserrat;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 400;
             line-height: 25px;
             margin-bottom: 0;
@@ -3550,7 +3551,7 @@ main {
         .date {
             color: #000;
             font-family: Montserrat;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
             line-height: 25px;
             text-transform: uppercase;
@@ -3588,6 +3589,9 @@ main {
                 @media (max-width: 799px) {
                     right: 10px;
                     top: 10px;
+                    transform: translate(50%,-50%);
+                    width: 10px;
+                    height: 10px;
                 }
                 @media (min-width: 800px) and (max-width: 1199px) {
                     width: 7px;
@@ -3625,6 +3629,9 @@ main {
                 @media (max-width: 799px) {
                     right: 10px;
                     top: 10px;
+                    transform: translate(50%,-50%);
+                    width: 10px;
+                    height: 10px;
                 }
                 @media (min-width: 800px) and (max-width: 1199px) {
                     width: 7px;
@@ -3649,6 +3656,9 @@ main {
                 @media (max-width: 799px) {
                     right: 10px;
                     top: 10px;
+                    transform: translate(50%,-50%);
+                    width: 10px;
+                    height: 10px;
                 }
                 @media (min-width: 800px) and (max-width: 1199px) {
                     width: 7px;
