@@ -271,7 +271,7 @@ header {
 
         .name {
             font-family: Montserrat;
-            font-size: 38px;
+            font-size: 24px;
             font-weight: 700;
             line-height: 42px;
             @media (min-width: 799px) {
@@ -279,18 +279,18 @@ header {
             }
             @media (min-width: 120px) and (max-width: 640px) {
                 font-family: Montserrat;
-                font-size: 4.5vw;
+                font-size: 3.4vw;
                 font-weight: 700;
                 line-height: 24px;
             }
             @media (min-width: 641px) and (max-width: 799px) {
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 700;
                 line-height: 30px;
                 text-align: center;
             }
             @media (min-width: 800px) and (max-width: 1199px) {
-                font-size: 24px;
+                font-size: 18px;
                 font-weight: 700;
                 line-height: 30px;
                 text-align: center;
