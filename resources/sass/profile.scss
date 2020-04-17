@@ -181,11 +181,11 @@ header {
     display: grid;
     margin-top: 50px;
     grid-template-columns: 1fr;
-    @media (min-width: 768px) {
+    @media (min-width: 641px) {
         display: flex;
         flex-wrap: wrap;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 640px) {
         grid-template-columns: 100%;
         margin-top: 0;
         padding: 10px 0 40px;
@@ -894,7 +894,7 @@ header {
             width: 920px;
         }
 
-        @media (min-width: 120px) and (max-width: 412px) {
+        @media (min-width: 120px) and (max-width: 640px) {
             width: 100%;
             .slider-container {
                 width: 100%;
@@ -903,7 +903,7 @@ header {
             }
         }
 
-        @media (min-width: 413px) and (max-width: 799px) {
+        @media (min-width: 641px) and (max-width: 799px) {
             width: 100%;
             .slider-container {
                 width: 100%;
