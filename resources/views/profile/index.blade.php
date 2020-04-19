@@ -204,7 +204,7 @@
             </div>
             <div class="warning visible-mobile" style="margin-top: 20px;">
                 <strong>Внимание!</strong>
-                <p>Полный функционал портала доступен на компьютере / ноутбуке / планшете.</p>
+                <p>Полный функционал портала доступен на компьютере / ноутбуке / планшете*</p>
             </div>
             <div class="block my_rewards hidden-mobile">
                 <span class="my_rewards_title">Мои награды:</span>
