@@ -33,7 +33,7 @@
                             редактировать данные</a>
                         <br>
                         <a style="display: inline-flex; margin-bottom: 15px;" href="/home/password/update"
-                           class="button round button-bklue-stroke ">
+                           class="button round button-blue-stroke ">
                             <i class="icon lock"></i>
                             сменить пароль</a>
                         {{--                        <br>--}}
