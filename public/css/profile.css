@@ -1248,6 +1248,7 @@ header nav .menu img {
   .team {
     max-width: 100%;
     margin-bottom: 20px;
+    width: 100%;
   }
 }
 
@@ -1256,6 +1257,16 @@ header nav .menu img {
     width: 275px;
     box-sizing: border-box;
     padding: 30px 15px;
+  }
+
+  .team img {
+    height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .team .button {
+    height: 46px;
   }
 }
 
@@ -1606,6 +1617,7 @@ header nav .menu img {
     padding: 20px;
     max-width: 100vw;
     height: auto;
+    width: 100%;
   }
 }
 

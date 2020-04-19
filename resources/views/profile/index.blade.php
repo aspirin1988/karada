@@ -25,7 +25,7 @@
             <div class="block profile">
                 <div class="profile-ava"><img src="{{$ava??'/img/empty.png'}}" alt=""></div>
                 <div class="profile-data">
-                    <div class="name">{{$first_name}} <br class="visible-mobile" > {{$last_name}}</div>
+                    <div class="name">{{$first_name}} <br> {{$last_name}}</div>
                     <div class="hidden-mobile">
                         <a style="display: inline-flex; margin-bottom: 15px;" href="/home/edit"
                            class="button round button-blue-stroke ">
