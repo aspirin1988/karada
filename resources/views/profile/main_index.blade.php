@@ -3,7 +3,7 @@
 @section('script')
     @parent
 
-    <script src="/js/main.js?v=14"></script>
+    <script src="/js/main.js?v=140"></script>
 
     <script>
         $('header').addClass('hidden');
@@ -51,7 +51,7 @@
         new WOW().init();
     </script>
 
-    <link rel="stylesheet" href="/js/owl.carousel.css?v=14">
+    <link rel="stylesheet" href="/js/owl.carousel.css?v=140">
     <script src="/js/owl.carousel.js"></script>
 
     <script>
@@ -116,7 +116,7 @@
 @stop
 
 @section('content')
-    <link rel="stylesheet" href="/css/index.css?v=14" type="text/css"/>
+    <link rel="stylesheet" href="/css/index.css?v=140" type="text/css"/>
     <section class="IndexTop" style="background: url(/img/index/1920_Вижуал.jpg) no-repeat 50% / cover;">
         <div class="IndexTopH">
             <div class="container">
@@ -415,7 +415,7 @@
                 </ul>
                 <div class="tab-content">
 
-                    <div id="tab1" class="tab price-box" style="display: flex; flex-direction: column; justify-content: space-between;" >
+                    <div id="tab1" class="tab price-box">
                         <div class="price-box-img">
                             <h3>СОЛО</h3>
                             <p>индивидуальное обучение</p>
